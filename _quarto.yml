@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Steven J. Pierce"
+  title: "Steven J. Pierce's Blog"
   navbar:
     left:
       - href: index.qmd
@@ -12,6 +12,6 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: spacelab
     css: styles.css
     toc: true

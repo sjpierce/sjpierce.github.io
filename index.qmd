@@ -4,7 +4,6 @@ author:
   - name: Steven J. Pierce
     orcid: 0000-0002-0679-3019
     email: pierces1@msu.edu
-date: now
 date-modified: last-modified
 date-format: YYYY-MM-DD HH:mm:ss z
 format: 

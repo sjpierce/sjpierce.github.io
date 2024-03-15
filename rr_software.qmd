@@ -53,9 +53,9 @@ will be a key part of the future of scientific publishing for those who want to
 do reproducible research. It can produce documents in many different formats
 (e.g., HTML, PDF, Word, PowerPoint, and many more). Combining Quarto with
 TinyTeX enables production of very nice PDF files, which are great for
-distribution and archiving. Meanwhile, [Git](https://git-scm.com) [@Torvalds-RN3929] and [GitHub](https://github.com/)
-solve source code version control problems and facilitate collaboration on code
-[@Bryan-RN3900].
+distribution and archiving. Meanwhile, [Git](https://git-scm.com) 
+[@Torvalds-RN3929] and [GitHub](https://github.com/) solve source code version 
+control problems and facilitate collaboration on code [@Bryan-RN3900].
 
 Marwick, Boettiger, & Mullen [@Marwick-RN3899] discuss creating research
 compendiums that bundle collections of documents along with data files into
@@ -64,18 +64,21 @@ packages become an additional scholarly product that make manuscripts more
 reproducible.
 
 # Purpose
-This document describes the software packages I recommend to enable reproducible
-research via R packages that serve as research compendiums to accompany
-scientific papers. It covers which packages one will need, why they are needed,
-and how to install them.
+This document describes the software packages I personally use and recommend to
+enable reproducible research via R packages that serve as research compendiums. 
+It covers which packages one will need, why they are needed, and how to install 
+them. I share these notes when helping other people set up the software 
+environment that I rely on for my daily research and statistical work. 
 
 # Assumptions
-1. You will be using either MS Windows 10 or 11 or MacOS. 
+1. You will be using either MS Windows 10 or 11 or MacOS. The notes below about 
+   MacOS are a result of helping a few collaborators who rely on MacOS; they may 
+   be less detailed (and less up-to-date) because I don't personally use MacOS.  
 2. You have administrative access to that computer to install and configure 
    software.
 3. You aim to use custom R packages as research compendiums containing Quarto 
-   scripts for creating dynamic documents that compile into PDF or HTML files 
-   (or other output formats). 
+   scripts for creating dynamic documents that compile into formatted PDF or 
+   HTML files (or other output formats). 
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
@@ -100,7 +103,8 @@ for which version of XCode and other tools have to be installed to compile R
 packages.
 
 ## R Installation Tips
-I recommend selecting the following options:
+I recommend selecting the following options when instlling R.
+
 1. 64-bit User installation 
 2. Customized startup
 3. SDI (separate windows)
@@ -119,26 +123,30 @@ packages and install them. That will take several minutes if you have a lot of
 packages.
 
 # Development Tools
-The development tools you need to install depend on your operating system. Use 
-the subsection below relevant to your OS. 
+Developing your own custom R packages requires more software than just using 
+R and relying solely on R packages created by others. The development tools you 
+need to install depend on your operating system. Use the subsection below 
+relevant to your OS. 
 
-## Rtools for Windows, version 4.3 (5958-5975 or later)
-Installing Rtools (https://cran.r-project.org/bin/windows/Rtools/) is 
+## RTools for Windows, version 4.3 (5958-5975 or later)
+Installing [RTools](https://cran.r-project.org/bin/windows/Rtools/) is 
 important because it contains some tools for compiling software packages and one 
 of the R packages we will use later (the devtools package) depends on having 
 Rtools available. You can download Rtools from 
-[CRAN](https://cran.r-project.org/). Follow the links labeled 
+[CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
 *Download R for Windows*, then *Rtools*, then *RTools 4.3*, then 
-*RTools43_installer*. The direct link is
-https://cran.r-project.org/bin/windows/Rtools/rtools43/files/rtools43-5958-5975.exe. 
+*RTools43_installer*, or use the 
+[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools43/files/rtools43-5958-5975.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## MacOS: Xcode, GNU Fortran, and Mandatory Libraries
-If you are using MacOS instead of Windows, then you need a few MacOS-specific 
-development tools that fulfill the compiler functions that RTools serves on 
-Windows (see https://cran.r-project.org/bin/macosx/tools/). The details are 
-available at https://mac.r-project.org/tools/. Specifically, you need Xcode, 
-GNU Fortran 12.2 Compiler, and some mandatory libraries. 
+If you are using MacOS instead of Windows, then you need a few 
+[MacOS-specific development tools](https://cran.r-project.org/bin/macosx/tools/) 
+that fulfill the compiler functions that RTools serves on Windows. The details 
+are available at 
+[https://mac.r-project.org/tools/](https://mac.r-project.org/tools/). 
+Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory 
+libraries. 
 
 # RStudio Desktop, version 2023.12.1+402 (or later)
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
@@ -146,34 +154,36 @@ GNU Fortran 12.2 Compiler, and some mandatory libraries.
 provides many convenient features for working with R. It provides a better user
 interface for R than the raw R software. It contains a very good programming
 editor, plus a nice way to browse the list of objects R has in memory. You can
-download the desktop version from https://posit.co/download/rstudio-desktop/
+download the desktop version from 
+[https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/).
 
 ## RStudio for Windows
-The direct link is 
-https://download1.rstudio.org/electron/windows/RStudio-2023.12.1-402.exe. Save 
-that installation file to your computer’s `Downloads` folder, then run it.
+You can use this 
+[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2023.12.1-402.exe). 
+Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## RStudio for MacOS
-The direct link is https://download1.rstudio.org/electron/macos/RStudio-2023.12.1-402.dmg 
+You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2023.12.1-402.dmg).  
 
-# Quarto, version 1.4.550 (or later) 
+# Quarto, version 1.4.551 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and
 technical publishing system that makes it easy to create reproducible, dynamic
 documents that interweave narrative text, code, and the result of running code
 (including tables, figures, and other statistical output). Quarto is the
-evolution of, and successor to, R Markdown (https://rmarkdown.rstudio.com/). An
+evolution of, and successor to, [R Markdown](https://rmarkdown.rstudio.com/). An
 older version of Quarto may come bundled into RStudio, but we will usually want
 the most recent stable release, so install it separately. You can download the
-latest stable version from https://quarto.org/docs/get-started/
+latest stable version from 
+[https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/). 
 
 ## Quarto for Windows
-The direct link 
-https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-win.msi. 
+You can use this 
+[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-win.msi). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## Quarto for MacOS
-The direct link is 
-[https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-macos.pkg](https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.550/quarto-1.4.550-macos.pkg) 
+You can use this 
+[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-macos.pkg). 
 
 # Git, version 2.44.0.1 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software
@@ -181,13 +191,13 @@ developed by programmers to help them manage the source code they write. It is a
 very sophisticated tool for tracking the history of what changed in a text file
 from one version to the next, who made the changes, when they were made, and
 why. It allows you to easily revert to any tracked version of a file. After you
-install Git, it is helpful to explore the site https://happygitwithr.com/
-[@Bryan-RN3908].
+install Git, it is helpful to explore the site 
+[https://happygitwithr.com/](https://happygitwithr.com/) [@Bryan-RN3908].
 
 ## Git for Windows
 You can download it from either [https://git-scm.com](https://git-scm.com/) or 
-[https://gitforwindows.org](https://gitforwindows.org). A direct link is 
-https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe. 
+[https://gitforwindows.org](https://gitforwindows.org). You can use this 
+[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## Git for MacOS
@@ -195,7 +205,10 @@ Download Git from
 [https://git-scm.com/download/mac](https://git-scm.com/download/mac).
 
 # Installing R Packages 
-User-contributed R packages add extra features to R. They are a large part of what makes R so useful. Below is a set of specific R packages that we plan to use and can be downloaded from CRAN (https://cran.r-project.org/) via the following command within R’s console. 
+User-contributed R packages add extra features to R. They are a large part of
+what makes R so useful. Below is a set of specific R packages that we plan to
+use and can be downloaded from [CRAN](https://cran.r-project.org/) via the
+following command within R’s console.
 
 ```{r}
 install.packages(c("devtools", "here", "kableExtra", "knitr", "quarto", 
@@ -238,23 +251,31 @@ packages that provide an unified set of functions that make working with R much
 easier. They support creating piped operations that chain together easily. 
 
 # TinyTex (this is a version of LaTeX)
-TinyTex (https://yihui.org/tinytex/) is a specific distribution of LaTeX, which is document preparation software that allows high-quality typesetting. It takes plain text LaTeX files (*.tex files) that describe the structure of a document and compiles them into fully-formatted PDF files with nice fonts and layout. We can actually use the R package called tinytex (https://cran.r-project.org/package=tinytex) to install TinyTeX via the following command inside R. 
+[TinyTex](https://yihui.org/tinytex/) is a specific distribution of 
+[LaTeX](https://www.latex-project.org/), which is document preparation software
+that allows high-quality typesetting. It takes plain text LaTeX files (`*.tex`
+files) that describe the structure of a document and compiles them into
+fully-formatted PDF files with nice fonts and layout. We can actually use
+tinytex R package to install TinyTeX via the following command inside R.
 
 ```{r}
 tinytex::install_tinytex()
 ```
 
-You can use alternative LaTeX distributions and tools (e.g., 
-[MiKTeX](https://miktex.org)) instead, but TinyTeX is very convenient because of
-how well it integrates with the other tools we’re using.
+You can use 
+[alternative LaTeX distributions](https://www.tug.org/interest.html#free) and 
+tools (e.g., [MiKTeX](https://miktex.org)) instead, but TinyTeX is very 
+convenient because of how well it integrates with the other tools we’re using. 
+[Yihui Xie](https://yihui.org/), the author of tinytex and TinyTex, is a 
+contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. 
 
 # Pandoc 
 [Pandoc](https://pandoc.org/) is software that allows you to convert documents
 between multiple formats. A copy of Pandoc comes bundled with RStudio and
 another copy comes bundled with Quarto, so you do not need to download and
-install it separately. Pandoc is a layer of software that helps convert
-documents into LaTeX files that can be processed by TinyTeX (or into HTML files,
-or a variety of other output formats). Quarto is built on top of Pandoc.
+install it separately. If you want PDF output, Pandoc is what converts documents 
+into the LaTeX files that can be processed by TinyTeX. Quarto is built on top of 
+Pandoc because it facilitates producing many different kinds of output files.
 
 # rcrpkg.template 
 [rcrpkg.template](https://github.com/sjpierce/rcrpkg.template) [@Pierce-RN8380] 
@@ -266,7 +287,7 @@ subfolder, the
 [`Example_Render_to_HTML.qmd`](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_HTML.qmd) 
 Quarto script demonstrates rendering to HTML output and
 [`Example_Render_to_PDF.qmd`](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_PDF.qmd) 
-demonstrates rendering to PDF output. The latter file
+Quarto script demonstrates rendering to PDF output. The latter file
 also uses the 
 [`title.tex`](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/title.tex) 
 and 

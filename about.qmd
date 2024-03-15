@@ -28,6 +28,7 @@ format:
     code-line-numbers: false
     embed-resources: true 
     anchor-sections: true
+    link-external-icon: true
 execute:
   eval: true
   echo: fenced

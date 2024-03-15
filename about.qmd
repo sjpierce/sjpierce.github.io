@@ -6,6 +6,16 @@ author:
     email: pierces1@msu.edu
 date-modified: last-modified
 date-format: YYYY-MM-DD HH:mm:ss z
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: GitHub
+      href: https://github.com/sjpierce
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=-ZHBcFEAAAAJ&hl=en
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-0679-3019
 format: 
   html:
     toc: true

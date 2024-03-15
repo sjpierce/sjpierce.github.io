@@ -31,4 +31,7 @@ knitr:
     message: true
 ---
 
-This is the humble beginning of my personal website. 
+Welcome my personal website! This is where I share materials on reproducible 
+research, statistical consulting, and other topics I find interesting.  
+
+[Software for Reproducible Research with R](rr_software.qmd)

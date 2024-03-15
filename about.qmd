@@ -44,3 +44,15 @@ knitr:
 I am an applied statistician and researcher at 
 [Michigan State University](https://msu.edu), working in the 
 [Center for Statistical Training and Consulting (CSTAT)](https://cstat.msu.edu). 
+
+Some of my current work focuses on:
+
+* Quality improvement for children's mental health health services.
+* A cost-benefit analysis of 
+  [EFNEP](https://www.nifa.usda.gov/grants/programs/capacity-grants/efnep/expanded-food-nutrition-education-program) 
+  utilizing biomarkers of chronic disease risk.   
+* Examining the effect of a cognitive-behavioral therapy on psychological, 
+  functional, and disease-related outcomes in youth with childhood-onset lupus.
+* Predicting the performance of medical students on a licensing examination. 
+  
+

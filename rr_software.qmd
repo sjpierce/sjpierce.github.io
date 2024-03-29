@@ -252,7 +252,7 @@ easier. They support creating piped operations that chain together easily.
 [LaTeX](https://www.latex-project.org/), which is document preparation software
 that allows high-quality typesetting. It takes plain text LaTeX files (`*.tex`
 files) that describe the structure of a document and compiles them into
-fully-formatted PDF files with nice fonts and layout. We can actually use
+fully-formatted PDF files with nice fonts and layout. We can actually use the
 tinytex R package to install TinyTeX via the following command inside R.
 
 ```{r}

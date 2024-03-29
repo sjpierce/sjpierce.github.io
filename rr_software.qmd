@@ -237,12 +237,10 @@ provides an easy way to install and start using TinyTex to convert R Markdown or
 Quarto documents to fully formatted PDF files. 
 
 ::: {.callout-tip}
-In the paragraph above, note the capitalization of the software names: quarto 
+In the paragraph above, note the capitalization of the software names: `quarto` 
 is an R package that helps you interface with the stand-alone Quarto software. 
-
-Similarly, note the capitalization of tinytex (an R package) versus TinyTeX (a 
-LaTeX distribution created by the same author). The former makes it easier to 
-use the latter. 
+Similarly, `tinytex` is an R package that helps you install and use TinyTeX (a 
+LaTeX distribution created by the same author).  
 :::
 
 The [tidyverse](https://www.tidyverse.org/) is a collection of related R 

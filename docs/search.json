@@ -11,7 +11,7 @@
     "href": "rr_software.html#r-for-windows",
     "title": "Software for Reproducible Research with R",
     "section": "3.1 R for Windows",
-    "text": "3.1 R for Windows\nIf you are using Windows, follow the links labeled Download R for Windows, then base, then Download R 4.3.3 for Windows. The direct link is https://cran.r-project.org/bin/windows/base/R-4.3.3-win.exe. Save that installation file to your computer’s Downloads folder, then run it."
+    "text": "3.1 R for Windows\nIf you are using Windows, follow the links labeled Download R for Windows, then base, then Download R 4.3.3 for Windows or use the direct link to the Windows installer. Save that installation file to your computer’s Downloads folder, then run it."
   },
   {
     "objectID": "rr_software.html#r-for-macos",

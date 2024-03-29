@@ -86,13 +86,13 @@ environment that I rely on for my daily research and statistical work.
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
 most of your data management and analysis tasks. You can download R from the
-Comprehensive R Archive Network (CRAN, https://cran.r-project.org/).
+[Comprehensive R Archive Network (CRAN)](https://cran.r-project.org/).
 
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
-then *base*, then *Download R 4.3.3 for Windows*. The direct link is
-https://cran.r-project.org/bin/windows/base/R-4.3.3-win.exe. Save that 
-installation file to your computer’s `Downloads` folder, then run it. 
+then *base*, then *Download R 4.3.3 for Windows* or use the 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.3.3-win.exe). 
+Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## R for MacOS
 If you are using MacOS, follow the link labeled *Download R for macOS*, then 

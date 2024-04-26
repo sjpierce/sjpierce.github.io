@@ -81,7 +81,7 @@ environment that I rely on for my daily research and statistical work.
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
-# R version 4.3.3 (or later)
+# R version 4.4.0 (or later)
 [R](https://www.r-project.org) [@R-Devel-Core-RN8182] is a free, open-source
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
@@ -90,8 +90,8 @@ most of your data management and analysis tasks. You can download R from the
 
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
-then *base*, then *Download R 4.3.3 for Windows* or use the 
-[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.3.3-win.exe). 
+then *base*, then *Download R 4.4.0 for Windows* or use the 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.4.0-win.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## R for MacOS
@@ -111,9 +111,9 @@ I recommend selecting the following options when instlling R.
 5. Save version number in registry
 6. Associate R with .RData files
 
-If you previously were using an older version of R (any version in the 4.2.x
+If you previously were using an older version of R (any version in the 4.3.x
 series), you should plan to reinstall all your R packages from scratch under R
-4.3.0 or later. The best way to do that is to use a script such as
+4.4.0 or later. The best way to do that is to use a script such as
 [Reinstall_Packages.R](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Reinstall_Packages.R)
 under the older version to save a data file containing the names of installed
 packages, then remove the older version of R and replace it with the newest
@@ -127,15 +127,15 @@ R and relying solely on R packages created by others. The development tools you
 need to install depend on your operating system. Use the subsection below 
 relevant to your OS. 
 
-## RTools for Windows, version 4.3 (5958-5975 or later)
+## RTools for Windows, version 4.4 (6104-6039 or later)
 Installing [RTools](https://cran.r-project.org/bin/windows/Rtools/) is 
 important because it contains some tools for compiling software packages and one 
 of the R packages we will use later (the devtools package) depends on having 
 Rtools available. You can download Rtools from 
 [CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
-*Download R for Windows*, then *Rtools*, then *RTools 4.3*, then 
+*Download R for Windows*, then *Rtools*, then *RTools 4.4*, then 
 *RTools43_installer*, or use the 
-[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools43/files/rtools43-5958-5975.exe). 
+[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools44/files/rtools44-6104-6039.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## MacOS: Xcode, GNU Fortran, and Mandatory Libraries

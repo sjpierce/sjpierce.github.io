@@ -196,11 +196,11 @@ install Git, it is helpful to explore the site
 ## Git for Windows
 You can download it from either [https://git-scm.com](https://git-scm.com/) or 
 [https://gitforwindows.org](https://gitforwindows.org). You can use this 
-[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe). 
+[direct link for the Windows installer]https://github.com/git-for-windows/git/releases/download/v2.45.0.windows.1/Git-2.45.0-64-bit.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it. 
 
 ## Git for MacOS
-Download Git from 
+Download instructions are available at  
 [https://git-scm.com/download/mac](https://git-scm.com/download/mac).
 
 # Installing R Packages 

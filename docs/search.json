@@ -74,14 +74,14 @@
     "href": "rr_software.html#git-for-windows",
     "title": "Software for Reproducible Research with R",
     "section": "7.1 Git for Windows",
-    "text": "7.1 Git for Windows\nYou can download it from either https://git-scm.com or https://gitforwindows.org. You can use this direct link for the Windows installer. Save that installation file to your computer’s Downloads folder, then run it."
+    "text": "7.1 Git for Windows\nYou can download it from either https://git-scm.com or https://gitforwindows.org. You can use this [direct link for the Windows installer]https://github.com/git-for-windows/git/releases/download/v2.45.0.windows.1/Git-2.45.0-64-bit.exe). Save that installation file to your computer’s Downloads folder, then run it."
   },
   {
     "objectID": "rr_software.html#git-for-macos",
     "href": "rr_software.html#git-for-macos",
     "title": "Software for Reproducible Research with R",
     "section": "7.2 Git for MacOS",
-    "text": "7.2 Git for MacOS\nDownload Git from https://git-scm.com/download/mac."
+    "text": "7.2 Git for MacOS\nDownload instructions are available at\nhttps://git-scm.com/download/mac."
   },
   {
     "objectID": "about.html",

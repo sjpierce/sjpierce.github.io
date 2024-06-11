@@ -158,11 +158,11 @@ download the desktop version from
 
 ## RStudio for Windows
 You can use this 
-[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2024.04.1-748.exe). 
+[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2024.04.2-764.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## RStudio for MacOS
-You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.04.1-748.dmg).  
+You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.04.2-764.dmg).  
 
 # Quarto, version 1.4.555 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and

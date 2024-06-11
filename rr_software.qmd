@@ -147,7 +147,7 @@ are available at
 Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory 
 libraries. 
 
-# RStudio Desktop, version 2024.04.1+748 (or later)
+# RStudio Desktop, version 2024.04.2+764 (or later)
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
 [@RStudio-Team-RN8351] is an integrated development environment (IDE) that 
 provides many convenient features for working with R. It provides a better user

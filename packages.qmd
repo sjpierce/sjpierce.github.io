@@ -1,0 +1,85 @@
+---
+title: "R Packages"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+bibliography: references.bib
+csl: apa.csl
+date-modified: last-modified
+date-format: YYYY-MM-DD HH:mm:ss z
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: GitHub
+      href: https://github.com/sjpierce
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=-ZHBcFEAAAAJ&hl=en
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-0679-3019
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    code-tools: true
+    code-line-numbers: false
+    embed-resources: true 
+    anchor-sections: true
+    link-external-icon: true
+execute:
+  eval: true
+  echo: fenced
+  output: true
+  warning: true
+  error: true
+  include: true
+knitr:
+  opts_chunk: 
+    message: true
+---
+
+In addition to providing access to custom R functions, one can use custom R 
+packages as research compendiums [@Marwick-RN3899] that organize raw data, 
+documentation, data management and analysis scripts, and statistical results in
+a convenient format. The scripts can contain narrative text interleaved with R
+code that can manage data and insert formatted text, tables, figures, and
+reference sections when you render the script into a dynamic document. Below is
+a list of the publicly accessible R packages that I have developed. I have
+others in preparation that will remain private repositories until relevant
+scholarly products have been published.
+
+Some of the packages listed below relied on 
+[R Markdown](https://rmarkdown.rstudio.com/) scripts, but I have subsequently 
+adopted a newer, more capable set of [software tools](rr_software.qmd) for 
+producing the research compendiums I have in preparation now. 
+
+# piercer
+The [piercer](https://github.com/sjpierce/piercer) package is my personal
+package of miscellaneous functions for use in my research and statistical 
+consulting work. It is not particularly large, but developing it has been an 
+excellent learning experience. 
+
+# SAWpaper
+The [SAWpaper](https://github.com/sjpierce/SAWpaper) package contains the code 
+and raw output for one of my papers [@Winke-RN3795]. This paper used a 
+continuation-ratio model to examine the validity of a computer-adaptive 
+self-assessment of second language learners' speaking proficiency. This package 
+
+
+# SSACHR
+This [SSACHR](https://github.com/sjpierce/SSACHR) package contains the code and 
+raw output for a paper that used criminal history data for suspected serial 
+sexual offenders to examine the potential impact of mandatory forensic 
+testing of sexual assault kits on crime prevention [@Campbell-RN4147]. The 
+results therein include all results reported in the paper, plus additional 
+output that was omitted due to page limits. This package also used 
+[R Markdown](https://rmarkdown.rstudio.com/) scripts. 
+
+# References
+::: {#refs}
+:::

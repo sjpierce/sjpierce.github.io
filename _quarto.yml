@@ -8,8 +8,9 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: packages.qmd
+        text: R Packages
       - about.qmd
-
 format:
   html:
     theme: spacelab

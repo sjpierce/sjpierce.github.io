@@ -56,7 +56,7 @@ distribution and archiving. Meanwhile, [Git](https://git-scm.com)
 [@Torvalds-RN3929] and [GitHub](https://github.com/) solve source code version 
 control problems and facilitate collaboration on code [@Bryan-RN3900].
 
-Marwick, Boettiger, & Mullen [@Marwick-RN3899] discuss creating research
+Marwick, Boettiger, & Mullen [-@Marwick-RN3899] discuss creating research
 compendiums that bundle collections of documents along with data files into
 custom R packages to make a research project more reproducible. These software
 packages become an additional scholarly product that make manuscripts more

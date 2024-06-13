@@ -68,7 +68,7 @@ excellent learning experience.
 The [SAWpaper](https://github.com/sjpierce/SAWpaper) package contains the code 
 and raw output for one of my papers [@Winke-RN3795]. This paper used a 
 continuation-ratio model to examine the validity of a computer-adaptive 
-self-assessment of second language learners' speaking proficiency. This package 
+self-assessment of second language learners' speaking proficiency. 
 
 
 # SSACHR
@@ -77,8 +77,7 @@ raw output for a paper that used criminal history data for suspected serial
 sexual offenders to examine the potential impact of mandatory forensic 
 testing of sexual assault kits on crime prevention [@Campbell-RN4147]. The 
 results therein include all results reported in the paper, plus additional 
-output that was omitted due to page limits. This package also used 
-[R Markdown](https://rmarkdown.rstudio.com/) scripts. 
+output that was omitted due to page limits. 
 
 # References
 ::: {#refs}

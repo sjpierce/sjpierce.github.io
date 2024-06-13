@@ -42,7 +42,7 @@ combine into a powerful, integrated set of tools. The statistical software
 [@RStudio-Team-RN8351], is the foundation for a set of tools that can generate
 dynamic documents containing a mix of narrative text along with R code that can
 be compiled to automatically produce a fully-formatted report, manuscript, 
-website, or srt of presentation slides complete with text, equations, figures, 
+website, or set of presentation slides complete with text, equations, figures, 
 tables, and reference sections [@Mair-RN3387].
 
 While [@Mair-RN3387] introduces [R Markdown](https://rmarkdown.rstudio.com/)

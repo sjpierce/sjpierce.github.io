@@ -210,6 +210,8 @@ use and can be downloaded from [CRAN](https://cran.r-project.org/) via the
 following command within R’s console.
 
 ```{r}
+#| label: install-r-pkgs
+
 install.packages(c("devtools", "here", "kableExtra", "knitr", "quarto", 
                    "rmarkdown", "tidyverse", "tinytex"))
 ``` 
@@ -257,6 +259,8 @@ fully-formatted PDF files with nice fonts and layout. We can actually use the
 tinytex R package to install TinyTeX via the following command inside R.
 
 ```{r}
+#| label: install-TinyTex
+ 
 tinytex::install_tinytex()
 ```
 

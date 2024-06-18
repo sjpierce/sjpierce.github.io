@@ -11,7 +11,7 @@
     "href": "rr_software.html#r-for-windows",
     "title": "Software for Reproducible Research with R",
     "section": "3.1 R for Windows",
-    "text": "3.1 R for Windows\nIf you are using Windows, follow the links labeled Download R for Windows, then base, then Download R 4.4.0 for Windows or use the direct link to the Windows installer. Save that installation file to your computer, then run it."
+    "text": "3.1 R for Windows\nIf you are using Windows, follow the links labeled Download R for Windows, then base, then Download R-4.4.1 for Windows or use the direct link to the Windows installer. Save that installation file to your computer, then run it."
   },
   {
     "objectID": "rr_software.html#r-for-macos",
@@ -25,7 +25,7 @@
     "href": "rr_software.html#r-installation-tips",
     "title": "Software for Reproducible Research with R",
     "section": "3.3 R Installation Tips",
-    "text": "3.3 R Installation Tips\nI recommend selecting the following options when instlling R.\n\n64-bit User installation\nCustomized startup\nSDI (separate windows)\nHTML help\nSave version number in registry\nAssociate R with .RData files\n\nIf you previously were using an older version of R (any version in the 4.3.x series), you should plan to reinstall all your R packages from scratch under R 4.4.0 or later. The best way to do that is to use a script such as Reinstall_Packages.R under the older version to save a data file containing the names of installed packages, then remove the older version of R and replace it with the newest version of R, and use the remainder of that script to read in that list of packages and install them. That will take several minutes if you have a lot of packages."
+    "text": "3.3 R Installation Tips\nI recommend selecting the following options when instlling R.\n\n64-bit User installation\nCustomized startup\nSDI (separate windows)\nHTML help\nSave version number in registry\nAssociate R with .RData files\n\nIf you previously were using an older version of R (any version in the 4.3.x series), you should plan to reinstall all your R packages from scratch under R 4.4.1 or later. The best way to do that is to use a script such as Reinstall_Packages.R under the older version to save a data file containing the names of installed packages, then remove the older version of R and replace it with the newest version of R, and use the remainder of that script to read in that list of packages and install them. That will take several minutes if you have a lot of packages."
   },
   {
     "objectID": "rr_software.html#rtools-for-windows-version-4.4-6104-6039-or-later",

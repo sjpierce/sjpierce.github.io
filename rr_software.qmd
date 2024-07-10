@@ -164,7 +164,7 @@ Save that installation file to your computer’s `Downloads` folder, then run it
 ## RStudio for MacOS
 You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.04.2-764.dmg).  
 
-# Quarto, version 1.5.53 (or later) 
+# Quarto, version 1.5.54 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and
 technical publishing system that makes it easy to create reproducible, dynamic
 documents that interweave narrative text, code, and the result of running code
@@ -177,12 +177,12 @@ latest stable version from
 
 ## Quarto for Windows
 You can use this 
-[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.53/quarto-1.5.53-win.msi). 
+[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.54/quarto-1.5.54-win.msi). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## Quarto for MacOS
 You can use this 
-[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.53/quarto-1.5.53-macos.pkg). 
+[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.54/quarto-1.5.54-macos.pkg). 
 
 # Git, version 2.45.2.1 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software

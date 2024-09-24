@@ -147,7 +147,7 @@ are available at
 Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory 
 libraries. 
 
-# RStudio Desktop, version 2024.04.2+764 (or later)
+# RStudio Desktop, version 2024.09.0+375 (or later)
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
 [@RStudio-Team-RN8351] is an integrated development environment (IDE) that 
 provides many convenient features for working with R. It provides a better user
@@ -158,11 +158,11 @@ download the desktop version from
 
 ## RStudio for Windows
 You can use this 
-[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2024.04.2-764.exe). 
+[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2024.09.0-375.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## RStudio for MacOS
-You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.04.2-764.dmg).  
+You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.09.0-375.dmg).  
 
 # Quarto, version 1.5.57 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and

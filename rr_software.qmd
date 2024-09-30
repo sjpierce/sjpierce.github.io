@@ -196,7 +196,7 @@ install Git, it is helpful to explore the site
 ## Git for Windows
 You can download it from either [https://git-scm.com](https://git-scm.com/) or 
 [https://gitforwindows.org](https://gitforwindows.org). You can use this 
-[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.46.1.windows.1/Git-2.46.1-64-bit.exe). 
+[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.46.2.windows.1/Git-2.46.2-64-bit.exe). 
 Save that installation file to your compute, then run it. 
 
 ## Git for MacOS

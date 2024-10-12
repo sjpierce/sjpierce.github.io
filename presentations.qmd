@@ -1,0 +1,108 @@
+---
+title: "Presentations"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+bibliography: references.bib
+csl: apa.csl
+date-modified: last-modified
+date-format: YYYY-MM-DD HH:mm:ss z
+about: 
+  template: marquee
+  links: 
+    - icon: github
+      text: GitHub
+      href: https://github.com/sjpierce
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=-ZHBcFEAAAAJ&hl=en
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0002-0679-3019
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    code-tools: true
+    code-line-numbers: false
+    embed-resources: true 
+    anchor-sections: true
+    link-external-icon: true
+execute:
+  eval: true
+  echo: fenced
+  output: true
+  warning: true
+  error: true
+  include: true
+knitr:
+  opts_chunk: 
+    message: true
+---
+
+This is where I'll post information about recent or upcoming presentations 
+
+# American Evaluation Association 2024
+Below is the abstract for my presentation [@Pierce-RN8577] called *Generating*
+*reproducible statistical analyses and evaluation reports: Principles,*
+*practices, and free software tools*. Slides and example files are available in
+my [Pierce.AEA2024 repository](https://github.com/sjpierce/Pierce.AEA2024). 
+
+**Abstract**
+
+> Fully reproducible statistical analyses are ones for which investigators have 
+> shared all the materials required to exactly recreate their findings so 
+> others can verify them or conduct alternative analyses. That requires sharing 
+> the original (usually de-identified) data, supporting documentation, and the 
+> software code used to analyze the data. While reproducibility has been 
+> described as an attainable minimum standard for trustworthy, credible 
+> scientific work; it is not yet well-embedded in evaluators’ professional 
+> training. This session will introduce the audience to a set of principles, 
+> practices, and free, open-source software tools that enable evaluators to 
+> efficiently generate reproducible statistical analyses and evaluation reports. 
+> We will cover why reproducibility is important in an evaluation context, then 
+> offer a vision of how to improve the reproducibility of your work and suggest 
+> concrete steps you can take to achieve that goal. We will discuss tailoring 
+> the degree of reproducibility you aim to achieve for a given project, which 
+> may vary due to project context or constraints. In terms of software, we will 
+> describe how R, RStudio, Quarto, and TinyTex comprise a powerful suite of 
+> tools that can generate dynamic documents containing a mix of narrative text 
+> along with R code that can be compiled to automate producing a fully-formatted 
+> report, manuscript, or set of slides complete with narrative text, analysis 
+> results, figures, tables, and references. Git and GitHub.com add further value 
+> through support for version control and collaboration on the source code for 
+> dynamic documents. The session will include conceptual content, examples of 
+> dynamic documents, and links to supporting resources the audience can use to 
+> accelerate learning how to make their work more reproducible.
+
+# Ann Arbor R Users' Group
+Below is the abstract for my presentation [@Pierce-RN8655] called *R and*
+*Quarto: A foundation for generating reproducible reports*. Slides and example 
+files will be available in my 
+[Pierce.AARUG2024 repository](https://github.com/sjpierce/Pierce.AARUG2024). 
+
+**Abstract**
+Forthcoming.
+
+# MSU Program Evaluation Brown Bag Series
+Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 
+*of missing data in evaluation*. Slides and example files will be available in
+my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024). 
+
+**Abstract**
+
+> This talk will discuss some fundamental concepts and issues related to missing
+> data in program evaluation contexts. We will cover why missing data matters 
+> plus types of missing data and how they affect statistical results. Then we 
+> will highlight how to describe the nature, scope, and patterns of missing data 
+> and how they relate to observed data. Finally, we will discuss some ways to 
+> prevent missing data and options for obtaining valid, unbiased statistical 
+> results even when there is missing data.
+
+
+# References
+::: {#refs}
+:::

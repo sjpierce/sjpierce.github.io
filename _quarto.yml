@@ -10,6 +10,8 @@ website:
         text: Home
       - href: packages.qmd
         text: R Packages
+      - href: presentations.qmd
+        text: Presentations
       - about.qmd
 format:
   html:

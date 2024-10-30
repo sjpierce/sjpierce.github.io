@@ -87,7 +87,7 @@ files will be available in my
 **Abstract**
 Forthcoming.
 
-# MSU Program Evaluation Brown Bag Series
+# MSU Program Evaluation Occasional Speaker Series
 Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 
 *of missing data in evaluation*. Slides and example files will be available in
 my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024). 

@@ -85,7 +85,12 @@ files will be available in my
 [Pierce.AARUG2024 repository](https://github.com/sjpierce/Pierce.AARUG2024). 
 
 **Abstract**
-Forthcoming.
+
+> This presentation will discuss the importance of reproducibility and 
+> illustrate how R and Quarto are foundational pieces of an integrated set of 
+> tools for generating fully-formatted, reproducible reports in a variety of 
+> output formats. We'll cover some key principles and practices that enhance
+> reproducibility.
 
 # MSU Program Evaluation Occasional Speaker Series
 Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 

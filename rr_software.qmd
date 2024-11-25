@@ -184,7 +184,7 @@ Save that installation file to your computer’s `Downloads` folder, then run it
 You can use this 
 [direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.5.57/quarto-1.5.57-macos.pkg). 
 
-# Git, version 2.47.0.2 (or later)
+# Git, version 2.47.1.0 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software
 developed by programmers to help them manage the source code they write. It is a
 very sophisticated tool for tracking the history of what changed in a text file

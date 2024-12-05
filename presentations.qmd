@@ -45,6 +45,63 @@ knitr:
 
 This is where I'll post information about recent or upcoming presentations 
 
+# CSTAT Webinar
+Below is the abstract for my upcoming presentation [@Pierce-RN8692] called 
+*Reproducible research: Principles, practices, and tools for generating* 
+*reproducible statistical analyses and reports*. Slides and example files will 
+be available in my 
+[CSTAT.RR2025 repository](https://github.com/sjpierce/CSTAT.RR2025). 
+
+**Abstract**
+
+> This seminar will introduce the audience to a set of principles, practices, 
+> and free, open-source software tools that enable scientists to generate 
+> reproducible statistical analyses and reports. We will cover why 
+> reproducibility is important, then offer a vision of how to enhance the 
+> reproducibility of your work, with concrete steps you can take to achieve that 
+> goal. We will discuss tailoring the degree of reproducibility you aim to 
+> achieve for a given project, which may vary due to project context or 
+> constraints. In terms of software, we will describe how R, RStudio, Quarto, 
+> and TinyTex comprise a powerful suite of tools that uses dynamic documents to 
+> automate producing fully-formatted reports, manuscripts, or slides complete 
+> with narrative text, analysis results, figures, tables, and references. Git 
+> and GitHub.com add further value through support for version control and 
+> collaboration on the source code for dynamic documents. The session will 
+> include conceptual content, examples of dynamic documents, and links to 
+> supporting resources the audience can use to accelerate learning how to make 
+> their work more reproducible.
+
+# MSU Program Evaluation Occasional Speaker Series
+Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 
+*of missing data in evaluation*. Slides are available in
+my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024) and a 
+[video recording](https://mediaspace.msu.edu/media/t/1_9gisp7ga) is also 
+available
+
+**Abstract**
+
+> This talk will discuss some fundamental concepts and issues related to missing
+> data in program evaluation contexts. We will cover why missing data matters 
+> plus types of missing data and how they affect statistical results. Then we 
+> will highlight how to describe the nature, scope, and patterns of missing data 
+> and how they relate to observed data. Finally, we will discuss some ways to 
+> prevent missing data and options for obtaining valid, unbiased statistical 
+> results even when there is missing data.
+
+# Ann Arbor R Users' Group
+Below is the abstract for my presentation [@Pierce-RN8655] called *R and*
+*Quarto: A foundation for generating reproducible reports*. Slides and example 
+files are available in my 
+[Pierce.AARUG2024 repository](https://github.com/sjpierce/Pierce.AARUG2024). 
+
+**Abstract**
+
+> This presentation will discuss the importance of reproducibility and 
+> illustrate how R and Quarto are foundational pieces of an integrated set of 
+> tools for generating fully-formatted, reproducible reports in a variety of 
+> output formats. We'll cover some key principles and practices that enhance
+> reproducibility.
+
 # American Evaluation Association 2024
 Below is the abstract for my presentation [@Pierce-RN8577] called *Generating*
 *reproducible statistical analyses and evaluation reports: Principles,*
@@ -77,35 +134,6 @@ my [Pierce.AEA2024 repository](https://github.com/sjpierce/Pierce.AEA2024).
 > dynamic documents. The session will include conceptual content, examples of 
 > dynamic documents, and links to supporting resources the audience can use to 
 > accelerate learning how to make their work more reproducible.
-
-# Ann Arbor R Users' Group
-Below is the abstract for my presentation [@Pierce-RN8655] called *R and*
-*Quarto: A foundation for generating reproducible reports*. Slides and example 
-files will be available in my 
-[Pierce.AARUG2024 repository](https://github.com/sjpierce/Pierce.AARUG2024). 
-
-**Abstract**
-
-> This presentation will discuss the importance of reproducibility and 
-> illustrate how R and Quarto are foundational pieces of an integrated set of 
-> tools for generating fully-formatted, reproducible reports in a variety of 
-> output formats. We'll cover some key principles and practices that enhance
-> reproducibility.
-
-# MSU Program Evaluation Occasional Speaker Series
-Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 
-*of missing data in evaluation*. Slides and example files will be available in
-my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024). 
-
-**Abstract**
-
-> This talk will discuss some fundamental concepts and issues related to missing
-> data in program evaluation contexts. We will cover why missing data matters 
-> plus types of missing data and how they affect statistical results. Then we 
-> will highlight how to describe the nature, scope, and patterns of missing data 
-> and how they relate to observed data. Finally, we will discuss some ways to 
-> prevent missing data and options for obtaining valid, unbiased statistical 
-> results even when there is missing data.
 
 
 # References

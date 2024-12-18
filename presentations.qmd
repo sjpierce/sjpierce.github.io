@@ -50,7 +50,10 @@ Below is the abstract for my upcoming presentation [@Pierce-RN8692] called
 *Reproducible research: Principles, practices, and tools for generating* 
 *reproducible statistical analyses and reports*. Slides and example files will 
 be available in my 
-[CSTAT.RR2025 repository](https://github.com/sjpierce/CSTAT.RR2025). 
+[CSTAT.RR2025 repository](https://github.com/sjpierce/CSTAT.RR2025), but will 
+not be finalized until shortly before the webinar is delivered. A 
+[registration link](https://cstat.msu.edu/event/reproducible-research-principles-practices-and-tools-generating-reproducible-statistical) 
+is available on [CSTAT's events website](https://cstat.msu.edu/events).   
 
 **Abstract**
 

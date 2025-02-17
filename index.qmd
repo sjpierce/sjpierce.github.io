@@ -5,7 +5,7 @@ author:
     orcid: 0000-0002-0679-3019
     email: pierces1@msu.edu
 date-modified: last-modified
-date-format: YYYY-MM-DD HH:mm:ss z
+date-format: YYYY-MM-DD
 format: 
   html:
     toc: true
@@ -28,6 +28,16 @@ execute:
 knitr:
   opts_chunk: 
     message: true
+listing:
+  contents: posts/**/*.qmd
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories, filename]
+  feed: true
+page-layout: full  
 ---
 
 Welcome my personal website! This is where I share materials on reproducible 

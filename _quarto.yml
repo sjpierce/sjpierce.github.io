@@ -4,6 +4,8 @@ project:
 
 website:
   title: "Piercing Insight"
+  site-url: https://sjpierce.github.io
+  description: "Steven. J. Pierce's personal blog."
   navbar:
     left:
       - href: index.qmd
@@ -13,6 +15,9 @@ website:
       - href: presentations.qmd
         text: Presentations
       - about.qmd
+    right:
+      - icon: rss
+        href: index.xml
 format:
   html:
     theme: spacelab

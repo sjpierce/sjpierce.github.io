@@ -1,0 +1,220 @@
+---
+title: "Draft vs. Production Output"
+description: "How I use Quarto to separate draft from production output files."
+date: "2025-02-16"
+date-modified: "2025-02-16"
+draft: false
+categories:
+  - Quarto Tips
+  - Reproducible Research
+  - Separation Principle
+---
+
+This post is describes a practical example of applying the separation principle 
+for reproducible research. Specifically, it describes why and how I separate 
+draft versus production versions of my output. The post assumes you have already 
+installed some specific 
+[software for reproducible research](https://sjpierce.github.io/rr_software.html). 
+
+I develop a research compendium for each of my statistical projects. My usual
+approach is to create a Git repository for a custom R package, part of which is
+a Quarto project. There are often multiple Quarto scripts that use R code chunks
+to do various tasks such as importing, cleaning, managing, and analyzing data,
+then reporting the results. 
+
+# Why Separate Draft vs. Production Output?
+Developing my scripts is an iterative process. I render drafts many times per
+day as I add or edit code, but I only need to do occasional production runs. The
+draft outputs are disposable intermediate artifacts. If needed, I can recover
+interim draft output by returning to a specific Git commit and re-running the 
+code as it existed at that point in time. 
+
+Production output files are another matter entirely. I find it useful to retain
+a version history of all rendered production output files distributed to
+clients, research partners, or other stakeholders. That way when someone wants 
+to discuss an output with me, I can quickly find, open, and review it without 
+having to re-run code. 
+
+# My Requirements for Output Files
+For most projects and scripts, I find it useful to impose a small set of 
+requirements on output file names. They must: 
+
+1. Show which script generated the output. 
+2. Clarify draft versus production status. 
+3. Distinguish between different production runs of the same script. 
+4. Show what output format was used. 
+
+::: {.callout-tip}
+My personal convention is to assign filenames by combining three pieces: a 
+*stem*, a *suffix*, and a *file extension*. 
+
+* The stem is a text string that matches the name of the script that produces 
+  the output (addressing requirement #1). For example, a script called 
+  `Import_Data.qmd` leads to a stem of `Import_Data`. 
+* The suffix consists of either the string `_Draft` for draft outputs, or a date 
+  in `_YYYY-MM-DD` format for production outputs. That addresses both 
+  requirements #2 and #3. 
+* The file extension then shows what output format was used (e.g., HTML or PDF). 
+  That addresses requirement #4. 
+
+So, `Import_Data_Draft.html` is a draft HTML output, while 
+`Import_Data_2025-01-16.html` and `Import_Data_2025-02-16.html` are production 
+HTML outputs run a month apart. 
+:::
+
+Date-stamping the production output file names makes sorting files to find the
+most current version of the results simple. We can also easily compare those to
+prior versions because we retain all production outputs as separate files.
+
+# Defaulting to Draft Output
+Saving every draft output file I generate would clutter my folders with tons of 
+interim files that would differ in only small ways. Therefore, I just overwrite 
+my draft output file each time I render a script on its own. That reduces 
+storage space consumed. Storage space may be very cheap, but still ought to be 
+used sensibly to facilitate usability and finding things.
+
+To demonstrate my approach, I created a file called `Example1.qmd` that contains 
+the following text. 
+
+::: {.callout-note icon=false}
+## Example1.qmd
+
+````
+---
+title: "Example 1: Separating Draft vs. Production Output"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+format: 
+  html:
+    output-file: "Example1_Draft.html"
+    embed-resources: true 
+  pdf:
+    output-file: "Example1_Draft.pdf"
+---
+
+This file is used to demonstrate YAML configuration I use to set the default 
+output file names for draft HTML and PDF output. The same script can also 
+generate production output by over-riding the default output file name at the 
+time of rendering. 
+
+````
+:::
+
+The `format:` key section of the YAML header controls what types of output will
+be produced. This one specifies both `html:` and `pdf:` output files will be
+written and uses a separate `output-file:` key for each one to specify the
+default output file names. Rendering `Example1.qmd` on its own from within the
+RStudio interface (clicking the *Render* button) will create both files using
+the default names. @fig-draft shows the process at a conceptual level. 
+
+```{dot}
+//| label: fig-draft
+//| fig-cap: "Render Example1.qmd to Get Draft Output"
+//| fig-width: 5
+//| fig-height: 1.5
+
+digraph GetDraft {
+rankdir="LR";
+
+node [shape = "box", style= "filled", fontname = "Arial", fillcolor = "#C3FFEC"]
+Script [label = "Example1.qmd\n(Quarto Script)"]
+HTML [label = "Example1_Draft.html\n(HTML Output)"]
+PDF [label = "Example1_Draft.pdf\n(PDF Output)"]
+
+Script -> HTML [label = "Default", fontname = "Arial", fontsize = 10]
+Script -> PDF [label = "Default", fontname = "Arial", fontsize = 10]
+}
+```
+
+Naturally, you can remove one of the output format keys from the YAML header to 
+get just one output file in whichever format you prefer. 
+
+Here are links to the draft output files: 
+
+* [`Example1_Draft.html`](https://sjpierce.github.io/examples/Example1_Draft.html) 
+* [`Example1_Draft.pdf`](https://sjpierce.github.io/examples/Example1_Draft.pdf) 
+
+# Obtaining Production Output 
+What remains then is to demonstrate how I get those date-stamped production 
+outputs. For that, I create a *production script* (e.g., `Production_Run.qmd`) 
+that can render other scripts to automatically date-stamped, customized output
+file names as shown in @fig-production.
+
+```{dot}
+//| label: fig-production
+//| fig-cap: "Render Production_Run.qmd to Get Date-Stamped, Production Output"
+//| fig-width: 5
+//| fig-height: 2.5
+
+digraph GetProduction {
+rankdir="LR";
+
+node [shape = "box", style= "filled", fontname = "Arial", fillcolor = "#C3FFEC"]
+Prod [label = "Production_Run.qmd\n(Quarto Script)"]
+Log [label = "Production_Run.html\n(HTML Output)"]
+Script [label = "Example1.qmd\n(Quarto Script)"]
+HTML [label = "Example1_2025-02-16.html\n(HTML Output)"]
+PDF [label = "Example1_2025-02-16.pdf\n(PDF Output)"]
+
+{rank = same; Prod; Script}
+{rank = same; Log; HTML; PDF}
+
+Prod -> Log [label = "Default", fontname = "Arial", fontsize = 10]
+Prod -> Script [label = "Pass\nfile\nnames", fontname = "Arial", fontsize = 10]
+Script -> HTML [label = "Customized", fontname = "Arial", fontsize = 10]
+Script -> PDF [label = "Customized", fontname = "Arial", fontsize = 10]
+}
+```
+
+Below is the basic content of the `Production_Run.qmd` script. You would need to 
+replace the double curly braces `{{r}}` with single curly braces `{r}` to get 
+this to run (the double braces disable execution of those chunks). 
+
+Here is a link to a production output file, namely  [`Example1_2025-02-16.html`](https://sjpierce.github.io/examples/Example1_2025-02-16.html) 
+
+::: {.callout-note icon=false}
+## Production_Run.qmd
+
+````
+---
+title: "Production Run Control Script"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+output-dir: examples
+format: 
+  html:
+    output-file: "Production_Run.html"
+    embed-resources: true 
+---
+
+This file is used to demonstrate using a production script to render other 
+scripts to automatically date-stamped, customized file names.
+
+``` {{r}}
+#| label: load-packages
+
+library(here)    # for here().
+library(quarto)  # for quarto_render().
+```
+
+The chunk below will render just the HTML version of the production output from 
+`Example1.qmd`. 
+
+``` {{r}}
+#| label: prod-render-Example1
+
+OutFile <- paste0("Example1_", Sys.Date(), ".html")
+
+# Render the script in a fresh R session.
+quarto_render(input = here("examples/Example1.qmd"), 
+              output_format = "html",
+              execute_dir = here::here("examples"),
+              output_file = OutFile)
+```
+
+````
+:::

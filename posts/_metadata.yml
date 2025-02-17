@@ -1,0 +1,20 @@
+# Options specified here will apply to all posts in this folder
+
+# Author name of all blog posts
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+
+# Reference list settings
+bibliography: ../references.bib
+csl: ../apa.csl
+
+# Table of content settings
+toc: true
+toc-depth: 3
+
+page-layout: article
+
+# Freeze computational output
+freeze: true

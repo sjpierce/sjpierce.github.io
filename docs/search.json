@@ -88,7 +88,7 @@
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Welcome my personal website! This is where I share materials on reproducible research, statistical consulting, and other topics I find interesting.\nSoftware for Reproducible Research with R"
+    "text": "Welcome my personal website! This is where I share materials on reproducible research, statistical consulting, and other topics I find interesting.\nSoftware for Reproducible Research with R\n\n\n\n\n\n\n\n\n   \n    \n    \n      Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        File Name\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nDraft vs. Production Output\n\n\n\nQuarto Tips\n\nReproducible Research\n\nSeparation Principle\n\n\n\nHow I use Quarto to separate draft from production output files.\n\n\n\n\n\n2025-02-16\n\n6 min\n\ndraft_vs_production.qmd\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -124,5 +124,54 @@
     "title": "Software for Reproducible Research with R",
     "section": "4.1 RTools for Windows, version 4.4 (6414-6401 or later)",
     "text": "4.1 RTools for Windows, version 4.4 (6414-6401 or later)\nInstalling RTools is important because it contains some tools for compiling software packages and one of the R packages we will use later (the devtools package) depends on having RTools available. You can download RTools from CRAN. Either follow the CRAN links labeled Download R for Windows, then RTools, then RTools 4.4, then RTools44_installer, or use the direct link to the installer file. Save that installation file to your computer, then run it."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Piercing Insight",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\nDraft vs. Production Output\n\n\n\nQuarto Tips\n\nReproducible Research\n\nSeparation Principle\n\n\n\nHow I use Quarto to separate draft from production output files.\n\n\n\n\n\nFeb 16, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/output/Example1_Draft.html",
+    "href": "posts/output/Example1_Draft.html",
+    "title": "Example 1: Separating Draft vs. Production Output",
+    "section": "",
+    "text": "This file is used to demonstrate YAML configuration I use to set the default output file names for draft HTML and PDF output. The same script can also generate production output by over-riding the default output file name at the time of rendering."
+  },
+  {
+    "objectID": "posts/output/Produce.html",
+    "href": "posts/output/Produce.html",
+    "title": "Production Control Script",
+    "section": "",
+    "text": "This file is used to demonstrate using a production script to render other scripts to auotmically date-stamped, customized file names."
+  },
+  {
+    "objectID": "examples/Example1_Draft.html",
+    "href": "examples/Example1_Draft.html",
+    "title": "Example 1: Separating Draft vs. Production Output",
+    "section": "",
+    "text": "This file is used to demonstrate YAML configuration I use to set the default output file names for draft HTML and PDF output. The same script can also generate production output by over-riding the default output file name at the time of rendering."
+  },
+  {
+    "objectID": "examples/Example1_2025-02-16.html",
+    "href": "examples/Example1_2025-02-16.html",
+    "title": "Example 1: Separating Draft vs. Production Output",
+    "section": "",
+    "text": "This file is used to demonstrate YAML configuration I use to set the default output file names for draft HTML and PDF output. The same script can also generate production output by over-riding the default output file name at the time of rendering."
+  },
+  {
+    "objectID": "examples/Production_Run.html",
+    "href": "examples/Production_Run.html",
+    "title": "Production Run Control Script",
+    "section": "",
+    "text": "This file is used to demonstrate using a production script to render other scripts to automatically date-stamped, customized file names.\n\nlibrary(here)    # for here().\n\nhere() starts at C:/Users/pierces1/OneDrive - Michigan State University/CSTATRedirects/Documents/R/sjpierce.github.io\n\nlibrary(quarto)  # for quarto_render().\n\nThe chunk below will render just the HTML version of the production output from Example1.qmd.\n\nOutFile &lt;- paste0(\"Example1_\", Sys.Date(), \".html\")\n\n# Render the script in a fresh R session.\nquarto_render(input = here(\"examples/Example1.qmd\"), \n              output_format = \"html\",\n              execute_dir = here::here(\"examples\"),\n              output_file = OutFile)\n\npandoc --output Example1_2025-02-16.html\n  to: html\n  output-file: Example1_Draft.html\n  standalone: true\n  embed-resources: true\n  title-prefix: Piercing Insight\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  css:\n    - ../styles.css\n  toc: true\n  \nmetadata\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  theme: spacelab\n  bibliography:\n    - ../references.bib\n  csl: ../apa.csl\n  title: 'Example 1: Separating Draft vs. Production Output'\n  author:\n    - name: Steven J. Pierce\n      orcid: 0000-0002-0679-3019\n      email: pierces1@msu.edu\n  \nOutput created: ..\\docs\\examples\\Example1_2025-02-16.html"
+  },
+  {
+    "objectID": "posts/output/draft_vs_production.html",
+    "href": "posts/output/draft_vs_production.html",
+    "title": "Draft vs. Production Output",
+    "section": "",
+    "text": "This post is describes a practical example of applying the separation principle for reproducible research. Specifically, it describes why and how I separate draft versus production versions of my output. The post assumes you have already installed some specific software for reproducible research.\nI develop a research compendium for each of my statistical projects. My usual approach is to create a Git repository for a custom R package, part of which is a Quarto project. There are often multiple Quarto scripts that use R code chunks to do various tasks such as importing, cleaning, managing, and analyzing data, then reporting the results.\n\nWhy Separate Draft vs. Production Output?\nDeveloping my scripts is an iterative process. I render drafts many times per day as I add or edit code, but I only need to do occasional production runs. The draft outputs are disposable intermediate artifacts. If needed, I can recover interim draft output by returning to a specific Git commit and re-running the code as it existed at that point in time.\nProduction output files are another matter entirely. I find it useful to retain a version history of all rendered production output files distributed to clients, research partners, or other stakeholders. That way when someone wants to discuss an output with me, I can quickly find, open, and review it without having to re-run code.\n\n\nMy Requirements for Output Files\nFor most projects and scripts, I find it useful to impose a small set of requirements on output file names. They must:\n\nShow which script generated the output.\nClarify draft versus production status.\nDistinguish between different production runs of the same script.\nShow what output format was used.\n\n\n\n\n\n\n\nTip\n\n\n\nMy personal convention is to assign filenames by combining three pieces: a stem, a suffix, and a file extension.\n\nThe stem is a text string that matches the name of the script that produces the output (addressing requirement #1). For example, a script called Import_Data.qmd leads to a stem of Import_Data.\nThe suffix consists of either the string _Draft for draft outputs, or a date in _YYYY-MM-DD format for production outputs. That addresses both requirements #2 and #3.\nThe file extension then shows what output format was used (e.g., HTML or PDF). That addresses requirement #4.\n\nSo, Import_Data_Draft.html is a draft HTML output, while Import_Data_2025-01-16.html and Import_Data_2025-02-16.html are production HTML outputs run a month apart.\n\n\nDate-stamping the production output file names makes sorting files to find the most current version of the results simple. We can also easily compare those to prior versions because we retain all production outputs as separate files.\n\n\nDefaulting to Draft Output\nSaving every draft output file I generate would clutter my folders with tons of interim files that would differ in only small ways. Therefore, I just overwrite my draft output file each time I render a script on its own. That reduces storage space consumed. Storage space may be very cheap, but still ought to be used sensibly to facilitate usability and finding things.\nTo demonstrate my approach, I created a file called Example1.qmd that contains the following text.\n\n\n\n\n\n\nExample1.qmd\n\n\n\n---\ntitle: \"Example 1: Separating Draft vs. Production Output\"\nauthor: \n  - name: Steven J. Pierce\n    orcid: 0000-0002-0679-3019\n    email: pierces1@msu.edu\nformat: \n  html:\n    output-file: \"Example1_Draft.html\"\n    embed-resources: true \n  pdf:\n    output-file: \"Example1_Draft.pdf\"\n---\n\nThis file is used to demonstrate YAML configuration I use to set the default \noutput file names for draft HTML and PDF output. The same script can also \ngenerate production output by over-riding the default output file name at the \ntime of rendering. \n\n\n\nThe format: key section of the YAML header controls what types of output will be produced. This one specifies both html: and pdf: output files will be written and uses a separate output-file: key for each one to specify the default output file names. Rendering Example1.qmd on its own from within the RStudio interface (clicking the Render button) will create both files using the default names. Figure 1 shows the process at a conceptual level.\n\n\n\n\n\n\n\n\nGetDraft\n\n\n\nScript\n\nExample1.qmd\n(Quarto Script)\n\n\n\nHTML\n\nExample1_Draft.html\n(HTML Output)\n\n\n\nScript-&gt;HTML\n\n\nDefault\n\n\n\nPDF\n\nExample1_Draft.pdf\n(PDF Output)\n\n\n\nScript-&gt;PDF\n\n\nDefault\n\n\n\n\n\n\nFigure 1: Render Example1.qmd to Get Draft Output\n\n\n\n\n\nNaturally, you can remove one of the output format keys from the YAML header to get just one output file in whichever format you prefer.\nHere are links to the draft output files:\n\nExample1_Draft.html\nExample1_Draft.pdf\n\n\n\nObtaining Production Output\nWhat remains then is to demonstrate how I get those date-stamped production outputs. For that, I create a production script (e.g., Production_Run.qmd) that can render other scripts to automatically date-stamped, customized output file names as shown in Figure 2.\n\n\n\n\n\n\n\n\nGetProduction\n\n\n\nProd\n\nProduction_Run.qmd\n(Quarto Script)\n\n\n\nLog\n\nProduction_Run.html\n(HTML Output)\n\n\n\nProd-&gt;Log\n\n\nDefault\n\n\n\nScript\n\nExample1.qmd\n(Quarto Script)\n\n\n\nProd-&gt;Script\n\n\nPass\nfile\nnames\n\n\n\nHTML\n\nExample1_2025-02-16.html\n(HTML Output)\n\n\n\nScript-&gt;HTML\n\n\nCustomized\n\n\n\nPDF\n\nExample1_2025-02-16.pdf\n(PDF Output)\n\n\n\nScript-&gt;PDF\n\n\nCustomized\n\n\n\n\n\n\nFigure 2: Render Production_Run.qmd to Get Date-Stamped, Production Output\n\n\n\n\n\nBelow is the basic content of the Production_Run.qmd script. You would need to replace the double curly braces {r} with single curly braces {r} to get this to run (the double braces disable execution of those chunks).\nHere is a link to a production output file, namely Example1_2025-02-16.html\n\n\n\n\n\n\nProduction_Run.qmd\n\n\n\n---\ntitle: \"Production Run Control Script\"\nauthor: \n  - name: Steven J. Pierce\n    orcid: 0000-0002-0679-3019\n    email: pierces1@msu.edu\noutput-dir: examples\nformat: \n  html:\n    output-file: \"Production_Run.html\"\n    embed-resources: true \n---\n\nThis file is used to demonstrate using a production script to render other \nscripts to automatically date-stamped, customized file names.\n\n``` {{r}}\n#| label: load-packages\n\nlibrary(here)    # for here().\nlibrary(quarto)  # for quarto_render().\n```\n\nThe chunk below will render just the HTML version of the production output from \n`Example1.qmd`. \n\n``` {{r}}\n#| label: prod-render-Example1\n\nOutFile &lt;- paste0(\"Example1_\", Sys.Date(), \".html\")\n\n# Render the script in a fresh R session.\nquarto_render(input = here(\"examples/Example1.qmd\"), \n              output_format = \"html\",\n              execute_dir = here::here(\"examples\"),\n              output_file = OutFile)\n```"
   }
 ]

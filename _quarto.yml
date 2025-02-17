@@ -15,9 +15,7 @@ website:
       - href: presentations.qmd
         text: Presentations
       - about.qmd
-    right:
-      - icon: rss
-        href: index.xml
+
 format:
   html:
     theme: spacelab

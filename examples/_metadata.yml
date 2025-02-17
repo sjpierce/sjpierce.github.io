@@ -1,0 +1,8 @@
+# Options specified here will apply to all posts in this folder
+
+# Reference list settings
+bibliography: ../references.bib
+csl: ../apa.csl
+
+# Freeze computational output
+freeze: true

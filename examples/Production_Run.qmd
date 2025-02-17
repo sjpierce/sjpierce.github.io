@@ -1,0 +1,37 @@
+---
+title: "Production Run Control Script"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+output-dir: examples
+format: 
+  html:
+    output-file: "Production_Run.html"
+    embed-resources: true 
+---
+
+This file is used to demonstrate using a production script to render other 
+scripts to automatically date-stamped, customized file names.
+
+``` {r}
+#| label: load-packages
+
+library(here)    # for here().
+library(quarto)  # for quarto_render().
+```
+
+The chunk below will render just the HTML version of the production output from 
+`Example1.qmd`. 
+
+``` {r}
+#| label: prod-render-Example1
+
+OutFile <- paste0("Example1_", Sys.Date(), ".html")
+
+# Render the script in a fresh R session.
+quarto_render(input = here("examples/Example1.qmd"), 
+              output_format = "html",
+              execute_dir = here::here("examples"),
+              output_file = OutFile)
+```

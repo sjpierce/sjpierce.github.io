@@ -1,0 +1,18 @@
+---
+title: "Example 1: Separating Draft vs. Production Output"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+format: 
+  html:
+    output-file: "Example1_Draft.html"
+    embed-resources: true 
+  pdf:
+    output-file: "Example1_Draft.pdf"
+---
+
+This file is used to demonstrate YAML configuration I use to set the default 
+output file names for draft HTML and PDF output. The same script can also 
+generate production output by over-riding the default output file name at the 
+time of rendering. 

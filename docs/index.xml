@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Piercing Insight</title>
+<link>https://sjpierce.github.io/</link>
+<atom:link href="https://sjpierce.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>Steven. J. Pierce&#39;s personal blog.</description>
+<generator>quarto-1.7.13</generator>
+<lastBuildDate>Sun, 16 Feb 2025 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Draft vs. Production Output</title>
+  <dc:creator>Steven J. Pierce</dc:creator>
+  <link>https://sjpierce.github.io/posts/output/draft_vs_production.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>This post is describes a practical example of applying the separation principle for reproducible research. Specifically, it describes why and how I separate draft versus production versions of my output. The post assumes you have already installed some specific <a href="https://sjpierce.github.io/rr_software.html">software for reproducible research</a>.</p>
+<p>I develop a research compendium for each of my statistical projects. My usual approach is to create a Git repository for a custom R package, part of which is a Quarto project. There are often multiple Quarto scripts that use R code chunks to do various tasks such as importing, cleaning, managing, and analyzing data, then reporting the results.</p>
+<section id="why-separate-draft-vs.-production-output" class="level1">
+<h1>Why Separate Draft vs.&nbsp;Production Output?</h1>
+<p>Developing my scripts is an iterative process. I render drafts many times per day as I add or edit code, but I only need to do occasional production runs. The draft outputs are disposable intermediate artifacts. If needed, I can recover interim draft output by returning to a specific Git commit and re-running the code as it existed at that point in time.</p>
+<p>Production output files are another matter entirely. I find it useful to retain a version history of all rendered production output files distributed to clients, research partners, or other stakeholders. That way when someone wants to discuss an output with me, I can quickly find, open, and review it without having to re-run code.</p>
+</section>
+<section id="my-requirements-for-output-files" class="level1">
+<h1>My Requirements for Output Files</h1>
+<p>For most projects and scripts, I find it useful to impose a small set of requirements on output file names. They must:</p>
+<ol type="1">
+<li>Show which script generated the output.</li>
+<li>Clarify draft versus production status.</li>
+<li>Distinguish between different production runs of the same script.</li>
+<li>Show what output format was used.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>My personal convention is to assign filenames by combining three pieces: a <em>stem</em>, a <em>suffix</em>, and a <em>file extension</em>.</p>
+<ul>
+<li>The stem is a text string that matches the name of the script that produces the output (addressing requirement #1). For example, a script called <code>Import_Data.qmd</code> leads to a stem of <code>Import_Data</code>.</li>
+<li>The suffix consists of either the string <code>_Draft</code> for draft outputs, or a date in <code>_YYYY-MM-DD</code> format for production outputs. That addresses both requirements #2 and #3.</li>
+<li>The file extension then shows what output format was used (e.g., HTML or PDF). That addresses requirement #4.</li>
+</ul>
+<p>So, <code>Import_Data_Draft.html</code> is a draft HTML output, while <code>Import_Data_2025-01-16.html</code> and <code>Import_Data_2025-02-16.html</code> are production HTML outputs run a month apart.</p>
+</div>
+</div>
+<p>Date-stamping the production output file names makes sorting files to find the most current version of the results simple. We can also easily compare those to prior versions because we retain all production outputs as separate files.</p>
+</section>
+<section id="defaulting-to-draft-output" class="level1">
+<h1>Defaulting to Draft Output</h1>
+<p>Saving every draft output file I generate would clutter my folders with tons of interim files that would differ in only small ways. Therefore, I just overwrite my draft output file each time I render a script on its own. That reduces storage space consumed. Storage space may be very cheap, but still ought to be used sensibly to facilitate usability and finding things.</p>
+<p>To demonstrate my approach, I created a file called <code>Example1.qmd</code> that contains the following text.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example1.qmd
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>---
+title: "Example 1: Separating Draft vs. Production Output"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+format: 
+  html:
+    output-file: "Example1_Draft.html"
+    embed-resources: true 
+  pdf:
+    output-file: "Example1_Draft.pdf"
+---
+
+This file is used to demonstrate YAML configuration I use to set the default 
+output file names for draft HTML and PDF output. The same script can also 
+generate production output by over-riding the default output file name at the 
+time of rendering. 
+</code></pre>
+</div>
+</div>
+<p>The <code>format:</code> key section of the YAML header controls what types of output will be produced. This one specifies both <code>html:</code> and <code>pdf:</code> output files will be written and uses a separate <code>output-file:</code> key for each one to specify the default output file names. Rendering <code>Example1.qmd</code> on its own from within the RStudio interface (clicking the <em>Render</em> button) will create both files using the default names. Figure&nbsp;1 shows the process at a conceptual level.</p>
+<div class="cell" data-fig-width="5" data-fig-height="1.5" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-draft" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-draft-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="480" height="144" viewbox="0.00 0.00 331.78 109.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 105.6)">
+<title>GetDraft</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-105.6 327.78,-105.6 327.78,4 -4,4"></polygon>
+<!-- Script -->
+<g id="node1" class="node">
+<title>Script</title>
+<polygon fill="#c3ffec" stroke="black" points="109.57,-71.4 -0.19,-71.4 -0.19,-30.2 109.57,-30.2 109.57,-71.4"></polygon>
+<text text-anchor="middle" x="54.69" y="-55" font-family="Arial" font-size="14.00">Example1.qmd</text>
+<text text-anchor="middle" x="54.69" y="-38.2" font-family="Arial" font-size="14.00">(Quarto Script)</text>
+</g>
+<!-- HTML -->
+<g id="node2" class="node">
+<title>HTML</title>
+<polygon fill="#c3ffec" stroke="black" points="323.64,-101.4 177.2,-101.4 177.2,-60.2 323.64,-60.2 323.64,-101.4"></polygon>
+<text text-anchor="middle" x="250.42" y="-85" font-family="Arial" font-size="14.00">Example1_Draft.html</text>
+<text text-anchor="middle" x="250.42" y="-68.2" font-family="Arial" font-size="14.00">(HTML Output)</text>
+</g>
+<!-- Script&#45;&gt;HTML -->
+<g id="edge1" class="edge">
+<title>Script-&gt;HTML</title>
+<path fill="none" stroke="black" d="M109.4,-59.12C127.23,-61.88 147.51,-65.02 167,-68.04"></path>
+<polygon fill="black" stroke="black" points="166.68,-71.53 177.1,-69.6 167.76,-64.61 166.68,-71.53"></polygon>
+<text text-anchor="middle" x="143.22" y="-68.8" font-family="Arial" font-size="10.00">Default</text>
+</g>
+<!-- PDF -->
+<g id="node3" class="node">
+<title>PDF</title>
+<polygon fill="#c3ffec" stroke="black" points="320.15,-41.4 180.69,-41.4 180.69,-0.2 320.15,-0.2 320.15,-41.4"></polygon>
+<text text-anchor="middle" x="250.42" y="-25" font-family="Arial" font-size="14.00">Example1_Draft.pdf</text>
+<text text-anchor="middle" x="250.42" y="-8.2" font-family="Arial" font-size="14.00">(PDF Output)</text>
+</g>
+<!-- Script&#45;&gt;PDF -->
+<g id="edge2" class="edge">
+<title>Script-&gt;PDF</title>
+<path fill="none" stroke="black" d="M109.4,-42.48C128.36,-39.55 150.09,-36.18 170.68,-32.99"></path>
+<polygon fill="black" stroke="black" points="171.34,-36.43 180.68,-31.44 170.27,-29.52 171.34,-36.43"></polygon>
+<text text-anchor="middle" x="143.22" y="-42.8" font-family="Arial" font-size="10.00">Default</text>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-draft-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Render Example1.qmd to Get Draft Output
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Naturally, you can remove one of the output format keys from the YAML header to get just one output file in whichever format you prefer.</p>
+<p>Here are links to the draft output files:</p>
+<ul>
+<li><a href="https://sjpierce.github.io/examples/Example1_Draft.html"><code>Example1_Draft.html</code></a></li>
+<li><a href="https://sjpierce.github.io/examples/Example1_Draft.pdf"><code>Example1_Draft.pdf</code></a></li>
+</ul>
+</section>
+<section id="obtaining-production-output" class="level1">
+<h1>Obtaining Production Output</h1>
+<p>What remains then is to demonstrate how I get those date-stamped production outputs. For that, I create a <em>production script</em> (e.g., <code>Production_Run.qmd</code>) that can render other scripts to automatically date-stamped, customized output file names as shown in Figure&nbsp;2.</p>
+<div class="cell" data-fig-width="5" data-fig-height="2.5" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-production" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-production-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg width="480" height="240" viewbox="0.00 0.00 432.31 186.60" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" style="; max-width: none; max-height: none">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 182.6)">
+<title>GetProduction</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-182.6 428.31,-182.6 428.31,4 -4,4"></polygon>
+<!-- Prod -->
+<g id="node1" class="node">
+<title>Prod</title>
+<polygon fill="#c3ffec" stroke="black" points="147.29,-178.4 0.24,-178.4 0.24,-137.2 147.29,-137.2 147.29,-178.4"></polygon>
+<text text-anchor="middle" x="73.76" y="-162" font-family="Arial" font-size="14.00">Production_Run.qmd</text>
+<text text-anchor="middle" x="73.76" y="-145.2" font-family="Arial" font-size="14.00">(Quarto Script)</text>
+</g>
+<!-- Log -->
+<g id="node2" class="node">
+<title>Log</title>
+<polygon fill="#c3ffec" stroke="black" points="403.55,-178.4 257.08,-178.4 257.08,-137.2 403.55,-137.2 403.55,-178.4"></polygon>
+<text text-anchor="middle" x="330.32" y="-162" font-family="Arial" font-size="14.00">Production_Run.html</text>
+<text text-anchor="middle" x="330.32" y="-145.2" font-family="Arial" font-size="14.00">(HTML Output)</text>
+</g>
+<!-- Prod&#45;&gt;Log -->
+<g id="edge1" class="edge">
+<title>Prod-&gt;Log</title>
+<path fill="none" stroke="black" d="M147.37,-157.8C178.4,-157.8 214.78,-157.8 246.82,-157.8"></path>
+<polygon fill="black" stroke="black" points="247.06,-161.3 257.06,-157.8 247.06,-154.3 247.06,-161.3"></polygon>
+<text text-anchor="middle" x="191.92" y="-160.8" font-family="Arial" font-size="10.00">Default</text>
+</g>
+<!-- Script -->
+<g id="node3" class="node">
+<title>Script</title>
+<polygon fill="#c3ffec" stroke="black" points="128.64,-83.4 18.88,-83.4 18.88,-42.2 128.64,-42.2 128.64,-83.4"></polygon>
+<text text-anchor="middle" x="73.76" y="-67" font-family="Arial" font-size="14.00">Example1.qmd</text>
+<text text-anchor="middle" x="73.76" y="-50.2" font-family="Arial" font-size="14.00">(Quarto Script)</text>
+</g>
+<!-- Prod&#45;&gt;Script -->
+<g id="edge2" class="edge">
+<title>Prod-&gt;Script</title>
+<path fill="none" stroke="black" d="M73.76,-136.9C73.76,-124.23 73.76,-107.84 73.76,-93.69"></path>
+<polygon fill="black" stroke="black" points="77.26,-93.41 73.76,-83.41 70.26,-93.41 77.26,-93.41"></polygon>
+<text text-anchor="middle" x="52.76" y="-119.3" font-family="Arial" font-size="10.00">Pass</text>
+<text text-anchor="middle" x="52.76" y="-107.3" font-family="Arial" font-size="10.00">file</text>
+<text text-anchor="middle" x="52.76" y="-95.3" font-family="Arial" font-size="10.00">names</text>
+</g>
+<!-- HTML -->
+<g id="node4" class="node">
+<title>HTML</title>
+<polygon fill="#c3ffec" stroke="black" points="424.31,-101.4 236.33,-101.4 236.33,-60.2 424.31,-60.2 424.31,-101.4"></polygon>
+<text text-anchor="middle" x="330.32" y="-85" font-family="Arial" font-size="14.00">Example1_2025-02-16.html</text>
+<text text-anchor="middle" x="330.32" y="-68.2" font-family="Arial" font-size="14.00">(HTML Output)</text>
+</g>
+<!-- Script&#45;&gt;HTML -->
+<g id="edge3" class="edge">
+<title>Script-&gt;HTML</title>
+<path fill="none" stroke="black" d="M128.75,-66.62C157.05,-68.62 192.69,-71.14 226.05,-73.5"></path>
+<polygon fill="black" stroke="black" points="226.09,-77.01 236.31,-74.22 226.59,-70.03 226.09,-77.01"></polygon>
+<text text-anchor="middle" x="191.92" y="-75.8" font-family="Arial" font-size="10.00">Customized</text>
+</g>
+<!-- PDF -->
+<g id="node5" class="node">
+<title>PDF</title>
+<polygon fill="#c3ffec" stroke="black" points="420.82,-41.4 239.81,-41.4 239.81,-0.2 420.82,-0.2 420.82,-41.4"></polygon>
+<text text-anchor="middle" x="330.32" y="-25" font-family="Arial" font-size="14.00">Example1_2025-02-16.pdf</text>
+<text text-anchor="middle" x="330.32" y="-8.2" font-family="Arial" font-size="14.00">(PDF Output)</text>
+</g>
+<!-- Script&#45;&gt;PDF -->
+<g id="edge4" class="edge">
+<title>Script-&gt;PDF</title>
+<path fill="none" stroke="black" d="M128.75,-53.89C158.04,-49.06 195.18,-42.93 229.52,-37.27"></path>
+<polygon fill="black" stroke="black" points="230.3,-40.68 239.6,-35.6 229.16,-33.78 230.3,-40.68"></polygon>
+<text text-anchor="middle" x="191.92" y="-49.8" font-family="Arial" font-size="10.00">Customized</text>
+</g>
+</g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-production-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Render Production_Run.qmd to Get Date-Stamped, Production Output
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Below is the basic content of the <code>Production_Run.qmd</code> script. You would need to replace the double curly braces <code>{r}</code> with single curly braces <code>{r}</code> to get this to run (the double braces disable execution of those chunks).</p>
+<p>Here is a link to a production output file, namely <a href="https://sjpierce.github.io/examples/Example1_2025-02-16.html"><code>Example1_2025-02-16.html</code></a></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Production_Run.qmd
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>---
+title: "Production Run Control Script"
+author: 
+  - name: Steven J. Pierce
+    orcid: 0000-0002-0679-3019
+    email: pierces1@msu.edu
+output-dir: examples
+format: 
+  html:
+    output-file: "Production_Run.html"
+    embed-resources: true 
+---
+
+This file is used to demonstrate using a production script to render other 
+scripts to automatically date-stamped, customized file names.
+
+``` {{r}}
+#| label: load-packages
+
+library(here)    # for here().
+library(quarto)  # for quarto_render().
+```
+
+The chunk below will render just the HTML version of the production output from 
+`Example1.qmd`. 
+
+``` {{r}}
+#| label: prod-render-Example1
+
+OutFile &lt;- paste0("Example1_", Sys.Date(), ".html")
+
+# Render the script in a fresh R session.
+quarto_render(input = here("examples/Example1.qmd"), 
+              output_format = "html",
+              execute_dir = here::here("examples"),
+              output_file = OutFile)
+```
+</code></pre>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>Quarto Tips</category>
+  <category>Reproducible Research</category>
+  <category>Separation Principle</category>
+  <guid>https://sjpierce.github.io/posts/output/draft_vs_production.html</guid>
+  <pubDate>Sun, 16 Feb 2025 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+{
+  "hash": "7320b232d1bcba915aecde6ccb5908ec",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Production Run Control Script\"\nauthor: \n  - name: Steven J. Pierce\n    orcid: 0000-0002-0679-3019\n    email: pierces1@msu.edu\noutput-dir: examples\nformat: \n  html:\n    output-file: \"Production_Run.html\"\n    embed-resources: true \n---\n\nThis file is used to demonstrate using a production script to render other \nscripts to automatically date-stamped, customized file names.\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(here)    # for here().\n```\n\n::: {.cell-output .cell-output-stderr}\n\n```\nhere() starts at C:/Users/pierces1/OneDrive - Michigan State University/CSTATRedirects/Documents/R/sjpierce.github.io\n```\n\n\n:::\n\n```{.r .cell-code}\nlibrary(quarto)  # for quarto_render().\n```\n:::\n\nThe chunk below will render just the HTML version of the production output from \n`Example1.qmd`. \n\n::: {.cell}\n\n```{.r .cell-code}\nOutFile <- paste0(\"Example1_\", Sys.Date(), \".html\")\n\n# Render the script in a fresh R session.\nquarto_render(input = here(\"examples/Example1.qmd\"), \n              output_format = \"html\",\n              execute_dir = here::here(\"examples\"),\n              output_file = OutFile)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\npandoc --output Example1_2025-02-16.html\n  to: html\n  output-file: Example1_Draft.html\n  standalone: true\n  embed-resources: true\n  title-prefix: Piercing Insight\n  section-divs: true\n  html-math-method: mathjax\n  wrap: none\n  default-image-extension: png\n  css:\n    - ../styles.css\n  toc: true\n  \nmetadata\n  document-css: false\n  link-citations: true\n  date-format: long\n  lang: en\n  theme: spacelab\n  bibliography:\n    - ../references.bib\n  csl: ../apa.csl\n  title: 'Example 1: Separating Draft vs. Production Output'\n  author:\n    - name: Steven J. Pierce\n      orcid: 0000-0002-0679-3019\n      email: pierces1@msu.edu\n  \nOutput created: ..\\docs\\examples\\Example1_2025-02-16.html\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

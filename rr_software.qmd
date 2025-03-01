@@ -271,6 +271,18 @@ convenient because of how well it integrates with the other tools we’re using.
 [Yihui Xie](https://yihui.org/), the author of tinytex and TinyTex, is a 
 contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. 
 
+If it has been a while since you installed TinyTex, you can easily update to the 
+latest version by the following command. This should include any previously 
+installed LaTeX packages you had accumulated along the way. My experience is 
+that the first time you render a PDF file after a reinstall takes longer than 
+normal, but rendering speed returns to normal after that. 
+
+```{r}
+#| label: reinstall-TinyTex
+ 
+tinytex::reinstall_tinytex()
+```
+
 # Pandoc 
 [Pandoc](https://pandoc.org/) is software that allows you to convert documents
 between multiple formats. A copy of Pandoc comes bundled with RStudio and

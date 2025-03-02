@@ -3968,7 +3968,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2025-03-01 09:28:28 EST</p>
+      <p class="date-modified">2025-03-02 13:49:03 EST</p>
     </div>
   </div>
     
@@ -3984,7 +3984,7 @@ vertical-align: -.125em;
 <p>Marwick, Boettiger, &amp; Mullen <span class="citation" data-cites="Marwick-RN3899">(<a href="#ref-Marwick-RN3899" role="doc-biblioref">2018</a>)</span> discuss creating research compendiums that bundle collections of documents along with data files into custom R packages to make a research project more reproducible. These software packages become additional scholarly products that make manuscripts more reproducible.</p>
 <section id="purpose" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Purpose</h1>
-<p>This document describes the software packages I personally use and recommend to enable reproducible research via R packages that serve as research compendiums. It covers which packages one will need, why they are needed, and how to install them. I share these notes when helping other people set up the software environment that I rely on for my daily research and statistical work.</p>
+<p>This document describes the software packages I personally use and recommend to enable reproducible research via R packages that serve as research compendiums. It covers which packages one will need, why they are needed, and how to install them. I share these notes when helping other people set up the software environment that I rely on for my daily research and statistical work. If you want to see how I use these software tools, check out my upcoming presentation on reproducible research <span class="citation" data-cites="Pierce-RN8692">(<a href="#ref-Pierce-RN8692" role="doc-biblioref">Pierce, 2025, March 6</a>)</span>.</p>
 </section>
 <section id="assumptions" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Assumptions</h1>
@@ -4144,6 +4144,9 @@ Mair, P. (2016). Thou shalt be reproducible! A technology perspective. <em>Front
 </div>
 <div id="ref-Marwick-RN3899" class="csl-entry" role="listitem">
 Marwick, B., Boettiger, C., &amp; Mullen, L. (2018). Packaging data analytical work reproducibly using <span>R</span> (and friends). <em>The American Statistician</em>, <em>72</em>(1), 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>
+</div>
+<div id="ref-Pierce-RN8692" class="csl-entry" role="listitem">
+Pierce, S. J. (2025, March 6). <em>Reproducible research: Principles, practices, and tools for generating reproducible statistical analyses and reports</em> [Online seminar]. <span>Center for Statistical Training and Consulting</span> webinar series on <span>Responsible and Ethical Conduct of Research</span>. <a href="https://github.com/sjpierce/CSTAT.RR2025">https://github.com/sjpierce/CSTAT.RR2025</a>
 </div>
 <div id="ref-Pierce-RN8380" class="csl-entry" role="listitem">
 Pierce, S. J. (2024). <em><span class="nocase">rcrpkg.template</span>: Research compendium <span>R</span> package template</em> (Version 0.6.0) [Computer Program, R package, Public Repository]. GitHub. <a href="https://github.com/sjpierce/rcrpkg.template">https://github.com/sjpierce/rcrpkg.template</a>
@@ -4672,8 +4675,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>Statisticians can demonstrate leadership in research projects by advocating for</span>
 <span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>and engaging in reproducible research <span class="co">[</span><span class="ot">@Hochheimer-RN8567</span><span class="co">]</span>. Reproducible</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>research can be facilitated by using a set of software packages that</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>combine into a powerful, integrated set of tools. The statistical software</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>research can be facilitated by using a set of software packages that combine </span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>into a powerful, integrated set of tools. The statistical software </span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R</span><span class="co">](https://www.r-project.org)</span>, paired with </span>
 <span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio Desktop</span><span class="co">](https://posit.co/products/open-source/rstudio/)</span> </span>
 <span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@RStudio-Team-RN8351</span><span class="co">]</span>, is the foundation for a set of tools that can generate</span>
@@ -4704,267 +4707,269 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>enable reproducible research via R packages that serve as research compendiums. </span>
 <span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>It covers which packages one will need, why they are needed, and how to install </span>
 <span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>them. I share these notes when helping other people set up the software </span>
-<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>environment that I rely on for my daily research and statistical work. </span>
-<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a><span class="fu"># Assumptions</span></span>
-<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>You will be using either MS Windows 10 or 11 or MacOS. The notes below about </span>
-<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>   MacOS are a result of helping a few collaborators who rely on MacOS; they may </span>
-<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>   be less detailed (and less up-to-date) because I don&#39;t personally use MacOS.  </span>
-<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>You have administrative access to that computer to install and configure </span>
-<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>   software.</span>
-<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>You aim to use custom R packages as research compendiums containing Quarto </span>
-<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>   scripts for creating dynamic documents that compile into formatted PDF or </span>
-<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>   HTML files (or other output formats). </span>
-<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>You want to use version control software to track how the code and documents </span>
-<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>   change over time. </span>
-<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a><span class="fu"># R, version 4.4.2 (or later)</span></span>
-<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R</span><span class="co">](https://www.r-project.org)</span> <span class="co">[</span><span class="ot">@R-Devel-Core-RN8182</span><span class="co">]</span> is a free, open-source</span>
-<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a>software environment for statistical computing and graphics. This is the</span>
-<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a>foundational software for my approach to reproducible research. It will handle </span>
-<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>most of your data management and analysis tasks. You can download R from the</span>
-<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Comprehensive R Archive Network (CRAN)</span><span class="co">](https://cran.r-project.org/)</span>.</span>
-<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="fu">## R for Windows</span></span>
-<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a>If you are using Windows, follow the links labeled *Download R for Windows*, </span>
-<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a>then *base*, then *Download R-4.4.2 for Windows* or use the </span>
-<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe)</span>. </span>
-<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer, then run it. </span>
-<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a><span class="fu">## R for MacOS</span></span>
-<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a>If you are using MacOS, follow the link labeled *Download R for macOS*, then </span>
-<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a>download the latest release specific to your version of MacOS and whether you </span>
-<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>have an Intel processor or ARM processor! Those come with different requirements </span>
-<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>for which version of XCode and other tools have to be installed to compile R </span>
-<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>packages.</span>
-<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a><span class="fu">## R Installation Tips</span></span>
-<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a>I recommend selecting the following options when instlling R.</span>
-<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>64-bit User installation </span>
-<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Customized startup</span>
-<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>SDI (separate windows)</span>
-<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>HTML help</span>
-<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Save version number in registry</span>
-<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Associate R with .RData files</span>
-<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a>If you previously were using an older version of R (any version in the 4.3.x</span>
-<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a>series), you should plan to reinstall all your R packages from scratch under R</span>
-<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>4.4.1 or later. The best way to do that is to use a script such as</span>
-<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Reinstall_Packages.R</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Reinstall_Packages.R)</span></span>
-<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>under the older version to save a data file containing the names of installed</span>
-<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a>packages, then remove the older version of R and replace it with the newest</span>
-<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>version of R, and use the remainder of that script to read in that list of</span>
-<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>packages and install them. That will take several minutes if you have a lot of</span>
-<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>packages.</span>
-<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a><span class="fu"># Development Tools</span></span>
-<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a>Developing your own custom R packages requires more software than just using </span>
-<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a>R and relying solely on R packages created by others. The development tools you </span>
-<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>need to install depend on your operating system. Use the subsection below </span>
-<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>relevant to your OS. </span>
-<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a><span class="fu">## RTools for Windows, version 4.4 (6459-6401 or later)</span></span>
-<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a>Installing <span class="co">[</span><span class="ot">RTools</span><span class="co">](https://cran.r-project.org/bin/windows/Rtools/)</span> is </span>
-<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a>important because it contains some tools for compiling software packages and one </span>
-<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>of the R packages we will use later (the devtools package) depends on having </span>
-<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>RTools available. You can download RTools from </span>
-<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">CRAN</span><span class="co">](https://cran.r-project.org/)</span>. Either follow the CRAN links labeled </span>
-<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>*Download R for Windows*, then *RTools*, then *RTools 4.4*, then </span>
-<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a>*RTools44_installer*, or use the </span>
-<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the installer file</span><span class="co">](https://cran.r-project.org/bin/windows/Rtools/rtools44/files/rtools44-6459-6401.exe)</span>. </span>
-<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer, then run it. </span>
-<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## MacOS: Xcode, GNU Fortran, and Mandatory Libraries</span></span>
-<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a>If you are using MacOS instead of Windows, then you need a few </span>
-<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">MacOS-specific development tools</span><span class="co">](https://cran.r-project.org/bin/macosx/tools/)</span> </span>
-<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>that fulfill the compiler functions that RTools serves on Windows. The details </span>
-<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a>are available at </span>
-<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://mac.r-project.org/tools/</span><span class="co">](https://mac.r-project.org/tools/)</span>. </span>
-<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory </span>
-<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a>libraries. </span>
-<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a><span class="fu"># RStudio Desktop, version 2024.12.1+563 (or later)</span></span>
-<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio Desktop</span><span class="co">](https://posit.co/products/open-source/rstudio/)</span> </span>
-<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@RStudio-Team-RN8351</span><span class="co">]</span> is an integrated development environment (IDE) that </span>
-<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a>provides many convenient features for working with R. It provides a better user</span>
-<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a>interface for R than the raw R software. It contains a very good programming</span>
-<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>editor, plus a nice way to browse the list of objects R has in memory. You can</span>
-<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>download the desktop version from </span>
-<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://posit.co/download/rstudio-desktop/</span><span class="co">](https://posit.co/download/rstudio-desktop/)</span>.</span>
-<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a><span class="fu">## RStudio for Windows</span></span>
-<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a>You can use this </span>
-<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://download1.rstudio.org/electron/windows/RStudio-2024.12.1-563.exe)</span>. </span>
-<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer’s <span class="in">`Downloads`</span> folder, then run it.</span>
-<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a><span class="fu">## RStudio for MacOS</span></span>
-<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a>You can use this <span class="co">[</span><span class="ot">direct link for the MacOS installer</span><span class="co">](https://download1.rstudio.org/electron/macos/RStudio-2024.12.1-563.dmg)</span>.  </span>
-<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quarto, version 1.7.13 (or later) </span></span>
-<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> <span class="co">[</span><span class="ot">@Allaire-RN8427</span><span class="co">]</span> is an open-source scientific and</span>
-<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a>technical publishing system that makes it easy to create reproducible, dynamic</span>
-<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a>documents that interweave narrative text, code, and the result of running code</span>
-<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>(including tables, figures, and other statistical output). Quarto is the</span>
-<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>evolution of, and successor to, <span class="co">[</span><span class="ot">R Markdown</span><span class="co">](https://rmarkdown.rstudio.com/)</span>. An</span>
-<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>older version of Quarto may come bundled into RStudio, but we will usually want</span>
-<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>the most recent stable release, so install it separately. You can download the</span>
-<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>latest stable version from </span>
-<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://quarto.org/docs/get-started/</span><span class="co">](https://quarto.org/docs/get-started/)</span>. </span>
-<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto for Windows</span></span>
-<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a>You can use this </span>
-<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.13/quarto-1.7.13-win.msi)</span>. </span>
-<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer’s <span class="in">`Downloads`</span> folder, then run it.</span>
-<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto for MacOS</span></span>
-<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a>You can use this </span>
-<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the MacOS installer</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.13/quarto-1.7.13-macos.pkg)</span>. </span>
-<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a><span class="fu"># Git, version 2.48.1.1 (or later)</span></span>
-<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Git</span><span class="co">](https://git-scm.com/)</span> <span class="co">[</span><span class="ot">@Torvalds-RN3929</span><span class="co">]</span> is version control software</span>
-<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a>developed by programmers to help them manage the source code they write. It is a</span>
-<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a>very sophisticated tool for tracking the history of what changed in a text file</span>
-<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>from one version to the next, who made the changes, when they were made, and</span>
-<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>why. It allows you to easily revert to any tracked version of a file. After you</span>
-<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>install Git, it is helpful to explore the site </span>
-<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://happygitwithr.com/</span><span class="co">](https://happygitwithr.com/)</span> <span class="co">[</span><span class="ot">@Bryan-RN3908</span><span class="co">]</span>.</span>
-<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a><span class="fu">## Git for Windows</span></span>
-<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a>You can download it from either <span class="co">[</span><span class="ot">https://git-scm.com</span><span class="co">](https://git-scm.com/)</span> or </span>
-<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://gitforwindows.org</span><span class="co">](https://gitforwindows.org)</span>. You can use this </span>
-<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link for the Windows installer</span><span class="co">](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)</span>. </span>
-<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a>Save that installation file to your compute, then run it. </span>
-<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a><span class="fu">## Git for MacOS</span></span>
-<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a>Download instructions are available at  </span>
-<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://git-scm.com/download/mac</span><span class="co">](https://git-scm.com/download/mac)</span>.</span>
-<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a><span class="fu"># Installing R Packages </span></span>
-<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a>User-contributed R packages add extra features to R. They are a large part of</span>
-<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a>what makes R so useful. Below is a set of specific R packages that we plan to</span>
-<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>use and can be downloaded from <span class="co">[</span><span class="ot">CRAN</span><span class="co">](https://cran.r-project.org/)</span> via the</span>
-<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>following command within R’s console.</span>
-<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-214"><a href="#cb4-214" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-215"><a href="#cb4-215" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-r-pkgs</span></span>
-<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
-<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;tinytex&quot;</span>))</span>
-<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
-<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a>Each of these may also automatically install additional packages on which they</span>
-<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a>depend. We may recommend installing additional packages later.</span>
-<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">devtools package</span><span class="co">](https://devtools.r-lib.org/)</span> provides developer tools </span>
-<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>and functions that simplify creating and quality-checking custom R packages. </span>
-<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">here package</span><span class="co">](https://here.r-lib.org/)</span> facilitates using relative filenames </span>
-<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a>when one is using </span>
-<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio projects</span><span class="co">](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)</span> </span>
-<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a>to organize files. </span>
-<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">rmarkdown</span><span class="co">](https://pkgs.rstudio.com/rmarkdown/)</span> and </span>
-<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">knitr</span><span class="co">](https://yihui.org/knitr/)</span> packages work together to translate </span>
-<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R Markdown</span><span class="co">](https://rmarkdown.rstudio.com/)</span> and/or Quarto scripts into </span>
-<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a>Pandoc markdown files. </span>
-<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quarto</span><span class="co">](https://cran.r-project.org/package=quarto)</span> package provides support </span>
-<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a>for interfacing with Quarto. Meanwhile, the </span>
-<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">kableExtra</span><span class="co">](http://haozhu233.github.io/kableExtra/)</span> package extends knitr’s </span>
-<span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a>tools for making nice, formatted tables in via R Markdown or Quarto. Then, the </span>
-<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">tinytex</span><span class="co">](https://cran.r-project.org/web/packages/tinytex/index.html)</span> package</span>
-<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a>provides an easy way to install and start using TinyTex to convert R Markdown or </span>
-<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a>Quarto documents to fully formatted PDF files. </span>
-<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a>In the paragraph above, note the capitalization of the software names: <span class="in">`quarto`</span> </span>
-<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>is an R package that helps you interface with the stand-alone Quarto software. </span>
-<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a>Similarly, <span class="in">`tinytex`</span> is an R package that helps you install and use TinyTeX (a </span>
-<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a>LaTeX distribution created by the same author).  </span>
-<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">tidyverse</span><span class="co">](https://www.tidyverse.org/)</span> is a collection of related R </span>
-<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a>packages that provide an unified set of functions that make working with R much </span>
-<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a>easier. They support creating piped operations that chain together easily. </span>
-<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a><span class="fu"># TinyTex </span></span>
-<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TinyTex</span><span class="co">](https://yihui.org/tinytex/)</span> is a specific distribution of </span>
-<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span>, which is document preparation software</span>
-<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a>that allows high-quality typesetting. It takes plain text LaTeX files (<span class="in">`*.tex`</span></span>
-<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a>files) that describe the structure of a document and compiles them into</span>
-<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a>fully-formatted PDF files with nice fonts and layout. We can actually use the</span>
-<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a>tinytex R package to install TinyTeX via the following command inside R.</span>
-<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-TinyTex</span></span>
-<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span>
-<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a>You can use </span>
-<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">alternative LaTeX distributions</span><span class="co">](https://www.tug.org/interest.html#free)</span> and </span>
-<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a>tools (e.g., <span class="co">[</span><span class="ot">MiKTeX</span><span class="co">](https://miktex.org)</span>) instead, but TinyTeX is very </span>
-<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a>convenient because of how well it integrates with the other tools we’re using. </span>
-<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Yihui Xie</span><span class="co">](https://yihui.org/)</span>, the author of tinytex and TinyTex, is a </span>
-<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a>contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. </span>
-<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a>If it has been a while since you installed TinyTex, you can easily update to the </span>
-<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a>latest version by the following command. This should include any previously </span>
-<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a>installed LaTeX packages you had accumulated along the way. My experience is </span>
-<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a>that the first time you render a PDF file after a reinstall takes longer than </span>
-<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a>normal, but rendering speed returns to normal after that. </span>
-<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reinstall-TinyTex</span></span>
-<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">reinstall_tinytex</span>()</span>
-<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pandoc </span></span>
-<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Pandoc</span><span class="co">](https://pandoc.org/)</span> is software that allows you to convert documents</span>
-<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a>between multiple formats. A copy of Pandoc comes bundled with RStudio and</span>
-<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a>another copy comes bundled with Quarto, so you do not need to download and</span>
-<span id="cb4-296"><a href="#cb4-296" aria-hidden="true" tabindex="-1"></a>install it separately. If you want PDF output, Pandoc is what converts documents </span>
-<span id="cb4-297"><a href="#cb4-297" aria-hidden="true" tabindex="-1"></a>into the LaTeX files that can be processed by TinyTeX. Quarto is built on top of </span>
-<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a>Pandoc because it facilitates producing many different kinds of output files.</span>
-<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a><span class="fu"># rcrpkg.template </span></span>
-<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">rcrpkg.template</span><span class="co">](https://github.com/sjpierce/rcrpkg.template)</span> <span class="co">[</span><span class="ot">@Pierce-RN8380</span><span class="co">]</span> </span>
-<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a>is a Git repository I created to serve as a starter template for new, </span>
-<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a>project-specific Git repositories. It streamlines creating a new custom R </span>
-<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a>package that serves as a research compendium <span class="co">[</span><span class="ot">@Marwick-RN3899</span><span class="co">]</span> for a project. </span>
-<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a>Inside the <span class="co">[</span><span class="ot">`scripts`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/tree/main/scripts)</span> </span>
-<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a>subfolder, the </span>
-<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_HTML.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_HTML.qmd)</span> </span>
-<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to HTML output and the </span>
-<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_PDF.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_PDF.qmd)</span> </span>
-<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to PDF output. The latter file also uses the </span>
-<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/title.tex)</span> </span>
-<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a>and </span>
-<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`compact-title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/compact-title.tex)</span> </span>
-<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a>files stored in the same folder to control the formatting of space around the</span>
-<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a>title and showing author affiliation info. References to those can be removed</span>
-<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a>from the YAML header to simplify the script and reduce dependency on additional</span>
-<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a>files. The </span>
-<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Setup_as_Package.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Setup_as_Package.qmd)</span> </span>
-<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a>Quarto script guides one through some key steps in setting up a custom R </span>
-<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a>package.</span>
-<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a>The basic approach to using this template is:</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>environment that I rely on for my daily research and statistical work. If you </span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>want to see how I use these software tools, check out my upcoming </span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>presentation on reproducible research <span class="co">[</span><span class="ot">@Pierce-RN8692</span><span class="co">]</span>. </span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a><span class="fu"># Assumptions</span></span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>You will be using either MS Windows 10 or 11 or MacOS. The notes below about </span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>   MacOS are a result of helping a few collaborators who rely on MacOS; they may </span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>   be less detailed (and less up-to-date) because I don&#39;t personally use MacOS.  </span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>You have administrative access to that computer to install and configure </span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>   software.</span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>You aim to use custom R packages as research compendiums containing Quarto </span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>   scripts for creating dynamic documents that compile into formatted PDF or </span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>   HTML files (or other output formats). </span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>You want to use version control software to track how the code and documents </span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>   change over time. </span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="fu"># R, version 4.4.2 (or later)</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R</span><span class="co">](https://www.r-project.org)</span> <span class="co">[</span><span class="ot">@R-Devel-Core-RN8182</span><span class="co">]</span> is a free, open-source</span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a>software environment for statistical computing and graphics. This is the</span>
+<span id="cb4-89"><a href="#cb4-89" aria-hidden="true" tabindex="-1"></a>foundational software for my approach to reproducible research. It will handle </span>
+<span id="cb4-90"><a href="#cb4-90" aria-hidden="true" tabindex="-1"></a>most of your data management and analysis tasks. You can download R from the</span>
+<span id="cb4-91"><a href="#cb4-91" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Comprehensive R Archive Network (CRAN)</span><span class="co">](https://cran.r-project.org/)</span>.</span>
+<span id="cb4-92"><a href="#cb4-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-93"><a href="#cb4-93" aria-hidden="true" tabindex="-1"></a><span class="fu">## R for Windows</span></span>
+<span id="cb4-94"><a href="#cb4-94" aria-hidden="true" tabindex="-1"></a>If you are using Windows, follow the links labeled *Download R for Windows*, </span>
+<span id="cb4-95"><a href="#cb4-95" aria-hidden="true" tabindex="-1"></a>then *base*, then *Download R-4.4.2 for Windows* or use the </span>
+<span id="cb4-96"><a href="#cb4-96" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe)</span>. </span>
+<span id="cb4-97"><a href="#cb4-97" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer, then run it. </span>
+<span id="cb4-98"><a href="#cb4-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-99"><a href="#cb4-99" aria-hidden="true" tabindex="-1"></a><span class="fu">## R for MacOS</span></span>
+<span id="cb4-100"><a href="#cb4-100" aria-hidden="true" tabindex="-1"></a>If you are using MacOS, follow the link labeled *Download R for macOS*, then </span>
+<span id="cb4-101"><a href="#cb4-101" aria-hidden="true" tabindex="-1"></a>download the latest release specific to your version of MacOS and whether you </span>
+<span id="cb4-102"><a href="#cb4-102" aria-hidden="true" tabindex="-1"></a>have an Intel processor or ARM processor! Those come with different requirements </span>
+<span id="cb4-103"><a href="#cb4-103" aria-hidden="true" tabindex="-1"></a>for which version of XCode and other tools have to be installed to compile R </span>
+<span id="cb4-104"><a href="#cb4-104" aria-hidden="true" tabindex="-1"></a>packages.</span>
+<span id="cb4-105"><a href="#cb4-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-106"><a href="#cb4-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## R Installation Tips</span></span>
+<span id="cb4-107"><a href="#cb4-107" aria-hidden="true" tabindex="-1"></a>I recommend selecting the following options when instlling R.</span>
+<span id="cb4-108"><a href="#cb4-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-109"><a href="#cb4-109" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>64-bit User installation </span>
+<span id="cb4-110"><a href="#cb4-110" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Customized startup</span>
+<span id="cb4-111"><a href="#cb4-111" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>SDI (separate windows)</span>
+<span id="cb4-112"><a href="#cb4-112" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>HTML help</span>
+<span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Save version number in registry</span>
+<span id="cb4-114"><a href="#cb4-114" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>Associate R with .RData files</span>
+<span id="cb4-115"><a href="#cb4-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-116"><a href="#cb4-116" aria-hidden="true" tabindex="-1"></a>If you previously were using an older version of R (any version in the 4.3.x</span>
+<span id="cb4-117"><a href="#cb4-117" aria-hidden="true" tabindex="-1"></a>series), you should plan to reinstall all your R packages from scratch under R</span>
+<span id="cb4-118"><a href="#cb4-118" aria-hidden="true" tabindex="-1"></a>4.4.1 or later. The best way to do that is to use a script such as</span>
+<span id="cb4-119"><a href="#cb4-119" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Reinstall_Packages.R</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Reinstall_Packages.R)</span></span>
+<span id="cb4-120"><a href="#cb4-120" aria-hidden="true" tabindex="-1"></a>under the older version to save a data file containing the names of installed</span>
+<span id="cb4-121"><a href="#cb4-121" aria-hidden="true" tabindex="-1"></a>packages, then remove the older version of R and replace it with the newest</span>
+<span id="cb4-122"><a href="#cb4-122" aria-hidden="true" tabindex="-1"></a>version of R, and use the remainder of that script to read in that list of</span>
+<span id="cb4-123"><a href="#cb4-123" aria-hidden="true" tabindex="-1"></a>packages and install them. That will take several minutes if you have a lot of</span>
+<span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>packages.</span>
+<span id="cb4-125"><a href="#cb4-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-126"><a href="#cb4-126" aria-hidden="true" tabindex="-1"></a><span class="fu"># Development Tools</span></span>
+<span id="cb4-127"><a href="#cb4-127" aria-hidden="true" tabindex="-1"></a>Developing your own custom R packages requires more software than just using </span>
+<span id="cb4-128"><a href="#cb4-128" aria-hidden="true" tabindex="-1"></a>R and relying solely on R packages created by others. The development tools you </span>
+<span id="cb4-129"><a href="#cb4-129" aria-hidden="true" tabindex="-1"></a>need to install depend on your operating system. Use the subsection below </span>
+<span id="cb4-130"><a href="#cb4-130" aria-hidden="true" tabindex="-1"></a>relevant to your OS. </span>
+<span id="cb4-131"><a href="#cb4-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-132"><a href="#cb4-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## RTools for Windows, version 4.4 (6459-6401 or later)</span></span>
+<span id="cb4-133"><a href="#cb4-133" aria-hidden="true" tabindex="-1"></a>Installing <span class="co">[</span><span class="ot">RTools</span><span class="co">](https://cran.r-project.org/bin/windows/Rtools/)</span> is </span>
+<span id="cb4-134"><a href="#cb4-134" aria-hidden="true" tabindex="-1"></a>important because it contains some tools for compiling software packages and one </span>
+<span id="cb4-135"><a href="#cb4-135" aria-hidden="true" tabindex="-1"></a>of the R packages we will use later (the devtools package) depends on having </span>
+<span id="cb4-136"><a href="#cb4-136" aria-hidden="true" tabindex="-1"></a>RTools available. You can download RTools from </span>
+<span id="cb4-137"><a href="#cb4-137" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">CRAN</span><span class="co">](https://cran.r-project.org/)</span>. Either follow the CRAN links labeled </span>
+<span id="cb4-138"><a href="#cb4-138" aria-hidden="true" tabindex="-1"></a>*Download R for Windows*, then *RTools*, then *RTools 4.4*, then </span>
+<span id="cb4-139"><a href="#cb4-139" aria-hidden="true" tabindex="-1"></a>*RTools44_installer*, or use the </span>
+<span id="cb4-140"><a href="#cb4-140" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the installer file</span><span class="co">](https://cran.r-project.org/bin/windows/Rtools/rtools44/files/rtools44-6459-6401.exe)</span>. </span>
+<span id="cb4-141"><a href="#cb4-141" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer, then run it. </span>
+<span id="cb4-142"><a href="#cb4-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-143"><a href="#cb4-143" aria-hidden="true" tabindex="-1"></a><span class="fu">## MacOS: Xcode, GNU Fortran, and Mandatory Libraries</span></span>
+<span id="cb4-144"><a href="#cb4-144" aria-hidden="true" tabindex="-1"></a>If you are using MacOS instead of Windows, then you need a few </span>
+<span id="cb4-145"><a href="#cb4-145" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">MacOS-specific development tools</span><span class="co">](https://cran.r-project.org/bin/macosx/tools/)</span> </span>
+<span id="cb4-146"><a href="#cb4-146" aria-hidden="true" tabindex="-1"></a>that fulfill the compiler functions that RTools serves on Windows. The details </span>
+<span id="cb4-147"><a href="#cb4-147" aria-hidden="true" tabindex="-1"></a>are available at </span>
+<span id="cb4-148"><a href="#cb4-148" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://mac.r-project.org/tools/</span><span class="co">](https://mac.r-project.org/tools/)</span>. </span>
+<span id="cb4-149"><a href="#cb4-149" aria-hidden="true" tabindex="-1"></a>Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory </span>
+<span id="cb4-150"><a href="#cb4-150" aria-hidden="true" tabindex="-1"></a>libraries. </span>
+<span id="cb4-151"><a href="#cb4-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-152"><a href="#cb4-152" aria-hidden="true" tabindex="-1"></a><span class="fu"># RStudio Desktop, version 2024.12.1+563 (or later)</span></span>
+<span id="cb4-153"><a href="#cb4-153" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio Desktop</span><span class="co">](https://posit.co/products/open-source/rstudio/)</span> </span>
+<span id="cb4-154"><a href="#cb4-154" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">@RStudio-Team-RN8351</span><span class="co">]</span> is an integrated development environment (IDE) that </span>
+<span id="cb4-155"><a href="#cb4-155" aria-hidden="true" tabindex="-1"></a>provides many convenient features for working with R. It provides a better user</span>
+<span id="cb4-156"><a href="#cb4-156" aria-hidden="true" tabindex="-1"></a>interface for R than the raw R software. It contains a very good programming</span>
+<span id="cb4-157"><a href="#cb4-157" aria-hidden="true" tabindex="-1"></a>editor, plus a nice way to browse the list of objects R has in memory. You can</span>
+<span id="cb4-158"><a href="#cb4-158" aria-hidden="true" tabindex="-1"></a>download the desktop version from </span>
+<span id="cb4-159"><a href="#cb4-159" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://posit.co/download/rstudio-desktop/</span><span class="co">](https://posit.co/download/rstudio-desktop/)</span>.</span>
+<span id="cb4-160"><a href="#cb4-160" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-161"><a href="#cb4-161" aria-hidden="true" tabindex="-1"></a><span class="fu">## RStudio for Windows</span></span>
+<span id="cb4-162"><a href="#cb4-162" aria-hidden="true" tabindex="-1"></a>You can use this </span>
+<span id="cb4-163"><a href="#cb4-163" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://download1.rstudio.org/electron/windows/RStudio-2024.12.1-563.exe)</span>. </span>
+<span id="cb4-164"><a href="#cb4-164" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer’s <span class="in">`Downloads`</span> folder, then run it.</span>
+<span id="cb4-165"><a href="#cb4-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-166"><a href="#cb4-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## RStudio for MacOS</span></span>
+<span id="cb4-167"><a href="#cb4-167" aria-hidden="true" tabindex="-1"></a>You can use this <span class="co">[</span><span class="ot">direct link for the MacOS installer</span><span class="co">](https://download1.rstudio.org/electron/macos/RStudio-2024.12.1-563.dmg)</span>.  </span>
+<span id="cb4-168"><a href="#cb4-168" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-169"><a href="#cb4-169" aria-hidden="true" tabindex="-1"></a><span class="fu"># Quarto, version 1.7.13 (or later) </span></span>
+<span id="cb4-170"><a href="#cb4-170" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/)</span> <span class="co">[</span><span class="ot">@Allaire-RN8427</span><span class="co">]</span> is an open-source scientific and</span>
+<span id="cb4-171"><a href="#cb4-171" aria-hidden="true" tabindex="-1"></a>technical publishing system that makes it easy to create reproducible, dynamic</span>
+<span id="cb4-172"><a href="#cb4-172" aria-hidden="true" tabindex="-1"></a>documents that interweave narrative text, code, and the result of running code</span>
+<span id="cb4-173"><a href="#cb4-173" aria-hidden="true" tabindex="-1"></a>(including tables, figures, and other statistical output). Quarto is the</span>
+<span id="cb4-174"><a href="#cb4-174" aria-hidden="true" tabindex="-1"></a>evolution of, and successor to, <span class="co">[</span><span class="ot">R Markdown</span><span class="co">](https://rmarkdown.rstudio.com/)</span>. An</span>
+<span id="cb4-175"><a href="#cb4-175" aria-hidden="true" tabindex="-1"></a>older version of Quarto may come bundled into RStudio, but we will usually want</span>
+<span id="cb4-176"><a href="#cb4-176" aria-hidden="true" tabindex="-1"></a>the most recent stable release, so install it separately. You can download the</span>
+<span id="cb4-177"><a href="#cb4-177" aria-hidden="true" tabindex="-1"></a>latest stable version from </span>
+<span id="cb4-178"><a href="#cb4-178" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://quarto.org/docs/get-started/</span><span class="co">](https://quarto.org/docs/get-started/)</span>. </span>
+<span id="cb4-179"><a href="#cb4-179" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-180"><a href="#cb4-180" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto for Windows</span></span>
+<span id="cb4-181"><a href="#cb4-181" aria-hidden="true" tabindex="-1"></a>You can use this </span>
+<span id="cb4-182"><a href="#cb4-182" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the Windows installer</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.13/quarto-1.7.13-win.msi)</span>. </span>
+<span id="cb4-183"><a href="#cb4-183" aria-hidden="true" tabindex="-1"></a>Save that installation file to your computer’s <span class="in">`Downloads`</span> folder, then run it.</span>
+<span id="cb4-184"><a href="#cb4-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-185"><a href="#cb4-185" aria-hidden="true" tabindex="-1"></a><span class="fu">## Quarto for MacOS</span></span>
+<span id="cb4-186"><a href="#cb4-186" aria-hidden="true" tabindex="-1"></a>You can use this </span>
+<span id="cb4-187"><a href="#cb4-187" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link to the MacOS installer</span><span class="co">](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.13/quarto-1.7.13-macos.pkg)</span>. </span>
+<span id="cb4-188"><a href="#cb4-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-189"><a href="#cb4-189" aria-hidden="true" tabindex="-1"></a><span class="fu"># Git, version 2.48.1.1 (or later)</span></span>
+<span id="cb4-190"><a href="#cb4-190" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Git</span><span class="co">](https://git-scm.com/)</span> <span class="co">[</span><span class="ot">@Torvalds-RN3929</span><span class="co">]</span> is version control software</span>
+<span id="cb4-191"><a href="#cb4-191" aria-hidden="true" tabindex="-1"></a>developed by programmers to help them manage the source code they write. It is a</span>
+<span id="cb4-192"><a href="#cb4-192" aria-hidden="true" tabindex="-1"></a>very sophisticated tool for tracking the history of what changed in a text file</span>
+<span id="cb4-193"><a href="#cb4-193" aria-hidden="true" tabindex="-1"></a>from one version to the next, who made the changes, when they were made, and</span>
+<span id="cb4-194"><a href="#cb4-194" aria-hidden="true" tabindex="-1"></a>why. It allows you to easily revert to any tracked version of a file. After you</span>
+<span id="cb4-195"><a href="#cb4-195" aria-hidden="true" tabindex="-1"></a>install Git, it is helpful to explore the site </span>
+<span id="cb4-196"><a href="#cb4-196" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://happygitwithr.com/</span><span class="co">](https://happygitwithr.com/)</span> <span class="co">[</span><span class="ot">@Bryan-RN3908</span><span class="co">]</span>.</span>
+<span id="cb4-197"><a href="#cb4-197" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-198"><a href="#cb4-198" aria-hidden="true" tabindex="-1"></a><span class="fu">## Git for Windows</span></span>
+<span id="cb4-199"><a href="#cb4-199" aria-hidden="true" tabindex="-1"></a>You can download it from either <span class="co">[</span><span class="ot">https://git-scm.com</span><span class="co">](https://git-scm.com/)</span> or </span>
+<span id="cb4-200"><a href="#cb4-200" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://gitforwindows.org</span><span class="co">](https://gitforwindows.org)</span>. You can use this </span>
+<span id="cb4-201"><a href="#cb4-201" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">direct link for the Windows installer</span><span class="co">](https://github.com/git-for-windows/git/releases/download/v2.48.1.windows.1/Git-2.48.1-64-bit.exe)</span>. </span>
+<span id="cb4-202"><a href="#cb4-202" aria-hidden="true" tabindex="-1"></a>Save that installation file to your compute, then run it. </span>
+<span id="cb4-203"><a href="#cb4-203" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-204"><a href="#cb4-204" aria-hidden="true" tabindex="-1"></a><span class="fu">## Git for MacOS</span></span>
+<span id="cb4-205"><a href="#cb4-205" aria-hidden="true" tabindex="-1"></a>Download instructions are available at  </span>
+<span id="cb4-206"><a href="#cb4-206" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">https://git-scm.com/download/mac</span><span class="co">](https://git-scm.com/download/mac)</span>.</span>
+<span id="cb4-207"><a href="#cb4-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-208"><a href="#cb4-208" aria-hidden="true" tabindex="-1"></a><span class="fu"># Installing R Packages </span></span>
+<span id="cb4-209"><a href="#cb4-209" aria-hidden="true" tabindex="-1"></a>User-contributed R packages add extra features to R. They are a large part of</span>
+<span id="cb4-210"><a href="#cb4-210" aria-hidden="true" tabindex="-1"></a>what makes R so useful. Below is a set of specific R packages that we plan to</span>
+<span id="cb4-211"><a href="#cb4-211" aria-hidden="true" tabindex="-1"></a>use and can be downloaded from <span class="co">[</span><span class="ot">CRAN</span><span class="co">](https://cran.r-project.org/)</span> via the</span>
+<span id="cb4-212"><a href="#cb4-212" aria-hidden="true" tabindex="-1"></a>following command within R’s console.</span>
+<span id="cb4-213"><a href="#cb4-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-216"><a href="#cb4-216" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-217"><a href="#cb4-217" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-r-pkgs</span></span>
+<span id="cb4-218"><a href="#cb4-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-219"><a href="#cb4-219" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
+<span id="cb4-220"><a href="#cb4-220" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;tinytex&quot;</span>))</span>
+<span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
+<span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a>Each of these may also automatically install additional packages on which they</span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a>depend. We may recommend installing additional packages later.</span>
+<span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">devtools package</span><span class="co">](https://devtools.r-lib.org/)</span> provides developer tools </span>
+<span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a>and functions that simplify creating and quality-checking custom R packages. </span>
+<span id="cb4-228"><a href="#cb4-228" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-229"><a href="#cb4-229" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">here package</span><span class="co">](https://here.r-lib.org/)</span> facilitates using relative filenames </span>
+<span id="cb4-230"><a href="#cb4-230" aria-hidden="true" tabindex="-1"></a>when one is using </span>
+<span id="cb4-231"><a href="#cb4-231" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">RStudio projects</span><span class="co">](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects)</span> </span>
+<span id="cb4-232"><a href="#cb4-232" aria-hidden="true" tabindex="-1"></a>to organize files. </span>
+<span id="cb4-233"><a href="#cb4-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-234"><a href="#cb4-234" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">rmarkdown</span><span class="co">](https://pkgs.rstudio.com/rmarkdown/)</span> and </span>
+<span id="cb4-235"><a href="#cb4-235" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">knitr</span><span class="co">](https://yihui.org/knitr/)</span> packages work together to translate </span>
+<span id="cb4-236"><a href="#cb4-236" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R Markdown</span><span class="co">](https://rmarkdown.rstudio.com/)</span> and/or Quarto scripts into </span>
+<span id="cb4-237"><a href="#cb4-237" aria-hidden="true" tabindex="-1"></a>Pandoc markdown files. </span>
+<span id="cb4-238"><a href="#cb4-238" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quarto</span><span class="co">](https://cran.r-project.org/package=quarto)</span> package provides support </span>
+<span id="cb4-239"><a href="#cb4-239" aria-hidden="true" tabindex="-1"></a>for interfacing with Quarto. Meanwhile, the </span>
+<span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">kableExtra</span><span class="co">](http://haozhu233.github.io/kableExtra/)</span> package extends knitr’s </span>
+<span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a>tools for making nice, formatted tables in via R Markdown or Quarto. Then, the </span>
+<span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">tinytex</span><span class="co">](https://cran.r-project.org/web/packages/tinytex/index.html)</span> package</span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a>provides an easy way to install and start using TinyTex to convert R Markdown or </span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>Quarto documents to fully formatted PDF files. </span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a>In the paragraph above, note the capitalization of the software names: <span class="in">`quarto`</span> </span>
+<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a>is an R package that helps you interface with the stand-alone Quarto software. </span>
+<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>Similarly, <span class="in">`tinytex`</span> is an R package that helps you install and use TinyTeX (a </span>
+<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a>LaTeX distribution created by the same author).  </span>
+<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">tidyverse</span><span class="co">](https://www.tidyverse.org/)</span> is a collection of related R </span>
+<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a>packages that provide an unified set of functions that make working with R much </span>
+<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a>easier. They support creating piped operations that chain together easily. </span>
+<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a><span class="fu"># TinyTex </span></span>
+<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TinyTex</span><span class="co">](https://yihui.org/tinytex/)</span> is a specific distribution of </span>
+<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span>, which is document preparation software</span>
+<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a>that allows high-quality typesetting. It takes plain text LaTeX files (<span class="in">`*.tex`</span></span>
+<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a>files) that describe the structure of a document and compiles them into</span>
+<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a>fully-formatted PDF files with nice fonts and layout. We can actually use the</span>
+<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a>tinytex R package to install TinyTeX via the following command inside R.</span>
+<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-TinyTex</span></span>
+<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span>
+<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a>You can use </span>
+<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">alternative LaTeX distributions</span><span class="co">](https://www.tug.org/interest.html#free)</span> and </span>
+<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a>tools (e.g., <span class="co">[</span><span class="ot">MiKTeX</span><span class="co">](https://miktex.org)</span>) instead, but TinyTeX is very </span>
+<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a>convenient because of how well it integrates with the other tools we’re using. </span>
+<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Yihui Xie</span><span class="co">](https://yihui.org/)</span>, the author of tinytex and TinyTex, is a </span>
+<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a>contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. </span>
+<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a>If it has been a while since you installed TinyTex, you can easily update to the </span>
+<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a>latest version by the following command. This should include any previously </span>
+<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a>installed LaTeX packages you had accumulated along the way. My experience is </span>
+<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a>that the first time you render a PDF file after a reinstall takes longer than </span>
+<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a>normal, but rendering speed returns to normal after that. </span>
+<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reinstall-TinyTex</span></span>
+<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">reinstall_tinytex</span>()</span>
+<span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pandoc </span></span>
+<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Pandoc</span><span class="co">](https://pandoc.org/)</span> is software that allows you to convert documents</span>
+<span id="cb4-296"><a href="#cb4-296" aria-hidden="true" tabindex="-1"></a>between multiple formats. A copy of Pandoc comes bundled with RStudio and</span>
+<span id="cb4-297"><a href="#cb4-297" aria-hidden="true" tabindex="-1"></a>another copy comes bundled with Quarto, so you do not need to download and</span>
+<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a>install it separately. If you want PDF output, Pandoc is what converts documents </span>
+<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a>into the LaTeX files that can be processed by TinyTeX. Quarto is built on top of </span>
+<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a>Pandoc because it facilitates producing many different kinds of output files.</span>
+<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a><span class="fu"># rcrpkg.template </span></span>
+<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">rcrpkg.template</span><span class="co">](https://github.com/sjpierce/rcrpkg.template)</span> <span class="co">[</span><span class="ot">@Pierce-RN8380</span><span class="co">]</span> </span>
+<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a>is a Git repository I created to serve as a starter template for new, </span>
+<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a>project-specific Git repositories. It streamlines creating a new custom R </span>
+<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a>package that serves as a research compendium <span class="co">[</span><span class="ot">@Marwick-RN3899</span><span class="co">]</span> for a project. </span>
+<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a>Inside the <span class="co">[</span><span class="ot">`scripts`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/tree/main/scripts)</span> </span>
+<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a>subfolder, the </span>
+<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_HTML.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_HTML.qmd)</span> </span>
+<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to HTML output and the </span>
+<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_PDF.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_PDF.qmd)</span> </span>
+<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to PDF output. The latter file also uses the </span>
+<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/title.tex)</span> </span>
+<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a>and </span>
+<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`compact-title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/compact-title.tex)</span> </span>
+<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a>files stored in the same folder to control the formatting of space around the</span>
+<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a>title and showing author affiliation info. References to those can be removed</span>
+<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a>from the YAML header to simplify the script and reduce dependency on additional</span>
+<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a>files. The </span>
+<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Setup_as_Package.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Setup_as_Package.qmd)</span> </span>
+<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a>Quarto script guides one through some key steps in setting up a custom R </span>
+<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a>package.</span>
 <span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Fork and clone the <span class="in">`rcrpkg.template`</span> repository to your GitHub account.</span>
-<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use GitHub settings to set that as a repository template for yourself.</span>
-<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use GitHub to create a new repository (with a suitable name of your choice) </span>
-<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a>   from that template repository. </span>
-<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Clone that your new repository to your local computer, </span>
-<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Start using the <span class="in">`Setup_as_Package.qmd`</span> script inside your new local </span>
-<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a>   repository to take additional steps.</span>
-<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a>The basic approach to using this template is:</span>
+<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Fork and clone the <span class="in">`rcrpkg.template`</span> repository to your GitHub account.</span>
+<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use GitHub settings to set that as a repository template for yourself.</span>
+<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use GitHub to create a new repository (with a suitable name of your choice) </span>
+<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a>   from that template repository. </span>
+<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Clone that your new repository to your local computer, </span>
+<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Start using the <span class="in">`Setup_as_Package.qmd`</span> script inside your new local </span>
+<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a>   repository to take additional steps.</span>
 <span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
-<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
+<span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-338"><a href="#cb4-338" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

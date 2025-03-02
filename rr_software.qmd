@@ -35,8 +35,8 @@ knitr:
 
 Statisticians can demonstrate leadership in research projects by advocating for
 and engaging in reproducible research [@Hochheimer-RN8567]. Reproducible
-research can be facilitated by using a set of software packages that
-combine into a powerful, integrated set of tools. The statistical software
+research can be facilitated by using a set of software packages that combine 
+into a powerful, integrated set of tools. The statistical software 
 [R](https://www.r-project.org), paired with 
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
 [@RStudio-Team-RN8351], is the foundation for a set of tools that can generate
@@ -67,7 +67,9 @@ This document describes the software packages I personally use and recommend to
 enable reproducible research via R packages that serve as research compendiums. 
 It covers which packages one will need, why they are needed, and how to install 
 them. I share these notes when helping other people set up the software 
-environment that I rely on for my daily research and statistical work. 
+environment that I rely on for my daily research and statistical work. If you 
+want to see how I use these software tools, check out my upcoming 
+presentation on reproducible research [@Pierce-RN8692]. 
 
 # Assumptions
 1. You will be using either MS Windows 10 or 11 or MacOS. The notes below about 

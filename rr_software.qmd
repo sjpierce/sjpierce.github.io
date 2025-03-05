@@ -83,7 +83,7 @@ presentation on reproducible research [@Pierce-RN8692].
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
-# R, version 4.4.2 (or later)
+# R, version 4.4.3 (or later)
 [R](https://www.r-project.org) [@R-Devel-Core-RN8182] is a free, open-source
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
@@ -92,8 +92,8 @@ most of your data management and analysis tasks. You can download R from the
 
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
-then *base*, then *Download R-4.4.2 for Windows* or use the 
-[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.4.2-win.exe). 
+then *base*, then *Download R-4.4.3 for Windows* or use the 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.4.3-win.exe). 
 Save that installation file to your computer, then run it. 
 
 ## R for MacOS

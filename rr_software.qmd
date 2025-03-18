@@ -45,7 +45,7 @@ be compiled to automatically produce a fully-formatted report, manuscript,
 website, or set of presentation slides complete with text, equations, figures, 
 tables, and reference sections [@Mair-RN3387].
 
-While [@Mair-RN3387] introduces [R Markdown](https://rmarkdown.rstudio.com/)
+While @Mair-RN3387 introduces [R Markdown](https://rmarkdown.rstudio.com/)
 as a tool for writing dynamic documents, [Quarto](https://quarto.org/) 
 [@Allaire-RN8427] is a next-generation tool that replaces R Markdown. Quarto
 will be a key part of the future of scientific publishing for those who want to
@@ -56,20 +56,19 @@ distribution and archiving. Meanwhile, [Git](https://git-scm.com)
 [@Torvalds-RN3929] and [GitHub](https://github.com/) solve source code version 
 control problems and facilitate collaboration on code [@Bryan-RN3900].
 
-Marwick, Boettiger, & Mullen [-@Marwick-RN3899] discuss creating research
-compendiums that bundle collections of documents along with data files into
-custom R packages to make a research project more reproducible. These software
-packages become additional scholarly products that make manuscripts more
-reproducible.
+@Marwick-RN3899 discuss creating research compendiums that bundle collections of
+documents along with data files into custom R packages to make a research
+project more reproducible. These software packages become additional scholarly
+products that make manuscripts more reproducible.
 
 # Purpose
 This document describes the software packages I personally use and recommend to
-enable reproducible research via R packages that serve as research compendiums. 
-It covers which packages one will need, why they are needed, and how to install 
-them. I share these notes when helping other people set up the software 
-environment that I rely on for my daily research and statistical work. If you 
-want to see how I use these software tools, check out my upcoming 
-presentation on reproducible research [@Pierce-RN8692]. 
+enable reproducible research via R packages that serve as research compendiums.
+It covers which packages one will need, why they are needed, and how to install
+them. I share these notes when helping other people set up the software
+environment that I rely on for my daily research and statistical work. If you
+want to see how I use these software tools, check out my recent presentation on
+reproducible research [@Pierce-RN8692].
 
 # Assumptions
 1. You will be using either MS Windows 10 or 11 or MacOS. The notes below about 

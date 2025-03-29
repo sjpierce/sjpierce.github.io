@@ -15,6 +15,8 @@ website:
       - href: presentations.qmd
         text: Presentations
       - about.qmd
+  drafts: 
+    - posts/principles/rr_principles.qmd
 
 format:
   html:

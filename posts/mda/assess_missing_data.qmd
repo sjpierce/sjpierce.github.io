@@ -1,0 +1,393 @@
+---
+title: "Assessing Missing Data"
+description: "Examples of Assessing Missing Data."
+date: "2025-03-29"
+date-modified: "2025-03-29"
+draft: false
+categories:
+  - Quarto Tips
+  - Missing Data
+  - R
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    number-depth: 3
+    code-fold: true
+    code-tools: true
+    code-line-numbers: false
+    embed-resources: true 
+    anchor-sections: true
+    link-external-icon: true
+execute:
+  eval: true
+  echo: fenced
+  output: true
+  warning: true
+  error: true
+  include: true
+---
+
+# Purpose
+Examining the amount, nature, and patterns of missing data is crucial to 
+properly handling missing data 
+[@McKnight-RN1296; @van_Buuren-RN3962; @White-RN3603]. There are no hard and
+fast rules about how much missing data constitutes a serious problem, but more
+missing data usually means there is a greater risk of getting biased results if
+your analysis relies on listwise deletion to handle missing data. One has to
+make judgments about whether the amount and nature of the missing data issues in
+your study warrant the effort required to implement sophisticated solutions such
+as multiple imputation (MI) or full information maximum likelihood (FIML)
+estimation. It is best to make such judgments after a thorough assessment of the
+missingness. In short, you should diagnose the missing data situation before you 
+decide whether and how to treat the problem.
+
+This post discusses a few simple things one should do along the way and provides
+R code that I might use in a Quarto script to do them, along with commentary on 
+the results obtained for an example data set. 
+
+In larger or more complex data sets this sort of assessment can be lengthy,
+so this post is by no means comprehensive. It's just demonstrating some 
+essential summaries that you should examine. For more extensive guidance on 
+assessing missing data issues, see books by @McKnight-RN1296, @Enders-RN8673, 
+and @Graham-RN2677.
+
+:::{.callout-tip}
+All the example code operates on a data frame. Naturally, changing the data 
+set fed into the code will change the results. Think carefully about which 
+data set makes the most sense to use. You may need to subset a large data file 
+by selecting the cases and variables relevant to your planned analyses before 
+applying these techniques. 
+:::
+
+# R Packages for Examining Missing Data
+There are several R packages designed for dealing with missing data that have 
+functions useful at the assessment stage. For example, `ggmice`, `mice`, 
+`naniar`, and `VIM` are ones I happen to have installed. It's worth exploring 
+them to see what tools you like. Below, I have used `ggmice` and `mice` in my 
+examples.
+
+# Setup 
+Next we load R packages that we need to get additional functions. 
+
+``` {r}
+#| label: load-packages
+#| message: false
+
+library(devtools)         # for session_info()
+library(rmarkdown)        # for pandoc_version()
+library(knitr)            # for kable()
+options(kableExtra.latex.load_packages = FALSE)
+library(kableExtra)       # for kable_styling(), add_header_above(), etc.
+library(tidyverse)        # loads dplyr, ggplot2, lubridate, stringr all at once.
+                          # for %>%, filter(), mutate(), etc.
+library(purrr)            # for map()
+library(mice)             # for mice(), nic(), ncc(), and the boys data set. 
+library(modelsummary)     # for modelsummary()
+library(ggmice)           # for plot_pattern(), plot_corr()
+library(quarto)           # for quarto_version()
+```
+
+# Example 
+For the example code below, we'll use the `boys` data [@Fredriks-RN8696], which
+is bundled with the the `mice` package [@van_Buuren-RN3208]. These data come
+from a developmental study about growth in Dutch boys. The variables include
+age, region, weight, height, body mass index, head circumference, and three
+measures of pubertal development. For more details about the dataset, use the
+following command in the R console after loading the `mice` package: `?boys`.
+
+## Amount of Missing Data
+You should always examine the dimensions of your data set in terms of numbers of 
+cases (rows), variables (columns), and values (rows x columns). Extracting those 
+values from a data set is easy using functions such as `nrow()` and `ncol()` as 
+shown below. The number of values is obtained by multiplying the numbers of 
+cases and variables. This sets the context for examining how much of the data is
+missing. Additional functions from the `mice` package make it easy to extract 
+numbers of complete cases (`ncc()`) and incomplete cases `nic()`. Creative 
+combined use of the `sum()`, `colSums()`, and `is.na()` functions can get us 
+similar counts of the number of complete and incomplete variables and of the 
+number of complete (non-missing) and incomplete (missing) values. 
+
+The chunk below generates @tbl-dataset-info, which shows a convenient summary of 
+all those counts. I plan to eventually add functions to my 
+[`piercer`](https://github.com/sjpierce/piercer) package to automate generating 
+this sort of summary if I can't find an existing package that has one I like. 
+That would reduce the amount of code required to get the table. 
+
+```{r}
+#| label: tbl-dataset-info
+#| tbl-cap: Numbers of Complete and Incomplete Cases, Variables, and Values
+
+N_cases  <- nrow(boys)                     # All cases
+N_ccases <- ncc(boys)                      # Complete cases
+N_icases <- nic(boys)                      # Incomplete cases  
+N_vars   <- ncol(boys)                     # All variables
+N_cvars  <- sum(colSums(is.na(boys)) == 0) # Complete variables
+N_ivars  <- sum(colSums(is.na(boys)) > 0)  # Incomplete variables
+N_vals   <- N_cases*N_vars                 # All values
+N_cvals  <- sum(!is.na(boys))              # Complete values (non-missing)
+N_ivals  <- sum(is.na(boys))               # Incomplete values (missing)
+
+tibble(Subset = c("Complete", "Incomplete", "All"),
+       Cases = c(N_ccases, N_icases, N_cases),
+       Cases_P = 100*Cases/N_cases, 
+       Variables = c(N_cvars, N_ivars, N_vars),
+       Variables_P = 100*Variables/N_vars,
+       Values = c(N_cvals, N_ivals, N_vals),
+       Values_P = 100*Values/N_vals) %>% 
+  kable(., format = "html", digits = 1, 
+        col.names = c("Subset", rep(c("n", "%"), times = 3))) %>%
+  kable_styling() %>% 
+  add_header_above(., 
+                   header = c(" ", "Cases" = 2, "Variables" = 2, "Values" =  2))
+```
+
+:::{.callout-tip}
+* A value is just the datum for a specific case on a specific variable. It is 
+  complete (observed) when it non-missing, and incomplete when it is missing. 
+* A case is complete when all values on the row (across variables) are 
+  complete; it becomes incomplete if any variable in that row has a missing 
+  value. 
+* Similarly, a variable is complete when all values in that column (across 
+  cases) are complete but it becomes incomplete if any case in that column has 
+  a missing value. 
+  
+::: 
+
+Here, we can see that there's a reasonably large sample size (`r N_cases`) but 
+there are only `r N_vars` variables. That yields a total of 
+`r nrow(boys)*ncol(boys)` values in the data set. 
+
+We see different percentages of completeness depending on whether we look at 
+cases, variables, or values. This is a cross-sectional dataset, so we don't have 
+to consider a time dimension but if we had a longitudinal study we might need 
+to examine that as an additional dimension in the assessment. Similarly, this 
+is not a multilevel study design but if it were, we might need to examine 
+missingness at each level of the design. 
+
+The percent of incomplete cases is staggeringly high 
+(`r round(100*N_icases/N_cases, digits = 1)`%), as is the percent of incomplete 
+variables (`r round(100*N_ivars/N_vars, digits = 1)`%). However, we can also see 
+that the percent of missing values in the full data frame is much lower 
+(`r round(100*N_ivals/N_vals, digits = 1)`%), though it may still be large 
+enough to cause some concern. We need to know more before we make decisions. 
+
+## Univariate Missingness
+While @tbl-dataset-info is a useful overview of the amount of missing data, we 
+want to do a more granular examination as well. For example, we now know that 
+there are `r N_ivars` incomplete variables but the amount of missing data in 
+each of those variables could be quite different. Maybe there's only one missing 
+value among hundreds of cases for one variable, but hundreds of missing values 
+for another variable. That could be very important. 
+
+So, the next step is to examine univariate summaries of the amount of missing 
+data for each variable. The chunk below constructs @tbl-missing-by-var, which 
+shows such a summary. 
+
+```{r}
+#| label: tbl-missing-by-var
+#| tbl-cap: !expr paste0("Univariate Missingness in Boys Growth Data, (N = ", 
+#|                       nrow(boys), ")")
+
+boys %>% 
+  list() %>%
+  map_dfr(~ tibble(Name = names(.x),
+                   N_Valid = colSums(!is.na(.x)),
+                   N_Missing = colSums(is.na(.x)),
+                   Pct_Missing = 100*(N_Missing/nrow(boys)))) %>%
+  rowid_to_column(., "Position") %>%
+  kable(., format = "html", digits = 1) %>%
+  kable_styling() 
+```
+
+Inspection of @tbl-missing-by-var shows that `age` is the only variable with no 
+missing data. There is only a small amount of missing data for basic 
+anthropometric measurements (`hgt`, `wgt`, `bmi`, `hc`) and region (`reg`), but 
+there is a large amount of missing data for the three measures of pubertal 
+development (`gen`, `phb`, and `tv`). 
+
+The maximum percent missing observed in @tbl-missing-by-var for a single 
+variable can never be lower than the overall percent of incomplete cases from 
+@tbl-dataset-info. However, the percent of incomplete cases can easily be higher 
+than any of the percentages for individual variables because missing data may 
+occur in different variables on different cases. 
+
+If our planned analyses only required the anthropometric variables and region, 
+this data might be considered to have a fairly small amount of missing data. 
+One could remove the irrelevant variables from the data set and then re-create 
+@tbl-dataset-info to get better estimates of how many incomplete cases would be 
+dropped by listwise deletion. On the other hand, analyses requiring any of the 
+pubertal development measures would require solving an extremely large missing 
+data problem. 
+
+## Multivariate Patterns of Missingness
+After examining the univariate missingness, we need to shift our focus to 
+considering the patterns of missing data across variables. These multivariate 
+patterns of missingness can be quite useful in better understanding that nature 
+of the missingness issues in your data. @fig-patterns illustrates what I mean 
+by missing data patterns. It is generated by the `ggmice` function 
+`plot_pattern()`, which is a cleaner, better labeled alternative to the 
+graphical output from the `mice` function `md.pattern()`. 
+
+```{r}
+#| label: fig-patterns
+#| fig-cap: "Missingness Patterns for Dutch Boys Growth Study Data (748 boys, 9 
+#|           variables, 1 time point) [@Fredriks-RN8696]"
+
+plot_pattern(boys, square = FALSE, rotate = FALSE)
+```
+
+Each row in the graph represents a distinct pattern of observed versus missing
+values across the whole set of variables. The left side is annotated with the
+number of cases (i.e., boys) showing each pattern, the right side tells you how
+many missing values there are on that row, and the bottom shows the total number
+of missing values for each variable. The variables are sorted from left to right 
+in ascending order by number of missing values, so those on the right have the 
+most missing data. The annotation below the color coding legend shows the total 
+number of missing values. Some of the information in this figure overlaps with 
+that in the tables above, but I find it useful to have the percentages in those 
+tables along with the counts shown here. 
+
+The first row of @fig-patterns shows the `r N_ccases` boys have complete data. 
+The rest of the plot shows that this data set has a lot of holes in it. For 
+example, we can see that the most common pattern is that 437 boys 
+(`r round(100*437/N_cases, digits = 1)`%) have missing data for all 3 pubertal 
+development measures but observed data on all the other measures. We can also 
+see a number of patterns exhibited by only one boy each. The patterns with the 
+highest frequencies are probably the most useful ones to look at in this type of 
+plot. Beware that data sets containing both large samples and large numbers of 
+variables can make plots like this hard to read. You may have to get creative 
+about using these tools with subsets of the data in such cases. 
+
+Another thing we can see here is that body mass index is *always* missing 
+whenever either height or weight is missing. That's construct missingness caused 
+by item missingness because BMI is a measure derived from both the height and 
+weight variables. Solving any missing data for height and weight appropriately 
+will let you solve missing BMI data as well. The `mice` package has features 
+designed to handle preserving such deterministic relationships between variables 
+during imputation. 
+
+Inspect the patterns of missingness and try to make sense of them. That can
+reveal things like contiguous blocks of variables that are always missing
+together, which might be a result of things like participants skipping an entire
+section of a survey. In a longitudinal study where the data file is laid out in
+wide, multivariate format (repeated measures over time are represented by sets
+of columns), wave non-response or dropout might show up the same way.
+
+## Predictors of Missingness
+Identifying predictors of missingness is another step in assessing the nature of
+the missing data. This stage of assessing missing data issues can become quite
+extensive if there are many variables. Simple bivariate analyses may suffice,
+but you can use multivariate methods too. Just make sure you use models
+appropriate to the types of variables (nominal, ordinal, interval, ratio,
+counts, etc.) being examined in any given analysis.
+
+Observed variables that are associated with whether another variable is missing
+reveal that your data are incompatible with the missing completely at random
+(MCAR) mechanism; instead the mechanism must either be missing at random (MAR) or 
+missing not at random (MNAR). 
+
+Suppose in this boys growth study, we wanted to check whether the pubertal
+development variables were more likely to be missing for the youngest boys. That 
+might happen if data collection procedures specified assessing the pubertal 
+variables only for boys above some threshold age. We could create a set of
+binary missingness indicators, one for each pubertal variable, coded 0 if the
+pubertal variable was missing and 1 if it was observed. Then a logistic 
+regression model could test whether age predicts the missingness indicator 
+well. @tbl-m1 shows that the missingness of the `tv` variable decreases with 
+each additional year in age. This is actionable information about a potential 
+source of bias if missing data are not handled properly. 
+
+```{r}
+#| label: tbl-m1
+#| tbl-cap: Logistic Regression Model Predicting Missingness of tv
+#| warning: false
+
+m1 <- glm(is.na(tv) ~ age, family = binomial, data = boys)
+options(modelsummary_factory_html = 'kableExtra')
+modelsummary(m1, exponentiate = TRUE, 
+             output = "kableExtra", align = "lrrrrr", escape = FALSE,
+             col.names = c("Term", "OR", "OR.LL", "OR.UL", "t", "p"),
+             shape = term ~ model + statistic,
+             gof_omit = "BIC|AIC",
+             statistic = c("conf.int", "statistic", "p.value"))
+```
+
+Another thought for this example data is that maybe the rate of missingness for
+`tv` varies across regions. We can check that with a contingency table and a 
+chi-square test. It does not look like region is associated with missingess of 
+`tv` in these data.
+
+```{r}
+#| label: tbl-reg-tv
+#| tbl-cap: Contingency Table Region by Missingness of tv
+
+xtabs(~reg + is.na(tv), data = boys) %>% 
+  kable(col.names = c("Region", "FALSE (n)", "TRUE (n)")) %>% 
+  kable_styling() %>% 
+  add_header_above(., header = c(" ", "Missing tv" = 2))
+
+xtabs(~reg + is.na(tv), data = boys) %>% chisq.test()
+```
+
+Put some thought into what to examine and how to do it. You may not be able to 
+examine everything possible in a given data set, so be judicious about looking 
+for potential predictors of missingness. Use substantive knowledge to guide 
+those decisions if possible.
+
+# Extension to Multilevel Data
+Suppose you have a multilevel data structure, such as students (level 1) nested 
+within schools (level 2), with variables measured at each level of analysis. 
+It would be prudent to assess missing data in each of the following data sets 
+and think about what you learn from that before deciding how to handle the 
+missing data. 
+
+## Level 2 Data Set
+Start by using a level 2 data set containing one row per school. Apply the 
+techniques discussed above to understand missingness for school-level measures.
+How many schools have complete versus incomplete data? Missing school-level 
+measures will affect all students from those schools after we merge the two 
+levels of data. 
+
+## Level 1 Data Set
+Then, use a level 1 data set containing one row per student. This data set 
+should only contain student-level measures so you can get a pure look at how 
+student-level missing data issues might affect your analysis. 
+
+## Combined Dataset
+Merge the level 2 measures into the level 1 data set to get a combined data set 
+with one row per student that contains both student- and school-level measures.
+Repeat the missing data analysis on this combined data to learn how much the 
+intersection of missingness across levels affects the number of complete cases.
+Comparing the number of complete cases between the combined data set and the 
+level 1 data set will reveal how much missing school-level measures will 
+exacerbate any issues observed in the level 1 data. Some students may have 
+complete data only when considering student-level measures, but have incomplete 
+data after merging in school-level measures. That will have consequences for 
+your analysis. 
+
+# References
+::: {#refs}
+:::
+
+# Software Information
+
+- Software chain:
+  **qmd file > RStudio > Quarto > R > knitr > md file > Pandoc > html file**.
+- [Quarto `r quarto_version()`](https://quarto.org/) runs `*.qmd` files through 
+  [R](https://www.r-project.org/) and [knitr](https://yihui.org/knitr/) to 
+  produce `*.md` markdown files.
+- [Pandoc `r rmarkdown::pandoc_version()`](https://pandoc.org) converts markdown 
+  files (`*.md`) to other formats, including LaTeX (`*.tex`) and HTML (`*.html`) 
+  among others.
+
+This document was generated using the following computational environment and 
+dependencies: 
+
+``` {r}
+#| label: show-version
+
+# Get R and R package version numbers in use.
+devtools::session_info()
+```

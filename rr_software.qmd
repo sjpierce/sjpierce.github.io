@@ -128,7 +128,7 @@ R and relying solely on R packages created by others. The development tools you
 need to install depend on your operating system. Use the subsection below 
 relevant to your OS. 
 
-## RTools for Windows, version 4.4 (6459-6401 or later)
+## RTools for Windows, version 4.5 (6536-6492 or later)
 Installing [RTools](https://cran.r-project.org/bin/windows/Rtools/) is 
 important because it contains some tools for compiling software packages and one 
 of the R packages we will use later (the devtools package) depends on having 
@@ -136,7 +136,7 @@ RTools available. You can download RTools from
 [CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
 *Download R for Windows*, then *RTools*, then *RTools 4.4*, then 
 *RTools44_installer*, or use the 
-[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools44/files/rtools44-6459-6401.exe). 
+[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6536-6492.exe). 
 Save that installation file to your computer, then run it. 
 
 ## MacOS: Xcode, GNU Fortran, and Mandatory Libraries
@@ -165,7 +165,7 @@ Save that installation file to your computer’s `Downloads` folder, then run it
 ## RStudio for MacOS
 You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2024.12.1-563.dmg).  
 
-# Quarto, version 1.7.17 (or later) 
+# Quarto, version 1.7.23 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and
 technical publishing system that makes it easy to create reproducible, dynamic
 documents that interweave narrative text, code, and the result of running code
@@ -178,12 +178,12 @@ latest stable version from
 
 ## Quarto for Windows
 You can use this 
-[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.17/quarto-1.7.17-win.msi). 
+[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.23/quarto-1.7.23-win.msi). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## Quarto for MacOS
 You can use this 
-[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.13/quarto-1.7.13-macos.pkg). 
+[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.23/quarto-1.7.23-macos.pkg). 
 
 # Git, version 2.49.0.1 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software

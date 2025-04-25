@@ -45,13 +45,16 @@ knitr:
 
 This is where I'll post information about recent or upcoming presentations 
 
-# CSTAT Webinar
-Below is the abstract for my upcoming presentation [@Pierce-RN8692] called 
+# CSTAT Webinars 
+Below is the abstract for my upcoming presentation [@Pierce-RN8764] called 
 *Reproducible research: Principles, practices, and tools for generating* 
-*reproducible statistical analyses and reports*. Slides and example files are 
-available in my 
+*reproducible statistical analyses and reports*. This is will be the second 
+iteration of a presentation I did earlier this year [@Pierce-RN8692]. Slides and
+example files from the first iteration are available in my
 [CSTAT.RR2025 repository](https://github.com/sjpierce/CSTAT.RR2025) and a 
-[video recording](https://mediaspace.msu.edu/id/1_dyofbiv5) is also available.    
+[video recording](https://mediaspace.msu.edu/id/1_dyofbiv5) is also available. 
+The upcoming session will be mostly the same, though I may update some 
+materials, add some time for discussion, and create a new repository. 
 
 **Abstract**
 

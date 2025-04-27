@@ -200,6 +200,6 @@
     "href": "rr_software.html#rtools-for-windows-version-4.5-6536-6492-or-later",
     "title": "Software for Reproducible Research with R",
     "section": "4.1 RTools for Windows, version 4.5 (6536-6492 or later)",
-    "text": "4.1 RTools for Windows, version 4.5 (6536-6492 or later)\nInstalling RTools is important because it contains some tools for compiling software packages and one of the R packages we will use later (the devtools package) depends on having RTools available. You can download RTools from CRAN. Either follow the CRAN links labeled Download R for Windows, then RTools, then RTools 4.4, then RTools44_installer, or use the direct link to the installer file. Save that installation file to your computer, then run it."
+    "text": "4.1 RTools for Windows, version 4.5 (6536-6492 or later)\nInstalling RTools is important because it contains some tools for compiling software packages and one of the R packages we will use later (the devtools package) depends on having RTools available. You can download RTools from CRAN. Either follow the CRAN links labeled Download R for Windows, then RTools, then RTools 4.5, then RTools44_installer, or use the direct link to the installer file. Save that installation file to your computer, then run it."
   }
 ]

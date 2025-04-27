@@ -70,6 +70,11 @@ environment that I rely on for my daily research and statistical work. If you
 want to see how I use these software tools, check out my recent presentation on
 reproducible research [@Pierce-RN8692].
 
+::: {.callout-tip}
+I update this page whenever I install an update to R, RTools, RStudio, Quarto, 
+or Git. 
+:::
+
 # Assumptions
 1. You will be using either MS Windows 10 or 11 or MacOS. The notes below about 
    MacOS are a result of helping a few collaborators who rely on MacOS; they may 
@@ -134,7 +139,7 @@ important because it contains some tools for compiling software packages and one
 of the R packages we will use later (the devtools package) depends on having 
 RTools available. You can download RTools from 
 [CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
-*Download R for Windows*, then *RTools*, then *RTools 4.4*, then 
+*Download R for Windows*, then *RTools*, then *RTools 4.5*, then 
 *RTools44_installer*, or use the 
 [direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6536-6492.exe). 
 Save that installation file to your computer, then run it. 

@@ -1,0 +1,136 @@
+---
+title: "HTML vs. PDF Output"
+description: "Choosing between Quarto output formats."
+date: "2025-05-13"
+date-modified: "2025-05-13"
+draft: false
+categories:
+  - Quarto Tips
+  - Reproducible Research
+---
+
+I often need to share statistical output and reports with my colleagues and 
+research partners. These outputs are typically part of a research compendium 
+designed to enhance reproducibility. Quarto is one of 
+[my preferred software tools](https://sjpierce.github.io/rr_software.html)
+in part because it can render dynamic documents into several different output 
+file formats. This post explains a few thoughts about how I choose which output 
+file format to use. The formats I use most often include HTML, PDF, and 
+Revealjs. 
+
+A few things to consider when choosing an output format are: 
+
+- *Usage.* Is the output going to be used as a document designed for reading 
+  (by either myself or someone else), or slides that will be used in a 
+  presentation? 
+- *Medium.* Do I want to optimize for reading the output on a computer screen or 
+  from a printed hard copy? How well does the output format support the intended 
+  medium? 
+- *Code Display.* How does the format support showing versus hiding the code 
+  used to manage data and produce output elements like tables and graphs?
+- *Navigation.* For longer documents, how does the format support navigation 
+  between sections or searching for specific strings of text? 
+- *Annotation.* Do we need to be able to annotate the output easily? Some 
+  partners send me feedback by annotating an output file and sending it back, or 
+  annotate the output for their own use. 
+- *Branding.* How does the output format support formatting output to achieve 
+  consistent branding via logos, color palettes, fonts, and other design 
+  elements? 
+
+# HTML
+In terms of usage, default HTML output can be effective for documents, but a 
+specialized variant of HTML output called [Revealjs](https://revealjs.com/) is 
+better for producing presentation slides. Quarto 
+[supports Revealjs](https://quarto.org/docs/presentations/revealjs/) quite well. 
+It can also write out 
+[PowerPoint](https://quarto.org/docs/presentations/powerpoint.html) slides, but 
+supports more capabilities with Revealjs so one has more control over how the 
+slides look and work in Revealjs than in PowerPoint. 
+
+HTML is good for on-screen reading. Most popular web browsers are capable of 
+displaying it well and adjusting for things like screen resolution and size. 
+While one can print HTML output with a web browser, it is hard to ensure that 
+the print pagination and layout for HTML output will be attractive and sensible. 
+
+One thing I like about HTML output is the control you have over 
+[code display](https://quarto.org/docs/output-formats/html-code.html). I 
+particularly like to echo the code (`echo: true`) with code folding enabled 
+(`code-fold: true`). That inserts buttons in the output that dynamically show 
+individual blocks of code on demand, but default to collapsing them, allowing 
+you to focus more on narrative text, tables, and figures without sacrificing the
+reproducibility advantages of being able to see the code in the same document.
+You can also configure controls that hide or reveal all the code simultaneously,
+make it easy to copy the code.
+
+The HTML format also supports adding a floating, hyperlinked 
+[table of contents (TOC)](https://quarto.org/docs/output-formats/html-basics.html#table-of-contents) 
+on the side that remains visible regardless of what part of the document you are
+currently viewing. Clicking a topic in the TOC takes you to the relevant
+section. That's very convenient for navigating long documents. You can control
+how many layers of section headings are displayed in the TOC. Quarto 
+[cross-references](https://quarto.org/docs/authoring/cross-references.html) 
+offer a way to embed other navigation hyperlinks in the output. Searching for a
+string of text within an HTML output file is easy because browsers usually have 
+built-in search tools. 
+
+
+One disadvantage is that HTML does not provide an easy way for people to 
+annotate the output file. 
+
+[Branding](https://quarto.org/docs/authoring/brand.html) can be customized via 
+by creating a `_brand.yml`, supplying logo files, picking an existing 
+[HTML theme](https://quarto.org/docs/output-formats/html-themes.html), supplying 
+a [CSS file](https://quarto.org/docs/visual-editor/content.html#css-styles), or 
+supplying a 
+[Sass file](https://quarto.org/docs/output-formats/html-themes-more.html). 
+You may need to experiment a bit to figure out which combination of those 
+elements to use to get the desired results. 
+
+# PDF
+Quarto produces PDF output by using pandoc to convert your output into a 
+[LaTeX](https://www.latex-project.org/) file (`*.tex`) which is then converted 
+to its final PDF format. LaTeX is a sophisticated typesetting system that has 
+been around for about 40 years now. It is really good for creating documents 
+designed to be read. [Beamer](https://github.com/josephwright/beamer), a LaTeX 
+package that facilitates creating PDF presentation slides, is 
+[supported by Quarto](https://quarto.org/docs/presentations/beamer.html). 
+Personally, I prefer Revealjs over Beamer for making slides, but Beamer is a 
+well established tool used by many people. 
+
+The PDF format is fantastic for making documents you want to print. You can 
+control every aspect of layout, formatting, pagination, and so on. The level of 
+professional polish is limited only by your programming and design skills. 
+Fortunately, you can also read PDF files on computer screens very easily. 
+I choose PDF when I need something that must print well but may also be read 
+on-screen. 
+
+With respect to code display, PDF is less flexible than HTML output. Showing the 
+code for reproducibility purposes makes the document longer because chunks of 
+code are interleaved among the narrative text, tables, and figures and cannot be 
+collapsed. That can impair reading flow. One has to either show the code, 
+entirely omit it, or produce two alternate versions of the output files (one
+showing the code and the other omitting it). I have used the latter approach on
+several projects, usually by creating a *run script* that serves as a detailed
+reproducibility log and does the main computations, then saves out selected R
+objects that will be used by a *deliver script*, which produces a report
+designed for delivery to other people. That latter output will omit the code 
+chunks and emphasize clear, concise, communication of the methods and results. 
+
+As with HTML format, you can add a hyperlinked [TOC to PDF output](https://quarto.org/docs/output-formats/pdf-basics.html#table-of-contents), 
+control how many layers of section headings are displayed in it, and use 
+[cross-references](https://quarto.org/docs/authoring/cross-references.html) 
+to embed other navigation hyperlinks in the output. The TOC shows up only at the 
+start of the PDF file. That still makes the document easier to navigate, but is
+not quite as convenient as the floating TOC in HTML output. Finally, PDF readers 
+usually have robust search tools for locating strings of text within a document.
+
+Users who want to highlight or annotate parts of a PDF output file can do so 
+easily. Annotation features are available in most PDF reading software. 
+
+The Quarto branding tools used for HTML don't yet seem to support PDF output. 
+Quarto's support for inserting raw LaTeX code gives you access to tons of tools 
+for controlling output typesetting, layout, and branding. You can customize 
+fonts and colors, insert logos, control figure and table placement, add page
+breaks, and more. That may sometimes require digging into the nuances of LaTeX
+to get specific formatting. That can be a bit challenging at times but web
+searches, combined with some patience and tinkering can yield good solutions.

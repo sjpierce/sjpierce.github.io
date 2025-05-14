@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sjpierce.github.io/rr_software.html</loc>
-    <lastmod>2025-05-07T14:02:25.195Z</lastmod>
+    <lastmod>2025-05-14T00:11:45.724Z</lastmod>
   </url>
   <url>
     <loc>https://sjpierce.github.io/posts/output/draft_vs_production.html</loc>
@@ -35,5 +35,9 @@
   <url>
     <loc>https://sjpierce.github.io/posts/mda/assess_missing_data.html</loc>
     <lastmod>2025-03-29T20:43:53.218Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sjpierce.github.io/posts/output/html_vs_pdf.html</loc>
+    <lastmod>2025-05-14T00:21:27.572Z</lastmod>
   </url>
 </urlset>

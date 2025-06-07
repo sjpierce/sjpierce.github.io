@@ -2,7 +2,7 @@
 title: "HTML vs. PDF Output"
 description: "Choosing between Quarto output formats."
 date: "2025-05-13"
-date-modified: "2025-05-13"
+date-modified: "2025-06-07"
 draft: false
 categories:
   - Quarto Tips
@@ -119,10 +119,12 @@ chunks and emphasize clear, concise, communication of the methods and results.
 As with HTML format, you can add a hyperlinked [TOC to PDF output](https://quarto.org/docs/output-formats/pdf-basics.html#table-of-contents), 
 control how many layers of section headings are displayed in it, and use 
 [cross-references](https://quarto.org/docs/authoring/cross-references.html) 
-to embed other navigation hyperlinks in the output. The TOC shows up only at the 
-start of the PDF file. That still makes the document easier to navigate, but is
-not quite as convenient as the floating TOC in HTML output. Finally, PDF readers 
-usually have robust search tools for locating strings of text within a document.
+to embed other navigation hyperlinks in the output. The TOC shows up at the 
+start of the PDF file, below the title and author information. Depending on your 
+PDF reader software, you can also view the TOC in a sidebar. As with HTML output,
+clicking a topic in the TOC takes you to the relevant section and facilitates 
+navigating long documents. Finally, PDF readers usually have robust search tools 
+for locating strings of text within a document.
 
 Users who want to highlight or annotate parts of a PDF output file can do so 
 easily. Annotation features are available in most PDF reading software. 

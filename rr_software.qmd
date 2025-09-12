@@ -183,12 +183,12 @@ latest stable version from
 
 ## Quarto for Windows
 You can use this 
-[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.33/quarto-1.7.33-win.msi). 
+[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.4/quarto-1.8.4-win.msi). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## Quarto for MacOS
 You can use this 
-[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.7.33/quarto-1.7.33-macos.pkg). 
+[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.4/quarto-1.8.4-macos.pkg). 
 
 # Git, version 2.50.1.1 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software

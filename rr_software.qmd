@@ -170,7 +170,7 @@ Save that installation file to your computer’s `Downloads` folder, then run it
 ## RStudio for MacOS
 You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2025.09.0-387.dmg).  
 
-# Quarto, version 1.8.24 (or later) 
+# Quarto, version 1.8.25 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and
 technical publishing system that makes it easy to create reproducible, dynamic
 documents that interweave narrative text, code, and the result of running code
@@ -183,14 +183,14 @@ latest stable version from
 
 ## Quarto for Windows
 You can use this 
-[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.24/quarto-1.8.24-win.msi). 
+[direct link to the Windows installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.25/quarto-1.8.25-win.msi). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## Quarto for MacOS
 You can use this 
-[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.24/quarto-1.8.24-macos.pkg). 
+[direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.8.25/quarto-1.8.25-macos.pkg). 
 
-# Git, version 2.51.0.1 (or later)
+# Git, version 2.51.0.2 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software
 developed by programmers to help them manage the source code they write. It is a
 very sophisticated tool for tracking the history of what changed in a text file
@@ -202,7 +202,7 @@ install Git, it is helpful to explore the site
 ## Git for Windows
 You can download it from either [https://git-scm.com](https://git-scm.com/) or 
 [https://gitforwindows.org](https://gitforwindows.org). You can use this 
-[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.1/Git-2.51.0-64-bit.exe). 
+[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.51.0.windows.2/Git-2.51.0.2-64-bit.exe). 
 Save that installation file to your compute, then run it. 
 
 ## Git for MacOS

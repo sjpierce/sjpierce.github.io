@@ -39,22 +39,22 @@ research can be facilitated by using a set of software packages that combine
 into a powerful, integrated set of tools. The statistical software 
 [R](https://www.r-project.org), paired with 
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
-[@RStudio-Team-RN8351], is the foundation for a set of tools that can generate
+[@RStudio-Team-RN8351], is a foundation for a set of tools that can generate
 dynamic documents containing a mix of narrative text along with R code that can
 be compiled to automatically produce a fully-formatted report, manuscript, 
 website, or set of presentation slides complete with text, equations, figures, 
 tables, and reference sections [@Mair-RN3387].
 
-While @Mair-RN3387 introduces [R Markdown](https://rmarkdown.rstudio.com/)
-as a tool for writing dynamic documents, [Quarto](https://quarto.org/) 
-[@Allaire-RN8427] is a next-generation tool that replaces R Markdown. Quarto
-will be a key part of the future of scientific publishing for those who want to
-do reproducible research. It can produce documents in many different formats
-(e.g., HTML, PDF, Word, PowerPoint, and many more). Combining Quarto with
-TinyTeX enables production of very nice PDF files, which are great for
-distribution and archiving. Meanwhile, [Git](https://git-scm.com) 
-[@Torvalds-RN3929] and [GitHub](https://github.com/) solve source code version 
-control problems and facilitate collaboration on code [@Bryan-RN3900].
+While @Mair-RN3387 introduces [R Markdown](https://rmarkdown.rstudio.com/) as a
+tool for writing dynamic documents, [Quarto](https://quarto.org/)
+[@Allaire-RN8427] is a next-generation tool that replaces R Markdown. Quarto is
+a key part of scientific publishing for those who want to do reproducible
+research. It can produce documents in many different formats (e.g., HTML, PDF,
+Word, PowerPoint, and many more). Combining Quarto with TinyTeX enables
+production of very nice PDF files, which are great for distribution and 
+archiving. Meanwhile, [Git](https://git-scm.com) [@Torvalds-RN3929] and 
+[GitHub](https://github.com/) solve source code version control problems and 
+facilitate collaboration on code [@Bryan-RN3900].
 
 @Marwick-RN3899 discuss creating research compendiums that bundle collections of
 documents along with data files into custom R packages to make a research
@@ -62,9 +62,9 @@ project more reproducible. These software packages become additional scholarly
 products that make manuscripts more reproducible.
 
 # Purpose
-This document describes the software packages I personally use and recommend to
-enable reproducible research via R packages that serve as research compendiums.
-It covers which packages one will need, why they are needed, and how to install
+This document describes the software packages I use and recommend to enable
+reproducible research via R packages that serve as research compendiums. It
+covers which packages one will need, why they are needed, and how to install
 them. I share these notes when helping other people set up the software
 environment that I rely on for my daily research and statistical work. If you
 want to see how I use these software tools, check out my recent presentation on
@@ -76,9 +76,9 @@ or Git.
 :::
 
 # Assumptions
-1. You will be using either MS Windows 10 or 11 or MacOS. The notes below about 
-   MacOS are a result of helping a few collaborators who rely on MacOS; they may 
-   be less detailed (and less up-to-date) because I don't personally use MacOS.  
+1. You will be using either MS Windows 11 or MacOS. The notes below about MacOS
+   are a result of helping a few collaborators who rely on MacOS; they may be 
+   less detailed (and less up-to-date) because I don't personally use MacOS.  
 2. You have administrative access to that computer to install and configure 
    software.
 3. You aim to use custom R packages as research compendiums containing Quarto 
@@ -87,7 +87,7 @@ or Git.
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
-# R, version 4.5.1 (or later)
+# R, version 4.5.2 (or later)
 [R](https://www.r-project.org) [@R-Devel-Core-RN8182] is a free, open-source
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
@@ -96,8 +96,8 @@ most of your data management and analysis tasks. You can download R from the
 
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
-then *base*, then *Download R-4.5.1 for Windows* or use the 
-[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.5.1-win.exe). 
+then *base*, then *Download R-4.5.2 for Windows* or use the 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.5.2-win.exe). 
 Save that installation file to your computer, then run it. 
 
 ## R for MacOS
@@ -108,7 +108,7 @@ for which version of XCode and other tools have to be installed to compile R
 packages.
 
 ## R Installation Tips
-I recommend selecting the following options when instlling R.
+I recommend selecting the following options when installing R.
 
 1. 64-bit User installation 
 2. Customized startup
@@ -133,7 +133,7 @@ R and relying solely on R packages created by others. The development tools you
 need to install depend on your operating system. Use the subsection below 
 relevant to your OS. 
 
-## RTools for Windows, version 4.5 (6608-6492 or later)
+## RTools for Windows, version 4.5 (6691-6492 or later)
 Installing [RTools](https://cran.r-project.org/bin/windows/Rtools/) is 
 important because it contains some tools for compiling software packages and one 
 of the R packages we will use later (the devtools package) depends on having 
@@ -141,7 +141,7 @@ RTools available. You can download RTools from
 [CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
 *Download R for Windows*, then *RTools*, then *RTools 4.5*, then 
 *RTools44_installer*, or use the 
-[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6608-6492.exe). 
+[direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6691-6492.exe). 
 Save that installation file to your computer, then run it. 
 
 ## MacOS: Xcode, GNU Fortran, and Mandatory Libraries

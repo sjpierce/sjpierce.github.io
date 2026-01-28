@@ -53,10 +53,21 @@ a list of my publicly accessible R packages. I have others in preparation that
 will remain private repositories until relevant scholarly products have been
 published. 
 
-Some of the packages listed below relied on 
-[R Markdown](https://rmarkdown.rstudio.com/) scripts, but I have subsequently 
-adopted a newer, more capable set of [software tools](rr_software.qmd) for 
-producing the research compendiums I have in preparation now. 
+The SAWpaper and SSACHR packages listed below relied on 
+[R Markdown](https://rmarkdown.rstudio.com/) scripts, but I now use 
+[Quarto](https://quarto/org) [@Allaire-RN8427] scripts as part of my suite of 
+[software tools](rr_software.qmd) for producing research compendiums. 
+
+# CHOPStudy
+The [CHOPStudy](https://github.com/sjpierce/CHOPStudy) package is the research 
+compendium for my most recently accepted paper [@Eliason-RN8603]. This paper
+examined bandemia (elevated counts of band neutrophil cells) in dogs with 
+lymphoma after exposure to three different drugs in a multi-agent chemotherapy
+protocol. This is currently my most refined, publicly available research 
+compendium. It contains the data, the Quarto scripts (with embedded R code) used
+to manage and analyze the data, plus the HTML output files showing all 
+statistical results reported in the paper, plus additional analyses that were 
+omitted due to space limits.
 
 # piercer
 The [piercer](https://github.com/sjpierce/piercer) package is my personal

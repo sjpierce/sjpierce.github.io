@@ -59,14 +59,14 @@ The SAWpaper and SSACHR packages listed below relied on
 [software tools](rr_software.qmd) for producing research compendiums. 
 
 # CHOPStudy
-The [CHOPStudy](https://github.com/sjpierce/CHOPStudy) package is the research 
-compendium for my most recently accepted paper [@Eliason-RN8603]. This paper
-examined bandemia (elevated counts of band neutrophil cells) in dogs with 
-lymphoma after exposure to three different drugs in a multi-agent chemotherapy
-protocol. This is currently my most refined, publicly available research 
-compendium. It contains the data, the Quarto scripts (with embedded R code) used
-to manage and analyze the data, plus the HTML output files showing all 
-statistical results reported in the paper, plus additional analyses that were 
+The [CHOPStudy](https://github.com/sjpierce/CHOPStudy) package is the research
+compendium for a recently published paper [@Eliason-RN8603]. This paper examined
+bandemia (elevated counts of band neutrophil cells) in dogs with lymphoma after
+exposure to three different drugs in a multi-agent chemotherapy protocol. This
+is currently my most refined, publicly available research compendium that uses 
+HTML output. It contains the data, the Quarto scripts (with embedded R code)
+used to manage and analyze the data, plus the HTML output files showing all
+statistical results reported in the paper, plus additional analyses that were
 omitted due to space limits.
 
 # piercer
@@ -74,6 +74,16 @@ The [piercer](https://github.com/sjpierce/piercer) package is my personal
 package of miscellaneous functions for use in my research and statistical 
 consulting work. It is not particularly large, but developing it has been an 
 excellent learning experience. 
+
+# SANETPA
+The [SANETPA](https://github.com/sjpierce/SANETPA) package is my research
+compendium for a study examining attrition from a sexual assault nurse examiner
+(SANE) training program [@Campbell-RN8818]. It contains the data, the Quarto
+scripts (with embedded R code) used to manage and analyze the data, plus the PDF
+output files showing all statistical results reported in the paper, plus
+additional analyses that were omitted due to space limits. The paper will
+probably be published in July or August 2026. This is currently my most refined,
+publicly available research compendium that uses PDF outputs.
 
 # SAWpaper
 The [SAWpaper](https://github.com/sjpierce/SAWpaper) package contains the code 

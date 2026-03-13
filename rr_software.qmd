@@ -36,7 +36,7 @@ knitr:
 Statisticians can demonstrate leadership in research projects by advocating for
 and engaging in reproducible research [@Hochheimer-RN8567]. Reproducible
 research can be facilitated by using a set of software packages that combine 
-into a powerful, integrated set of tools. The statistical software 
+into a powerful, integrated suite of tools. The statistical software 
 [R](https://www.r-project.org), paired with 
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
 [@RStudio-Team-RN8351], is a foundation for a set of tools that can generate
@@ -67,8 +67,8 @@ reproducible research via R packages that serve as research compendiums. It
 covers which packages one will need, why they are needed, and how to install
 them. I share these notes when helping other people set up the software
 environment that I rely on for my daily research and statistical work. If you
-want to see how I use these software tools, check out my recent presentation on
-reproducible research [@Pierce-RN8692].
+want to see how I use these software tools, check out my presentation on
+reproducible research [@Pierce-RN8764].
 
 ::: {.callout-tip}
 I update this page whenever I install an update to R, RTools, RStudio, Quarto, 
@@ -87,7 +87,7 @@ or Git.
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
-# R, version 4.5.2 (or later)
+# R, version 4.5.3 (or later)
 [R](https://www.r-project.org) [@R-Devel-Core-RN8182] is a free, open-source
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
@@ -97,7 +97,7 @@ most of your data management and analysis tasks. You can download R from the
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
 then *base*, then *Download R-4.5.2 for Windows* or use the 
-[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.5.2-win.exe). 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.5.3-win.exe). 
 Save that installation file to your computer, then run it. 
 
 ## R for MacOS

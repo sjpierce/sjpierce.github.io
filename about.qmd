@@ -47,12 +47,15 @@ I am an applied statistician and researcher at
 
 Some of my current work focuses on:
 
-* Quality improvement for children's mental health health services.
 * A cost-benefit analysis of 
   [EFNEP](https://www.nifa.usda.gov/grants/programs/capacity-grants/efnep/expanded-food-nutrition-education-program) 
   utilizing biomarkers of chronic disease risk.   
-* Examining the effect of a cognitive-behavioral therapy on psychological, 
-  functional, and disease-related outcomes in youth with childhood-onset lupus.
-* Predicting the performance of medical students on a licensing examination. 
+* Examining the effect of cognitive-behavioral therapy interventions on 
+  psychological, functional, and disease-related outcomes in youth with 
+  functional abdominal pain disorders or with childhood-onset lupus.
+* Predicting the performance of medical students on licensing examinations. 
+* Examining the effect of a public preschool program on student retention, 
+  absenteeism, and standardized test scores for English and math during 
+  kindergarten through sixth grade. 
   
 

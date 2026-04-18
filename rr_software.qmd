@@ -153,7 +153,7 @@ are available at
 Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory 
 libraries. 
 
-# RStudio Desktop, version 2026.01.1+403 (or later)
+# RStudio Desktop, version 2026.01.2+418 (or later)
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 
 [@RStudio-Team-RN8351] is an integrated development environment (IDE) that 
 provides many convenient features for working with R. It provides a better user
@@ -164,11 +164,11 @@ download the desktop version from
 
 ## RStudio for Windows
 You can use this 
-[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2026.01.1-403.exe). 
+[direct link to the Windows installer](https://download1.rstudio.org/electron/windows/RStudio-2026.01.2-418.exe). 
 Save that installation file to your computer’s `Downloads` folder, then run it.
 
 ## RStudio for MacOS
-You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2026.01.1-403.dmg).  
+You can use this [direct link for the MacOS installer](https://download1.rstudio.org/electron/macos/RStudio-2026.01.2-418.dmg).  
 
 # Quarto, version 1.9.37 (or later) 
 [Quarto](https://quarto.org/) [@Allaire-RN8427] is an open-source scientific and
@@ -190,7 +190,7 @@ Save that installation file to your computer’s `Downloads` folder, then run it
 You can use this 
 [direct link to the MacOS installer](https://github.com/quarto-dev/quarto-cli/releases/download/v1.9.37/quarto-1.9.37-macos.pkg). 
 
-# Git, version 2.53.0.2 (or later)
+# Git, version 2.53.0.3 (or later)
 [Git](https://git-scm.com/) [@Torvalds-RN3929] is version control software
 developed by programmers to help them manage the source code they write. It is a
 very sophisticated tool for tracking the history of what changed in a text file
@@ -202,7 +202,7 @@ install Git, it is helpful to explore the site
 ## Git for Windows
 You can download it from either [https://git-scm.com](https://git-scm.com/) or 
 [https://gitforwindows.org](https://gitforwindows.org). You can use this 
-[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.2/Git-2.53.0.2-64-bit.exe). 
+[direct link for the Windows installer](https://github.com/git-for-windows/git/releases/download/v2.53.0.windows.3/Git-2.53.0.3-64-bit.exe). 
 Save that installation file to your compute, then run it. 
 
 ## Git for MacOS

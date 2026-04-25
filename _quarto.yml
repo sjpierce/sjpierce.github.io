@@ -17,6 +17,7 @@ website:
       - about.qmd
   drafts: 
     - posts/principles/rr_principles.qmd
+  draft-mode: unlinked
 
 format:
   html:

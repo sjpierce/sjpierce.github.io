@@ -36,6 +36,8 @@ listing:
   sort-ui: true
   filter-ui: true
   fields: [date, title, reading-time, description, categories, filename]
+  exclude: 
+    categories: "Draft"
 page-layout: full  
 ---
 

@@ -33,6 +33,11 @@ knitr:
     message: true
 ---
 
+::: {.callout-tip}
+I update this page whenever I install an update to R, RTools, RStudio, Quarto, 
+or Git. 
+:::
+
 Statisticians can demonstrate leadership in research projects by advocating for
 and engaging in reproducible research [@Hochheimer-RN8567]. Reproducible
 research can be facilitated by using a set of software packages that combine 
@@ -59,7 +64,8 @@ facilitate collaboration on code [@Bryan-RN3900].
 @Marwick-RN3899 discuss creating research compendiums that bundle collections of
 documents along with data files into custom R packages to make a research
 project more reproducible. These software packages become additional scholarly
-products that make manuscripts more reproducible.
+products that make manuscripts more reproducible. Several research compendiums 
+are linked on my [R Packages](packages.qmd) page. 
 
 # Purpose
 This document describes the software packages I use and recommend to enable
@@ -68,12 +74,7 @@ covers which packages one will need, why they are needed, and how to install
 them. I share these notes when helping other people set up the software
 environment that I rely on for my daily research and statistical work. If you
 want to see how I use these software tools, check out my presentation on
-reproducible research [@Pierce-RN8764].
-
-::: {.callout-tip}
-I update this page whenever I install an update to R, RTools, RStudio, Quarto, 
-or Git. 
-:::
+reproducible research [@Pierce-RN8764]. 
 
 # Assumptions
 1. You will be using either MS Windows 11 or MacOS. The notes below about MacOS
@@ -87,7 +88,7 @@ or Git.
 4. You want to use version control software to track how the code and documents 
    change over time. 
 
-# R, version 4.5.3 (or later)
+# R, version 4.6.0 (or later)
 [R](https://www.r-project.org) [@R-Devel-Core-RN8182] is a free, open-source
 software environment for statistical computing and graphics. This is the
 foundational software for my approach to reproducible research. It will handle 
@@ -96,8 +97,8 @@ most of your data management and analysis tasks. You can download R from the
 
 ## R for Windows
 If you are using Windows, follow the links labeled *Download R for Windows*, 
-then *base*, then *Download R-4.5.2 for Windows* or use the 
-[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.5.3-win.exe). 
+then *base*, then *Download R-4.6.0 for Windows* or use the 
+[direct link to the Windows installer](https://cran.r-project.org/bin/windows/base/R-4.6.0-win.exe). 
 Save that installation file to your computer, then run it. 
 
 ## R for MacOS
@@ -117,9 +118,9 @@ I recommend selecting the following options when installing R.
 5. Save version number in registry
 6. Associate R with .RData files
 
-If you previously were using an older version of R (any version in the 4.4.x
+If you previously were using an older version of R (any version in the 4.5.x
 series), you should plan to reinstall all your R packages from scratch under R
-4.5.0 or later. The best way to do that is to use a script such as
+4.6.0 or later. The best way to do that is to use a script such as
 [Reinstall_Packages.R](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Reinstall_Packages.R)
 under the older version to save a data file containing the names of installed
 packages, then remove the older version of R and replace it with the newest
@@ -140,7 +141,7 @@ software packages and one of the R packages we will use later (the devtools
 package) depends on having RTools available. You can download RTools from
 [CRAN](https://cran.r-project.org/). Either follow the CRAN links labeled 
 *Download R for Windows*, then *RTools*, then *RTools 4.5*, then 
-*RTools44_installer*, or use the 
+*RTools45_installer*, or use the 
 [direct link to the installer file](https://cran.r-project.org/bin/windows/Rtools/rtools45/files/rtools45-6768-6492.exe). 
 Save that installation file to your computer, then run it. 
 

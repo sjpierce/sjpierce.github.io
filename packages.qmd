@@ -56,7 +56,7 @@ published.
 
 The SAWpaper and SSACHR packages listed below relied on 
 [R Markdown](https://rmarkdown.rstudio.com/) scripts, but I now use 
-[Quarto](https://quarto/org) [@Allaire-RN8427] scripts as part of my suite of 
+[Quarto](https://quarto.org/) [@Allaire-RN8427] scripts as part of my suite of 
 [software tools](rr_software.qmd) for producing research compendiums. 
 
 # CHOPStudy

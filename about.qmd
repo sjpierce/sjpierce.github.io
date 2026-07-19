@@ -41,9 +41,12 @@ knitr:
     message: true
 ---
 
-I am an applied statistician and researcher at 
+I am an applied statistician, researcher, and program evaluator at 
 [Michigan State University](https://msu.edu), working in the 
 [Center for Statistical Training and Consulting (CSTAT)](https://cstat.msu.edu). 
+My PhD is in Ecological-Community Psychology but I've been working at CSTAT
+since 2009 and have applied my skills to a wide array of studies spanning many
+different academic disciplines, research designs, and topic areas.
 
 Some of my current work focuses on:
 
@@ -58,4 +61,16 @@ Some of my current work focuses on:
   absenteeism, and standardized test scores for English and math during 
   kindergarten through sixth grade. 
   
+:::{.callout-tip title="Available for Grant & Contract Work"}
+*Collaboration and consulting with researchers, organizations, businesses,*
+*government agencies, and other academic institutions are all part of my job at* 
+*CSTAT*. If you want to discuss engaging my professional services, either email 
+me directly or visit the [CSTAT website](https://cstat.msu.edu), click the 
+`Request a Consultation` button, then list me as the preferred consultant when 
+filling out our project intake form. 
 
+You can see more information at:
+
+* [https://cstat.msu.edu/collaborate](https://cstat.msu.edu/collaborate), and 
+* [https://cstat.msu.edu/collaborate/grants-contracts-support](https://cstat.msu.edu/collaborate/grants-contracts-support).
+:::

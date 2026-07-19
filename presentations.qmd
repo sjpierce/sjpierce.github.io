@@ -43,101 +43,163 @@ knitr:
     message: true
 ---
 
-This is where I'll post information about recent or upcoming presentations 
+This is where I'll post information about recent or upcoming presentations. 
 
-# CSTAT Webinars 
-Below is the abstract for my recent presentation [@Pierce-RN8764] called 
-*Reproducible research: Principles, practices, and tools for generating* 
-*reproducible statistical analyses and reports*. This was the second iteration 
-of that presentation, with some expanded material compared to the previous one 
+# Missing Data 
+I have been teaching about fundamental issues associated with missing data in 
+research and program evaluation studies. This is a neglected topic in a lot of 
+basic research design and statistical methods courses. 
+
+## Upcoming CSTAT Webinar
+The third iteration of this presentation will be a webinar designed for a
+broader audience of MSU graduate students, research staff, and faculty
+[@Pierce-RN9039]. The repository will not be publicly available until shortly
+before the presentation. See below for available materials from related 
+presentations I have already delivered.
+
+::: {.callout-note title="Abstract" collapse="true"}
+This talk will discuss some fundamental concepts and issues related to missing
+data in research studies. It will cover what missing data are, why we end up
+with them, and why they matter (i.e., their scientific consequences). The
+seminar will describe different types of missing data and introduce a structured
+framework for addressing missing data issues, plus strategies for diagnosing the
+amount, nature, and patterns of missing data. Finally, we will discuss some ways
+to prevent missing data and options for obtaining valid, unbiased statistical
+results even you have missing data. Links to additional learning resources will
+be shared.
+:::
+
+## Recent CSTAT Seminar 
+The second iteration of this presentation was an in-person seminar 
+[@Pierce-RN8953]. This version was longer than the previous one due to expanded 
+content. The audience consisted of a small group of Peruvian university faculty, 
+so I experimented with using Google Gemini to translate the materials from 
+English to Spanish. *I would appreciate getting feedback from bilingual people*
+*about how well that translation actually worked*. Both English and Spanish 
+versions of the slides are available in my 
+[FMD2026 repository](https://github.com/sjpierce/FMD2026). 
+
+::: {.callout-note title="Abstract" collapse="true"}
+This talk will discuss some fundamental concepts and issues related to missing
+data in research studies. It will cover what missing data are, why we end up
+with them, and why they matter (i.e., their scientific consequences). The
+seminar will describe different types of missing data and introduce a structured
+framework for addressing missing data issues, plus strategies for diagnosing the
+amount, nature, and patterns of missing data. Finally, we will discuss some ways
+to prevent missing data and options for obtaining valid, unbiased statistical
+results even you have missing data. Links to additional learning resources will
+be shared.
+:::
+
+## MSU Program Evaluation Occasional Speaker Series
+The first iteration of my missing data presentation [@Pierce-RN8663] was
+designed for students pursuing Master's degrees in program evaluation. Slides 
+are available in my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024) 
+and a [video recording](https://mediaspace.msu.edu/media/t/1_9gisp7ga) is also 
+available.
+
+::: {.callout-note title="Abstract" collapse="true"}
+This talk will discuss some fundamental concepts and issues related to missing
+data in program evaluation contexts. We will cover why missing data matters plus
+types of missing data and how they affect statistical results. Then we will
+highlight how to describe the nature, scope, and patterns of missing data and
+how they relate to observed data. Finally, we will discuss some ways to prevent
+missing data and options for obtaining valid, unbiased statistical results even
+when there is missing data.
+:::
+
+# Reproducible Research 
+Another topic I have been teaching about is reproducible research. I have used 
+the following presentations to articulate the principles and practices 
+underlying my approach in the hope that other researchers will start exploring 
+how to do more reproducible work themselves. 
+
+## CSTAT Webinars
+My fourth and most recent presentation on reproducible research [@Pierce-RN8764] 
+had some expanded material compared to the third one 
 [@Pierce-RN8692]. The most recent slides and example files are available in my 
 [CSTAT.RR2025v2 repository](https://github.com/sjpierce/CSTAT.RR2025v2). 
 A [video recording](https://mediaspace.msu.edu/media/CSTAT%202025%20Fall%20Semester%20-%20Reproducible%20Research/1_9ggpcw2z) 
 is also available. 
 
-**Abstract**
+::: {.callout-note title="Abstract" collapse="true"}
+This seminar will introduce the audience to a set of principles, practices, 
+and free, open-source software tools that enable scientists to generate 
+reproducible statistical analyses and reports. We will cover why 
+reproducibility is important, then offer a vision of how to enhance the 
+reproducibility of your work, with concrete steps you can take to achieve that 
+goal. We will discuss tailoring the degree of reproducibility you aim to 
+achieve for a given project, which may vary due to project context or 
+constraints. In terms of software, we will describe how R, RStudio, Quarto, 
+and TinyTex comprise a powerful suite of tools that uses dynamic documents to 
+automate producing fully-formatted reports, manuscripts, or slides complete 
+with narrative text, analysis results, figures, tables, and references. Git 
+and GitHub.com add further value through support for version control and 
+collaboration on the source code for dynamic documents. The session will 
+include conceptual content, examples of dynamic documents, and links to 
+supporting resources the audience can use to accelerate learning how to make 
+their work more reproducible.
+:::
 
-> This seminar will introduce the audience to a set of principles, practices, 
-> and free, open-source software tools that enable scientists to generate 
-> reproducible statistical analyses and reports. We will cover why 
-> reproducibility is important, then offer a vision of how to enhance the 
-> reproducibility of your work, with concrete steps you can take to achieve that 
-> goal. We will discuss tailoring the degree of reproducibility you aim to 
-> achieve for a given project, which may vary due to project context or 
-> constraints. In terms of software, we will describe how R, RStudio, Quarto, 
-> and TinyTex comprise a powerful suite of tools that uses dynamic documents to 
-> automate producing fully-formatted reports, manuscripts, or slides complete 
-> with narrative text, analysis results, figures, tables, and references. Git 
-> and GitHub.com add further value through support for version control and 
-> collaboration on the source code for dynamic documents. The session will 
-> include conceptual content, examples of dynamic documents, and links to 
-> supporting resources the audience can use to accelerate learning how to make 
-> their work more reproducible.
-
-# MSU Program Evaluation Occasional Speaker Series
-Below is the abstract for my presentation [@Pierce-RN8663] called *Fundamentals* 
-*of missing data in evaluation*. Slides are available in
-my [FMDE2024 repository](https://github.com/sjpierce/FMDE2024) and a 
-[video recording](https://mediaspace.msu.edu/media/t/1_9gisp7ga) is also 
-available.
-
-**Abstract**
-
-> This talk will discuss some fundamental concepts and issues related to missing
-> data in program evaluation contexts. We will cover why missing data matters 
-> plus types of missing data and how they affect statistical results. Then we 
-> will highlight how to describe the nature, scope, and patterns of missing data 
-> and how they relate to observed data. Finally, we will discuss some ways to 
-> prevent missing data and options for obtaining valid, unbiased statistical 
-> results even when there is missing data.
-
-# Ann Arbor R Users' Group
-Below is the abstract for my presentation [@Pierce-RN8655] called *R and*
-*Quarto: A foundation for generating reproducible reports*. Slides and example 
-files are available in my 
+## Ann Arbor R Users' Group
+The second iteration of my reproducible research presentation [@Pierce-RN8655] 
+was delivered to an audience of R users. Slides and example files are available 
+in my 
 [Pierce.AARUG2024 repository](https://github.com/sjpierce/Pierce.AARUG2024). 
 
 **Abstract**
 
-> This presentation will discuss the importance of reproducibility and 
-> illustrate how R and Quarto are foundational pieces of an integrated set of 
-> tools for generating fully-formatted, reproducible reports in a variety of 
-> output formats. We'll cover some key principles and practices that enhance
-> reproducibility.
+::: {.callout-note title="Abstract" collapse="true"}
+This presentation will discuss the importance of reproducibility and illustrate
+how R and Quarto are foundational pieces of an integrated set of tools for
+generating fully-formatted, reproducible reports in a variety of output formats.
+We'll cover some key principles and practices that enhance reproducibility.
+:::
 
-# American Evaluation Association 2024
-Below is the abstract for my presentation [@Pierce-RN8577] called *Generating*
-*reproducible statistical analyses and evaluation reports: Principles,*
-*practices, and free software tools*. Slides and example files are available in
-my [Pierce.AEA2024 repository](https://github.com/sjpierce/Pierce.AEA2024). 
+## American Evaluation Association 2024
+The first iteration of my reproducible research presentation [@Pierce-RN8577] 
+was delivered at a conference focused on program evaluation. Slides and example 
+files are available in my 
+[Pierce.AEA2024 repository](https://github.com/sjpierce/Pierce.AEA2024). 
 
-**Abstract**
+::: {.callout-note title="Abstract" collapse="true"}
+Fully reproducible statistical analyses are ones for which investigators have
+shared all the materials required to exactly recreate their findings so others
+can verify them or conduct alternative analyses. That requires sharing the
+original (usually de-identified) data, supporting documentation, and the
+software code used to analyze the data. While reproducibility has been described
+as an attainable minimum standard for trustworthy, credible scientific work; it
+is not yet well-embedded in evaluators’ professional training. This session will
+introduce the audience to a set of principles, practices, and free, open-source
+software tools that enable evaluators to efficiently generate reproducible
+statistical analyses and evaluation reports. We will cover why reproducibility
+is important in an evaluation context, then offer a vision of how to improve the
+reproducibility of your work and suggest concrete steps you can take to achieve
+that goal. We will discuss tailoring the degree of reproducibility you aim to
+achieve for a given project, which may vary due to project context or
+constraints. In terms of software, we will describe how R, RStudio, Quarto, and
+TinyTex comprise a powerful suite of tools that can generate dynamic documents
+containing a mix of narrative text along with R code that can be compiled to
+automate producing a fully-formatted report, manuscript, or set of slides
+complete with narrative text, analysis results, figures, tables, and references.
+Git and GitHub.com add further value through support for version control and
+collaboration on the source code for dynamic documents. The session will include
+conceptual content, examples of dynamic documents, and links to supporting
+resources the audience can use to accelerate learning how to make their work
+more reproducible.
+:::
 
-> Fully reproducible statistical analyses are ones for which investigators have 
-> shared all the materials required to exactly recreate their findings so 
-> others can verify them or conduct alternative analyses. That requires sharing 
-> the original (usually de-identified) data, supporting documentation, and the 
-> software code used to analyze the data. While reproducibility has been 
-> described as an attainable minimum standard for trustworthy, credible 
-> scientific work; it is not yet well-embedded in evaluators’ professional 
-> training. This session will introduce the audience to a set of principles, 
-> practices, and free, open-source software tools that enable evaluators to 
-> efficiently generate reproducible statistical analyses and evaluation reports. 
-> We will cover why reproducibility is important in an evaluation context, then 
-> offer a vision of how to improve the reproducibility of your work and suggest 
-> concrete steps you can take to achieve that goal. We will discuss tailoring 
-> the degree of reproducibility you aim to achieve for a given project, which 
-> may vary due to project context or constraints. In terms of software, we will 
-> describe how R, RStudio, Quarto, and TinyTex comprise a powerful suite of 
-> tools that can generate dynamic documents containing a mix of narrative text 
-> along with R code that can be compiled to automate producing a fully-formatted 
-> report, manuscript, or set of slides complete with narrative text, analysis 
-> results, figures, tables, and references. Git and GitHub.com add further value 
-> through support for version control and collaboration on the source code for 
-> dynamic documents. The session will include conceptual content, examples of 
-> dynamic documents, and links to supporting resources the audience can use to 
-> accelerate learning how to make their work more reproducible.
+# Research Case Studies
 
+## MSU College of Osteopathic Medicine
+I presented one of my projects to osteopathic medicine students as a research
+case study [@Pierce-RN8914]. The objective was to describe a pilot study on the
+TEACH intervention for youth with childhood-onset lupus, based on a recent 
+publication [@Cunningham-RN8694]. The talk emphasized some features of the
+research design we used and methodology decisions we had to make, plus the
+results we obtained. I aimed to make the content accessible to students with
+limited prior training in research design. Slides are available in my
+[OST597.TEACH repository](https://github.com/sjpierce/OST597.TEACH). 
 
 # References
 ::: {#refs}

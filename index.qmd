@@ -42,6 +42,10 @@ page-layout: full
 ---
 
 Welcome my personal website! This is where I share materials on reproducible 
-research, statistical consulting, and other topics I find interesting.  
+research, statistical collaboration and consulting, and other topics I find 
+interesting.  
 
-[Software for Reproducible Research with R](rr_software.qmd)
+Check out my page on 
+[software for doing reproducible research with R](rr_software.qmd). That's a 
+crucial part of my toolbox, so I share those notes with other people who want 
+to adopt the tools I have found most useful. 

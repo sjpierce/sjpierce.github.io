@@ -52,7 +52,8 @@ code that can manage data and insert formatted text, tables, figures, and
 reference sections when you render the script into a dynamic document. Below is
 a list of my publicly accessible R packages. I have others in preparation that
 will remain private repositories until relevant scholarly products have been
-published. 
+published. See [my presentations](presentations.qmd) on reproducible research
+for an overview of how to build compendiums with R packages. 
 
 The SAWpaper and SSACHR packages listed below relied on 
 [R Markdown](https://rmarkdown.rstudio.com/) scripts, but I now use 

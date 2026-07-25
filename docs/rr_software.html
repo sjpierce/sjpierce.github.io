@@ -4172,7 +4172,7 @@ vertical-align: -.125em;
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">2026-07-25 10:14:25 EDT</p>
+      <p class="date-modified">2026-07-25 10:23:08 EDT</p>
     </div>
   </div>
     
@@ -4291,13 +4291,15 @@ Tip
 <h1 data-number="8"><span class="header-section-number">8</span> Installing R Packages</h1>
 <p>User-contributed R packages add extra features to R. They are a large part of what makes R so useful. Below is a set of specific R packages that we plan to use and can be downloaded from <a href="https://cran.r-project.org/">CRAN</a> via the following command within R’s console.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;pak&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;tinytex&quot;</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Each of these may also automatically install additional packages on which they depend. We may recommend installing additional packages later.</p>
 <p>The <a href="https://devtools.r-lib.org/">devtools package</a> provides developer tools and functions that simplify creating and quality-checking custom R packages.</p>
 <p>The <a href="https://here.r-lib.org/">here package</a> facilitates using relative filenames when one is using <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">RStudio projects</a> to organize files.</p>
-<p>The <a href="https://pkgs.rstudio.com/rmarkdown/">rmarkdown</a> and <a href="https://yihui.org/knitr/">knitr</a> packages work together to translate <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and/or Quarto scripts into Pandoc markdown files. The <a href="https://cran.r-project.org/package=quarto">quarto</a> package provides support for interfacing with Quarto. Meanwhile, the <a href="http://haozhu233.github.io/kableExtra/">kableExtra</a> package extends knitr’s tools for making nice, formatted tables in via R Markdown or Quarto. Then, the <a href="https://cran.r-project.org/web/packages/tinytex/index.html">tinytex</a> package provides an easy way to install and start using TinyTex to convert R Markdown or Quarto documents to fully formatted PDF files.</p>
+<p>The <a href="https://pkgs.rstudio.com/rmarkdown/">rmarkdown</a> and <a href="https://yihui.org/knitr/">knitr</a> packages work together to translate <a href="https://rmarkdown.rstudio.com/">R Markdown</a> and/or Quarto scripts into Pandoc markdown files.</p>
+<p>The <a href="https://cran.r-project.org/package=pak">pak package</a> facilitates installing R packages (especially from code repositories like GitHub or GitLab). It is fast, reliable, and works in parallel when installing multiple packages.</p>
+<p>The <a href="https://cran.r-project.org/package=quarto">quarto</a> package provides support for interfacing with Quarto. Meanwhile, the <a href="http://haozhu233.github.io/kableExtra/">kableExtra</a> package extends knitr’s tools for making nice, formatted tables in via R Markdown or Quarto. Then, the <a href="https://cran.r-project.org/web/packages/tinytex/index.html">tinytex</a> package provides an easy way to install and start using TinyTex to convert R Markdown or Quarto documents to fully formatted PDF files.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -5062,7 +5064,7 @@ RStudio Team. (2026). <em><span>RStudio Desktop</span>: Integrated development e
 <span id="cb4-221"><a href="#cb4-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb4-222"><a href="#cb4-222" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-r-pkgs</span></span>
 <span id="cb4-223"><a href="#cb4-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
+<span id="cb4-224"><a href="#cb4-224" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">&quot;devtools&quot;</span>, <span class="st">&quot;here&quot;</span>, <span class="st">&quot;kableExtra&quot;</span>, <span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;pak&quot;</span>, <span class="st">&quot;quarto&quot;</span>, </span>
 <span id="cb4-225"><a href="#cb4-225" aria-hidden="true" tabindex="-1"></a>                   <span class="st">&quot;rmarkdown&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;tinytex&quot;</span>))</span>
 <span id="cb4-226"><a href="#cb4-226" aria-hidden="true" tabindex="-1"></a><span class="in">```</span> </span>
 <span id="cb4-227"><a href="#cb4-227" aria-hidden="true" tabindex="-1"></a></span>
@@ -5081,103 +5083,108 @@ RStudio Team. (2026). <em><span>RStudio Desktop</span>: Integrated development e
 <span id="cb4-240"><a href="#cb4-240" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">knitr</span><span class="co">](https://yihui.org/knitr/)</span> packages work together to translate </span>
 <span id="cb4-241"><a href="#cb4-241" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">R Markdown</span><span class="co">](https://rmarkdown.rstudio.com/)</span> and/or Quarto scripts into </span>
 <span id="cb4-242"><a href="#cb4-242" aria-hidden="true" tabindex="-1"></a>Pandoc markdown files. </span>
-<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quarto</span><span class="co">](https://cran.r-project.org/package=quarto)</span> package provides support </span>
-<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>for interfacing with Quarto. Meanwhile, the </span>
-<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">kableExtra</span><span class="co">](http://haozhu233.github.io/kableExtra/)</span> package extends knitr’s </span>
-<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>tools for making nice, formatted tables in via R Markdown or Quarto. Then, the </span>
-<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">tinytex</span><span class="co">](https://cran.r-project.org/web/packages/tinytex/index.html)</span> package</span>
-<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a>provides an easy way to install and start using TinyTex to convert R Markdown or </span>
-<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>Quarto documents to fully formatted PDF files. </span>
-<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
-<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a>In the paragraph above, note the capitalization of the software names: <span class="in">`quarto`</span> </span>
-<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a>is an R package that helps you interface with the stand-alone Quarto software. </span>
-<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a>Similarly, <span class="in">`tinytex`</span> is an R package that helps you install and use TinyTeX (a </span>
-<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a>LaTeX distribution created by the same author).  </span>
-<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">tidyverse</span><span class="co">](https://www.tidyverse.org/)</span> is a collection of related R </span>
-<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a>packages that provide an unified set of functions that make working with R much </span>
-<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a>easier. They support creating piped operations that chain together easily. </span>
-<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a><span class="fu"># TinyTex </span></span>
-<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TinyTex</span><span class="co">](https://yihui.org/tinytex/)</span> is a specific distribution of </span>
-<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span>, which is document preparation software</span>
-<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a>that allows high-quality typesetting. It takes plain text LaTeX files (<span class="in">`*.tex`</span></span>
-<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a>files) that describe the structure of a document and compiles them into</span>
-<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a>fully-formatted PDF files with nice fonts and layout. We can actually use the</span>
-<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a>tinytex R package to install TinyTeX via the following command inside R.</span>
-<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-TinyTex</span></span>
-<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-275"><a href="#cb4-275" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span>
-<span id="cb4-276"><a href="#cb4-276" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a>You can use </span>
-<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">alternative LaTeX distributions</span><span class="co">](https://www.tug.org/interest.html#free)</span> and </span>
-<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a>tools (e.g., <span class="co">[</span><span class="ot">MiKTeX</span><span class="co">](https://miktex.org)</span>) instead, but TinyTeX is very </span>
-<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a>convenient because of how well it integrates with the other tools we’re using. </span>
-<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Yihui Xie</span><span class="co">](https://yihui.org/)</span>, the author of tinytex and TinyTex, is a </span>
-<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a>contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. </span>
-<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a>If it has been a while since you installed TinyTex, you can easily update to the </span>
-<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a>latest version by the following command. This should include any previously </span>
-<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a>installed LaTeX packages you had accumulated along the way. My experience is </span>
-<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a>that the first time you render a PDF file after a reinstall takes longer than </span>
-<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a>normal, but rendering speed returns to normal after that. </span>
-<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reinstall-TinyTex</span></span>
-<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a> </span>
-<span id="cb4-296"><a href="#cb4-296" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">reinstall_tinytex</span>()</span>
-<span id="cb4-297"><a href="#cb4-297" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pandoc </span></span>
-<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Pandoc</span><span class="co">](https://pandoc.org/)</span> is software that allows you to convert documents</span>
-<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a>between multiple formats. A copy of Pandoc comes bundled with RStudio and</span>
-<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a>another copy comes bundled with Quarto, so you do not need to download and</span>
-<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a>install it separately. If you want PDF output, Pandoc is what converts documents </span>
-<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a>into the LaTeX files that can be processed by TinyTeX. Quarto is built on top of </span>
-<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a>Pandoc because it facilitates producing many different kinds of output files.</span>
-<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a><span class="fu"># rcrpkg.template </span></span>
-<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">rcrpkg.template</span><span class="co">](https://github.com/sjpierce/rcrpkg.template)</span> <span class="co">[</span><span class="ot">@Pierce-RN8380</span><span class="co">]</span> </span>
-<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a>is a Git repository I created to serve as a starter template for new, </span>
-<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a>project-specific Git repositories. It streamlines creating a new custom R </span>
-<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a>package that serves as a research compendium <span class="co">[</span><span class="ot">@Marwick-RN3899</span><span class="co">]</span> for a project. </span>
-<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a>Inside the <span class="co">[</span><span class="ot">`scripts`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/tree/main/scripts)</span> </span>
-<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a>subfolder, the </span>
-<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_HTML.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_HTML.qmd)</span> </span>
-<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to HTML output and the </span>
-<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_PDF.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_PDF.qmd)</span> </span>
-<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to PDF output. The latter file also uses the </span>
-<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/title.tex)</span> </span>
-<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a>and </span>
-<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`compact-title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/compact-title.tex)</span> </span>
-<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a>files stored in the same folder to control the formatting of space around the</span>
-<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a>title and showing author affiliation info. References to those can be removed</span>
-<span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a>from the YAML header to simplify the script and reduce dependency on additional</span>
-<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a>files. The </span>
-<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Setup_as_Package.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Setup_as_Package.qmd)</span> </span>
-<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a>Quarto script guides one through some key steps in setting up a custom R </span>
-<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a>package.</span>
-<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a>The basic approach to using this template is:</span>
-<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Fork and clone the <span class="in">`rcrpkg.template`</span> repository to your GitHub account.</span>
-<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use GitHub settings to set that as a repository template for yourself.</span>
-<span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use GitHub to create a new repository (with a suitable name of your choice) </span>
-<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a>   from that template repository. </span>
-<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Clone that your new repository to your local computer, </span>
-<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Start using the <span class="in">`Setup_as_Package.qmd`</span> script inside your new local </span>
-<span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a>   repository to take additional steps.</span>
-<span id="cb4-338"><a href="#cb4-338" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-339"><a href="#cb4-339" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-340"><a href="#cb4-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-341"><a href="#cb4-341" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
-<span id="cb4-342"><a href="#cb4-342" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
-<span id="cb4-343"><a href="#cb4-343" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-243"><a href="#cb4-243" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-244"><a href="#cb4-244" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">pak package</span><span class="co">](https://cran.r-project.org/package=pak)</span> facilitates installing </span>
+<span id="cb4-245"><a href="#cb4-245" aria-hidden="true" tabindex="-1"></a>R packages (especially from code repositories like GitHub or GitLab). It is </span>
+<span id="cb4-246"><a href="#cb4-246" aria-hidden="true" tabindex="-1"></a>fast, reliable, and works in parallel when installing multiple packages. </span>
+<span id="cb4-247"><a href="#cb4-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-248"><a href="#cb4-248" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">quarto</span><span class="co">](https://cran.r-project.org/package=quarto)</span> package provides support </span>
+<span id="cb4-249"><a href="#cb4-249" aria-hidden="true" tabindex="-1"></a>for interfacing with Quarto. Meanwhile, the </span>
+<span id="cb4-250"><a href="#cb4-250" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">kableExtra</span><span class="co">](http://haozhu233.github.io/kableExtra/)</span> package extends knitr’s </span>
+<span id="cb4-251"><a href="#cb4-251" aria-hidden="true" tabindex="-1"></a>tools for making nice, formatted tables in via R Markdown or Quarto. Then, the </span>
+<span id="cb4-252"><a href="#cb4-252" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">tinytex</span><span class="co">](https://cran.r-project.org/web/packages/tinytex/index.html)</span> package</span>
+<span id="cb4-253"><a href="#cb4-253" aria-hidden="true" tabindex="-1"></a>provides an easy way to install and start using TinyTex to convert R Markdown or </span>
+<span id="cb4-254"><a href="#cb4-254" aria-hidden="true" tabindex="-1"></a>Quarto documents to fully formatted PDF files. </span>
+<span id="cb4-255"><a href="#cb4-255" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-256"><a href="#cb4-256" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip}</span>
+<span id="cb4-257"><a href="#cb4-257" aria-hidden="true" tabindex="-1"></a>In the paragraph above, note the capitalization of the software names: <span class="in">`quarto`</span> </span>
+<span id="cb4-258"><a href="#cb4-258" aria-hidden="true" tabindex="-1"></a>is an R package that helps you interface with the stand-alone Quarto software. </span>
+<span id="cb4-259"><a href="#cb4-259" aria-hidden="true" tabindex="-1"></a>Similarly, <span class="in">`tinytex`</span> is an R package that helps you install and use TinyTeX (a </span>
+<span id="cb4-260"><a href="#cb4-260" aria-hidden="true" tabindex="-1"></a>LaTeX distribution created by the same author).  </span>
+<span id="cb4-261"><a href="#cb4-261" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-262"><a href="#cb4-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-263"><a href="#cb4-263" aria-hidden="true" tabindex="-1"></a>The <span class="co">[</span><span class="ot">tidyverse</span><span class="co">](https://www.tidyverse.org/)</span> is a collection of related R </span>
+<span id="cb4-264"><a href="#cb4-264" aria-hidden="true" tabindex="-1"></a>packages that provide an unified set of functions that make working with R much </span>
+<span id="cb4-265"><a href="#cb4-265" aria-hidden="true" tabindex="-1"></a>easier. They support creating piped operations that chain together easily. </span>
+<span id="cb4-266"><a href="#cb4-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-267"><a href="#cb4-267" aria-hidden="true" tabindex="-1"></a><span class="fu"># TinyTex </span></span>
+<span id="cb4-268"><a href="#cb4-268" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">TinyTex</span><span class="co">](https://yihui.org/tinytex/)</span> is a specific distribution of </span>
+<span id="cb4-269"><a href="#cb4-269" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">LaTeX</span><span class="co">](https://www.latex-project.org/)</span>, which is document preparation software</span>
+<span id="cb4-270"><a href="#cb4-270" aria-hidden="true" tabindex="-1"></a>that allows high-quality typesetting. It takes plain text LaTeX files (<span class="in">`*.tex`</span></span>
+<span id="cb4-271"><a href="#cb4-271" aria-hidden="true" tabindex="-1"></a>files) that describe the structure of a document and compiles them into</span>
+<span id="cb4-272"><a href="#cb4-272" aria-hidden="true" tabindex="-1"></a>fully-formatted PDF files with nice fonts and layout. We can actually use the</span>
+<span id="cb4-273"><a href="#cb4-273" aria-hidden="true" tabindex="-1"></a>tinytex R package to install TinyTeX via the following command inside R.</span>
+<span id="cb4-274"><a href="#cb4-274" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-277"><a href="#cb4-277" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-278"><a href="#cb4-278" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: install-TinyTex</span></span>
+<span id="cb4-279"><a href="#cb4-279" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-280"><a href="#cb4-280" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span>
+<span id="cb4-281"><a href="#cb4-281" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-282"><a href="#cb4-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-283"><a href="#cb4-283" aria-hidden="true" tabindex="-1"></a>You can use </span>
+<span id="cb4-284"><a href="#cb4-284" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">alternative LaTeX distributions</span><span class="co">](https://www.tug.org/interest.html#free)</span> and </span>
+<span id="cb4-285"><a href="#cb4-285" aria-hidden="true" tabindex="-1"></a>tools (e.g., <span class="co">[</span><span class="ot">MiKTeX</span><span class="co">](https://miktex.org)</span>) instead, but TinyTeX is very </span>
+<span id="cb4-286"><a href="#cb4-286" aria-hidden="true" tabindex="-1"></a>convenient because of how well it integrates with the other tools we’re using. </span>
+<span id="cb4-287"><a href="#cb4-287" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Yihui Xie</span><span class="co">](https://yihui.org/)</span>, the author of tinytex and TinyTex, is a </span>
+<span id="cb4-288"><a href="#cb4-288" aria-hidden="true" tabindex="-1"></a>contributor to R Markdown, Quarto, and the knitr and rmarkdown packages in R. </span>
+<span id="cb4-289"><a href="#cb4-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-290"><a href="#cb4-290" aria-hidden="true" tabindex="-1"></a>If it has been a while since you installed TinyTex, you can easily update to the </span>
+<span id="cb4-291"><a href="#cb4-291" aria-hidden="true" tabindex="-1"></a>latest version by the following command. This should include any previously </span>
+<span id="cb4-292"><a href="#cb4-292" aria-hidden="true" tabindex="-1"></a>installed LaTeX packages you had accumulated along the way. My experience is </span>
+<span id="cb4-293"><a href="#cb4-293" aria-hidden="true" tabindex="-1"></a>that the first time you render a PDF file after a reinstall takes longer than </span>
+<span id="cb4-294"><a href="#cb4-294" aria-hidden="true" tabindex="-1"></a>normal, but rendering speed returns to normal after that. </span>
+<span id="cb4-295"><a href="#cb4-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-298"><a href="#cb4-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-299"><a href="#cb4-299" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: reinstall-TinyTex</span></span>
+<span id="cb4-300"><a href="#cb4-300" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb4-301"><a href="#cb4-301" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">reinstall_tinytex</span>()</span>
+<span id="cb4-302"><a href="#cb4-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb4-303"><a href="#cb4-303" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-304"><a href="#cb4-304" aria-hidden="true" tabindex="-1"></a><span class="fu"># Pandoc </span></span>
+<span id="cb4-305"><a href="#cb4-305" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Pandoc</span><span class="co">](https://pandoc.org/)</span> is software that allows you to convert documents</span>
+<span id="cb4-306"><a href="#cb4-306" aria-hidden="true" tabindex="-1"></a>between multiple formats. A copy of Pandoc comes bundled with RStudio and</span>
+<span id="cb4-307"><a href="#cb4-307" aria-hidden="true" tabindex="-1"></a>another copy comes bundled with Quarto, so you do not need to download and</span>
+<span id="cb4-308"><a href="#cb4-308" aria-hidden="true" tabindex="-1"></a>install it separately. If you want PDF output, Pandoc is what converts documents </span>
+<span id="cb4-309"><a href="#cb4-309" aria-hidden="true" tabindex="-1"></a>into the LaTeX files that can be processed by TinyTeX. Quarto is built on top of </span>
+<span id="cb4-310"><a href="#cb4-310" aria-hidden="true" tabindex="-1"></a>Pandoc because it facilitates producing many different kinds of output files.</span>
+<span id="cb4-311"><a href="#cb4-311" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-312"><a href="#cb4-312" aria-hidden="true" tabindex="-1"></a><span class="fu"># rcrpkg.template </span></span>
+<span id="cb4-313"><a href="#cb4-313" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">rcrpkg.template</span><span class="co">](https://github.com/sjpierce/rcrpkg.template)</span> <span class="co">[</span><span class="ot">@Pierce-RN8380</span><span class="co">]</span> </span>
+<span id="cb4-314"><a href="#cb4-314" aria-hidden="true" tabindex="-1"></a>is a Git repository I created to serve as a starter template for new, </span>
+<span id="cb4-315"><a href="#cb4-315" aria-hidden="true" tabindex="-1"></a>project-specific Git repositories. It streamlines creating a new custom R </span>
+<span id="cb4-316"><a href="#cb4-316" aria-hidden="true" tabindex="-1"></a>package that serves as a research compendium <span class="co">[</span><span class="ot">@Marwick-RN3899</span><span class="co">]</span> for a project. </span>
+<span id="cb4-317"><a href="#cb4-317" aria-hidden="true" tabindex="-1"></a>Inside the <span class="co">[</span><span class="ot">`scripts`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/tree/main/scripts)</span> </span>
+<span id="cb4-318"><a href="#cb4-318" aria-hidden="true" tabindex="-1"></a>subfolder, the </span>
+<span id="cb4-319"><a href="#cb4-319" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_HTML.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_HTML.qmd)</span> </span>
+<span id="cb4-320"><a href="#cb4-320" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to HTML output and the </span>
+<span id="cb4-321"><a href="#cb4-321" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Example_Render_to_PDF.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Example_Render_to_PDF.qmd)</span> </span>
+<span id="cb4-322"><a href="#cb4-322" aria-hidden="true" tabindex="-1"></a>script demonstrates rendering to PDF output. The latter file also uses the </span>
+<span id="cb4-323"><a href="#cb4-323" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/title.tex)</span> </span>
+<span id="cb4-324"><a href="#cb4-324" aria-hidden="true" tabindex="-1"></a>and </span>
+<span id="cb4-325"><a href="#cb4-325" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`compact-title.tex`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/compact-title.tex)</span> </span>
+<span id="cb4-326"><a href="#cb4-326" aria-hidden="true" tabindex="-1"></a>files stored in the same folder to control the formatting of space around the</span>
+<span id="cb4-327"><a href="#cb4-327" aria-hidden="true" tabindex="-1"></a>title and showing author affiliation info. References to those can be removed</span>
+<span id="cb4-328"><a href="#cb4-328" aria-hidden="true" tabindex="-1"></a>from the YAML header to simplify the script and reduce dependency on additional</span>
+<span id="cb4-329"><a href="#cb4-329" aria-hidden="true" tabindex="-1"></a>files. The </span>
+<span id="cb4-330"><a href="#cb4-330" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">`Setup_as_Package.qmd`</span><span class="co">](https://github.com/sjpierce/rcrpkg.template/blob/main/scripts/Setup_as_Package.qmd)</span> </span>
+<span id="cb4-331"><a href="#cb4-331" aria-hidden="true" tabindex="-1"></a>Quarto script guides one through some key steps in setting up a custom R </span>
+<span id="cb4-332"><a href="#cb4-332" aria-hidden="true" tabindex="-1"></a>package.</span>
+<span id="cb4-333"><a href="#cb4-333" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-334"><a href="#cb4-334" aria-hidden="true" tabindex="-1"></a>The basic approach to using this template is:</span>
+<span id="cb4-335"><a href="#cb4-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-336"><a href="#cb4-336" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Fork and clone the <span class="in">`rcrpkg.template`</span> repository to your GitHub account.</span>
+<span id="cb4-337"><a href="#cb4-337" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Use GitHub settings to set that as a repository template for yourself.</span>
+<span id="cb4-338"><a href="#cb4-338" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Use GitHub to create a new repository (with a suitable name of your choice) </span>
+<span id="cb4-339"><a href="#cb4-339" aria-hidden="true" tabindex="-1"></a>   from that template repository. </span>
+<span id="cb4-340"><a href="#cb4-340" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Clone that your new repository to your local computer, </span>
+<span id="cb4-341"><a href="#cb4-341" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Start using the <span class="in">`Setup_as_Package.qmd`</span> script inside your new local </span>
+<span id="cb4-342"><a href="#cb4-342" aria-hidden="true" tabindex="-1"></a>   repository to take additional steps.</span>
+<span id="cb4-343"><a href="#cb4-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-344"><a href="#cb4-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-345"><a href="#cb4-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-346"><a href="#cb4-346" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
+<span id="cb4-347"><a href="#cb4-347" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb4-348"><a href="#cb4-348" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

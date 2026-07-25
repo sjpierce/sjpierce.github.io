@@ -219,7 +219,7 @@ following command within R’s console.
 ```{r}
 #| label: install-r-pkgs
 
-install.packages(c("devtools", "here", "kableExtra", "knitr", "quarto", 
+install.packages(c("devtools", "here", "kableExtra", "knitr", "pak", "quarto", 
                    "rmarkdown", "tidyverse", "tinytex"))
 ``` 
 
@@ -238,6 +238,11 @@ The [rmarkdown](https://pkgs.rstudio.com/rmarkdown/) and
 [knitr](https://yihui.org/knitr/) packages work together to translate 
 [R Markdown](https://rmarkdown.rstudio.com/) and/or Quarto scripts into 
 Pandoc markdown files. 
+
+The [pak package](https://cran.r-project.org/package=pak) facilitates installing 
+R packages (especially from code repositories like GitHub or GitLab). It is 
+fast, reliable, and works in parallel when installing multiple packages. 
+
 The [quarto](https://cran.r-project.org/package=quarto) package provides support 
 for interfacing with Quarto. Meanwhile, the 
 [kableExtra](http://haozhu233.github.io/kableExtra/) package extends knitr’s 

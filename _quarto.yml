@@ -16,7 +16,7 @@ website:
         text: Presentations
       - about.qmd
   drafts: 
-    - posts/principles/rr_principles.qmd
+    - posts/output/software_used.qmd
   draft-mode: unlinked
 
 format:

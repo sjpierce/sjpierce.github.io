@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/principles/rr_principles.html",
       "/posts/output/html_vs_pdf.html",
       "/posts/mda/assess_missing_data.html",
       "/posts/output/draft_vs_production.html"

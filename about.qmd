@@ -48,6 +48,13 @@ My PhD is in Ecological-Community Psychology but I've been working at CSTAT
 since 2009 and have applied my skills to a wide array of studies spanning many
 different academic disciplines, research designs, and topic areas.
 
+My methodology skills cover a broad range of quantitative methods, particularly
+including linear and generalized linear models (plus their
+mixed-model/multilevel extensions), growth curve modeling, structural equation
+models and latent variable modeling (including latent class and growth mixture
+models), measurement modeling, handling & imputing missing data, equivalence
+testing, and more. I have a strong interest in reproducible research.
+
 Some of my current work focuses on:
 
 * A cost-benefit analysis of 

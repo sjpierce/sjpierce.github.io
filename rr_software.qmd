@@ -151,8 +151,8 @@ If you are using MacOS instead of Windows, then you need a few
 that fulfill the compiler functions that RTools serves on Windows. The details 
 are available at 
 [https://mac.r-project.org/tools/](https://mac.r-project.org/tools/). 
-Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory 
-libraries. 
+Specifically, you need Xcode, universal GNU Fortran 14.2 Compiler, and some 
+mandatory libraries. 
 
 # RStudio Desktop, version 2026.08.2+200 (or later)
 [RStudio Desktop](https://posit.co/products/open-source/rstudio/) 

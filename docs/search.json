@@ -39,7 +39,7 @@
     "href": "rr_software.html#macos-xcode-gnu-fortran-and-mandatory-libraries",
     "title": "Software for Reproducible Research with R",
     "section": "4.2 MacOS: Xcode, GNU Fortran, and Mandatory Libraries",
-    "text": "4.2 MacOS: Xcode, GNU Fortran, and Mandatory Libraries\nIf you are using MacOS instead of Windows, then you need a few MacOS-specific development tools that fulfill the compiler functions that RTools serves on Windows. The details are available at https://mac.r-project.org/tools/. Specifically, you need Xcode, GNU Fortran 12.2 Compiler, and some mandatory libraries."
+    "text": "4.2 MacOS: Xcode, GNU Fortran, and Mandatory Libraries\nIf you are using MacOS instead of Windows, then you need a few MacOS-specific development tools that fulfill the compiler functions that RTools serves on Windows. The details are available at https://mac.r-project.org/tools/. Specifically, you need Xcode, universal GNU Fortran 14.2 Compiler, and some mandatory libraries."
   },
   {
     "objectID": "rr_software.html#rstudio-for-windows",

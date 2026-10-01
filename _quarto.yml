@@ -16,7 +16,7 @@ website:
         text: Presentations
       - about.qmd
   drafts: 
-    - posts/output/software_used.qmd
+    - posts/output/Placeholder.qmd
   draft-mode: unlinked
 
 format:

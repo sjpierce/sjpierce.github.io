@@ -1,0 +1,126 @@
+---
+title: "Documenting Software Used"
+description: "Automate documenting the software used to generate an output file."
+date: "2026-09-30"
+date-modified: "2026-09-30"
+draft: false
+categories:
+  - Quarto Tips
+  - Reproducible Research
+  - Automation Principle
+  - Preservation Principle
+execute:
+  echo: true
+---
+
+This post is about how I document the software environment used to generate 
+output files. 
+
+# Why Documenting the Software Used is Useful
+The documentation criterion for reproducibility requires telling other people 
+what software environment you used to conduct analyses. The most reliable way to 
+reproduce your work is to run your code, on your data, with the exact same
+software that you used. It is not enough to just say that you used R or a
+specific set of R packages because both the base R system and R packages change
+over time. Some package authors publish new versions quite frequently.
+
+Changes between versions can fix (or introduce) bugs and add, change, or remove 
+functions, arguments, syntax, interfaces, or dependencies on other software. So 
+someone else may be unable to reproduce your work even though they are using the 
+same set of packages if they have either older or newer versions than you were
+using. 
+
+Therefore, you need to record the specific version numbers of all the software 
+used for a given analysis. Doing so has helped me solve issues when routine R
+package updates broke scripts that previously worked reliably because I was able 
+to systematically track down which pieces of my software environment had changed
+then either revert to using an older version of a specific package or update my
+code to work with the newer version. Naturally, this all works better if you 
+[keep date-stamped production outputs](https://sjpierce.github.io/posts/output/draft_vs_production.html). 
+
+# Automation Helps
+I run package updates frequently and often use a large collection of R packages
+to manage data and run analyses. Loading an R package also means other packages 
+that it depends on also get loaded. Manually writing out the version numbers for
+all of them would be tedious and error-prone. The solution is to automate
+capturing that information by adding a few function calls at the end of scripts.
+
+So, I often include a relatively standardized Software Information section and 
+code chunks like those shown below in my scripts.
+
+# Load R Packages 
+Near the beginning of my Quarto files, I'll include a chunk to load R packages. 
+The ones loaded below offer functions I use to automate documenting my software 
+environment. 
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(devtools)  # for session_info()
+library(piercer)   # for git_report(), which_latex().
+library(quarto)    # for quarto_version()
+library(rmarkdown) # for pandoc_version()
+```
+
+# Software Information
+I used [R](https://www.r-project.org/) as the main computing environment and 
+[Quarto](https://quarto.org/) scripts to enhance reproducibility. I used 
+[RStudio](www.rstudio.org) as the editor to interface with R and Quarto. 
+
+- PDF software chain:
+  **qmd file > RStudio > Quarto > R > knitr > md file > Pandoc > tex file > TinyTeX > PDF file**.
+- HTML software chain:
+  **qmd file > RStudio > Quarto > R > knitr > md file > Pandoc > HTML file**.
+- [Quarto `{r} quarto_version()`](https://quarto.org/) runs `*.qmd` files 
+  through [R](https://www.r-project.org/) and [knitr](https://yihui.org/knitr/) 
+  to produce `*.md` markdown files.
+- [Pandoc `{r} rmarkdown::pandoc_version()`](https://pandoc.org) converts 
+  markdown files (`*.md`) to other formats, including LaTeX (`*.tex`) and HTML 
+  (`*.html`) among others.
+- [TinyTeX](https://yihui.org/tinytex/) compiles LaTeX files (`*.tex`) into PDF 
+  files. 
+
+## Versions
+This document was generated using the following computational environment and 
+dependencies: 
+
+``` {r}
+#| label: show-version
+
+# Quarto (used inline above in the bullet list)
+quarto_version()
+
+# Pandoc (used inline above in the bullet list) 
+pandoc_version()
+
+# TinyTex or other LaTeX software. 
+which_latex()
+
+# Get R and R package version numbers in use.
+devtools::session_info()
+```
+
+## Git Details
+The current Git commit details and status are:
+
+``` {r}
+#| label: git-details
+#| cfsize: scriptsize
+
+git_report()
+```
+
+This is useful because it tells us exactly which commit in the Git history 
+we would need to be using to make sure we are running the exact same code. 
+Sometimes another person is not using the most current code, or has changed the 
+code in some way since it was last committed.  
+
+::: {.callout-tip}
+* Untracked files are files located in the repository that Git has not been told 
+  to entirely ignore, but have also not been committed into the version history. 
+* Unstaged changes to files indicate that some of the contents have been 
+  modified since the last time the file was committed to Git. In production 
+  runs, we want the Git output to not show any unstaged changes to key files!
+
+::: 

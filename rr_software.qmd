@@ -161,7 +161,7 @@ provides many convenient features for working with R. It provides a better user
 interface for R than the raw R software. It contains a very good programming
 editor, plus a nice way to browse the list of objects R has in memory. You can
 download the desktop version from 
-[https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/).
+[https://docs.posit.co/ide/user/download.html](https://docs.posit.co/ide/user/download.html).
 
 ## RStudio for Windows
 You can use this 

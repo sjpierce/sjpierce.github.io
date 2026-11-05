@@ -50,12 +50,13 @@ I have been teaching about fundamental issues associated with missing data in
 research and program evaluation studies. This is a neglected topic in a lot of 
 basic research design and statistical methods courses. 
 
-## Upcoming CSTAT Webinar
-The third iteration of this presentation will be a webinar designed for a
-broader audience of MSU graduate students, research staff, and faculty
-[@Pierce-RN9039]. The repository will not be publicly available until shortly
-before the presentation. See below for available materials from related 
-presentations I have already delivered.
+## CSTAT Seminars 
+The third iteration of this presentation was a webinar designed for a broad 
+audience of MSU graduate students, research staff, and faculty [@Pierce-RN9039].
+The slides are available in my 
+[FMD2026v2 repository](https://github.com/sjpierce/FMD2026v2) and a 
+[video recording](https://mediaspace.msu.edu/playlist/dedicated/230793063/1_1xbqbwbj/1_0w99nh2g) 
+is available.
 
 ::: {.callout-note title="Abstract" collapse="true"}
 This talk will discuss some fundamental concepts and issues related to missing
@@ -69,7 +70,6 @@ results even you have missing data. Links to additional learning resources will
 be shared.
 :::
 
-## Recent CSTAT Seminar 
 The second iteration of this presentation was an in-person seminar 
 [@Pierce-RN8953]. This version was longer than the previous one due to expanded 
 content. The audience consisted of a small group of Peruvian university faculty, 
@@ -119,7 +119,7 @@ My fourth and most recent presentation on reproducible research [@Pierce-RN8764]
 had some expanded material compared to the third one 
 [@Pierce-RN8692]. The most recent slides and example files are available in my 
 [CSTAT.RR2025v2 repository](https://github.com/sjpierce/CSTAT.RR2025v2). 
-A [video recording](https://mediaspace.msu.edu/media/CSTAT%202025%20Fall%20Semester%20-%20Reproducible%20Research/1_9ggpcw2z) 
+A [video recording](https://mediaspace.msu.edu/playlist/dedicated/230793063/1_c38h1j69/1_9ggpcw2z) 
 is also available. 
 
 ::: {.callout-note title="Abstract" collapse="true"}
